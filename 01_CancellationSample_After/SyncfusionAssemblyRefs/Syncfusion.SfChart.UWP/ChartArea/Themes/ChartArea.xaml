@@ -1,0 +1,49 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Syncfusion.UI.Xaml.Charts">
+
+    <Style TargetType="local:SfChart">
+        <Setter Property="AreaBorderBrush" Value="{ThemeResource AppBarItemPointerOverBackgroundThemeBrush}"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:SfChart">
+                    <Grid>
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"
+                  Background="{TemplateBinding Background}" Margin="{TemplateBinding Margin}">
+                            <Grid Background="Transparent">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="25*"/>
+                                    <RowDefinition Height="75*"/>
+                                </Grid.RowDefinitions>
+
+                                <local:ChartDockPanel x:Name="Part_DockPanel" LastChildFill="False" Grid.Row="1" Grid.RowSpan="2">
+                                    <ContentPresenter x:Name="ChartHeader" Content="{TemplateBinding Header}" local:ChartDockPanel.Dock="Top" HorizontalAlignment="{TemplateBinding HorizontalHeaderAlignment}" VerticalAlignment="{TemplateBinding VerticalHeaderAlignment}" />
+                                    <local:ChartDockPanel.RootElement>
+                                        <local:ChartRootPanel x:Name="LayoutRoot" >
+                                            <Canvas x:Name="bottomAdorningCanvas" local:ChartRootPanel.MeasurePriorityIndex="1"/>
+                                            <Grid x:Name="InternalCanvas" Background="{TemplateBinding AreaBackground}" local:ChartRootPanel.MeasurePriorityIndex="1" Margin="{TemplateBinding AxisThickness}">
+                                                <Canvas x:Name="gridLines" />
+                                                <Border BorderBrush="{TemplateBinding AreaBorderBrush}"  BorderThickness="{TemplateBinding AreaBorderThickness}">
+                                                    <Grid x:Name="seriesPresenter" />
+                                                </Border>
+                                            </Grid>
+                                            <Canvas x:Name="PART_chartAxisPanel" local:ChartRootPanel.MeasurePriorityIndex="0"></Canvas>
+                                            <Canvas x:Name="adorningCanvas" local:ChartRootPanel.MeasurePriorityIndex="1"></Canvas>
+                                            <Canvas x:Name="Part_SeriesAnnotationCanvas" local:ChartRootPanel.MeasurePriorityIndex="1"/>
+                                            <Canvas x:Name="Part_ChartAnnotationCanvas" local:ChartRootPanel.MeasurePriorityIndex="1"/>
+                                            <Canvas x:Name="Part_ToolkitCanvas" local:ChartRootPanel.MeasurePriorityIndex="1"/>
+                                        </local:ChartRootPanel>
+                                    </local:ChartDockPanel.RootElement>
+                                </local:ChartDockPanel>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>
+

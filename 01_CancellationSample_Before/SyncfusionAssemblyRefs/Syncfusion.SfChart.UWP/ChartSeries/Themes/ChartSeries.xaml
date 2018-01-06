@@ -1,0 +1,724 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Syncfusion.UI.Xaml.Charts">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ms-appx:///Syncfusion.SfChart.UWP/Themes/Generic.Common.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="local:ChartSeriesBase">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ChartSeriesBase">
+                    <Grid x:Name="PART_SeriesRootPanel">
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:ErrorBarSeries">
+        <Setter Property="VisibilityOnLegend" Value="Collapsed"></Setter>
+        <Setter Property="HorizontalLineStyle">
+            <Setter.Value>
+                <local:LineStyle></local:LineStyle>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="HorizontalCapLineStyle">
+            <Setter.Value>
+               <local:CapLineStyle></local:CapLineStyle>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VerticalLineStyle">
+            <Setter.Value>
+                <local:LineStyle></local:LineStyle>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VerticalCapLineStyle">
+            <Setter.Value>
+                <local:CapLineStyle></local:CapLineStyle>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ErrorBarSeries">
+                       <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:TrendlineBase">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:TrendlineBase">
+                        <local:ChartTrendlinePanel x:Name="trendlinePanel"></local:ChartTrendlinePanel>
+                  </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:AreaSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:AreaSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:BarSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:BarSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:BoxAndWhiskerSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:BoxWhiskerSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:BubbleSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:BubbleSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:CandleSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:CandleSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:ColumnSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ColumnSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:FastLineSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:FastLineSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:FastLineBitmapSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:FastLineBitmapSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:FastHiLoBitmapSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:FastHiLoBitmapSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:FastHiLoOpenCloseBitmapSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:FastHiLoOpenCloseBitmapSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:FastColumnBitmapSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:FastColumnBitmapSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:FastStackingColumnBitmapSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:FastStackingColumnBitmapSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:FastBarBitmapSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:FastBarBitmapSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:WaterfallSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:WaterfallSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:FastCandleBitmapSeries">
+        <Setter Property="StrokeThickness" Value="1"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:FastCandleBitmapSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:FastStepLineBitmapSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:FastStepLineBitmapSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:FastScatterBitmapSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:FastScatterBitmapSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:HiLoSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:HiLoSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:HiLoOpenCloseSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:HiLoOpenCloseSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:HistogramSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:HistogramSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:LineSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:LineSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:PieSeries">
+        <Setter Property="EnableSmartLabels" Value="True"/>
+        <Setter Property="Palette" Value="Metro"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:PieSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:StepLineSeries">
+        <Setter Property="Palette" Value="Metro"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:StepLineSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:StepAreaSeries">
+        <Setter Property="Palette" Value="Metro"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:StepAreaSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:DoughnutSeries">
+        <Setter Property="EnableSmartLabels" Value="True"/>
+        <Setter Property="Palette" Value="Metro"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:DoughnutSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:RangeAreaSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:RangeAreaSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:RangeColumnSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:RangeColumnSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:SplineSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:SplineSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:SplineAreaSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:SplineAreaSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:StackingAreaSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:StackingAreaSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="local:StackingBarSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:StackingBarSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:StackingArea100Series">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:StackingArea100Series">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:StackingBar100Series">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:StackingBar100Series">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:StackingColumn100Series">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:StackingColumn100Series">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="local:StackingColumnSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:StackingColumnSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:ScatterSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ScatterSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="local:FunnelSeries">
+        <Setter Property="Palette" Value="Metro"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:FunnelSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:PyramidSeries">
+        <Setter Property="Palette" Value="Metro"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:PyramidSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:PolarSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:PolarSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:RadarSeries">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:RadarSeries">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="local:AccumulationDistributionIndicator">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:AccumulationDistributionIndicator">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:ExponentialAverageIndicator">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ExponentialAverageIndicator">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:AverageTrueRangeIndicator">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:AverageTrueRangeIndicator">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:SimpleAverageIndicator">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:SimpleAverageIndicator">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:TriangularAverageIndicator">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:TriangularAverageIndicator">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="local:MACDTechnicalIndicator">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:MACDTechnicalIndicator">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:RSITechnicalIndicator">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:RSITechnicalIndicator">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:StochasticTechnicalIndicator">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:StochasticTechnicalIndicator">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:BollingerBandIndicator">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:BollingerBandIndicator">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:MomentumTechnicalIndicator">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:MomentumTechnicalIndicator">
+                    <Grid>
+                        <local:ChartSeriesPanel x:Name="seriesPanel"></local:ChartSeriesPanel>
+                        <local:ChartAdornmentPresenter x:Name="adornmentPresenter"></local:ChartAdornmentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>
+

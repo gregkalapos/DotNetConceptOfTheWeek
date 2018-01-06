@@ -1,0 +1,92 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Syncfusion.UI.Xaml.Charts">
+                            
+    <Style TargetType="local:Resizer">
+         <Setter Property="Template">
+              <Setter.Value>
+                <ControlTemplate TargetType="local:Resizer">
+                    <Grid x:Name="mainGrid" Background="Transparent"> 
+                        <Grid.Resources>
+                            <LinearGradientBrush x:Key="backgroundbrush"  EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFEBFFFF" Offset="0.388"/>
+                                <GradientStop Color="#FFCAF5F8" Offset="0.398"/>
+                                <GradientStop Color="#FFD1F8FA" Offset="0.791"/>
+                                <GradientStop Color="#FFEAFFFF" Offset="0.801"/>
+                                <GradientStop Color="#FFEAFFFF" Offset="0.99"/>
+                                <GradientStop Color="#FFA3B9CC" Offset="1"/>
+                            </LinearGradientBrush>
+                            <SolidColorBrush x:Key="SelectorThumbBrush" Color="#FFA4DFF2"/>
+                            <Style x:Key="ThumbStyle1" TargetType="Thumb">
+                                <Setter Property="IsTabStop" Value="False"/>
+                                <Setter Property="Width" Value="5"/>
+                                <Setter Property="Height" Value="5"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Thumb">
+                                            <Grid>
+                                                <Grid>
+                                                    <Ellipse Fill="{StaticResource SelectorThumbBrush}" StrokeThickness="1"  Height="{TemplateBinding Height}" Width="{TemplateBinding Width}"/>
+                                                    <Ellipse Margin="8" Fill="White" Stroke="#FF777F85" StrokeThickness="1" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}"/>
+                                                </Grid>
+                                                <Rectangle x:Name="DisabledVisualElement" Fill="#FFFFFFFF" IsHitTestVisible="false" Opacity="0" RadiusY="2" RadiusX="2"/>
+                                                <Rectangle x:Name="FocusVisualElement" IsHitTestVisible="false" Margin="1" Opacity="0" RadiusY="1" RadiusX="1" Stroke="#FF6DBDD1" StrokeThickness="1"/>
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                            <Style x:Key="roundthumbstyle" TargetType="Thumb">
+                                <Setter Property="IsTabStop" Value="False"/>
+                                <Setter Property="Width" Value="20"/>
+                                <Setter Property="Height" Value="20"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Thumb">
+                                            <Grid>
+                                                <Grid>
+                                                    <Ellipse Fill="{StaticResource SelectorThumbBrush}" StrokeThickness="1"/>
+                                                    <Ellipse Margin="5" Fill="White" Stroke="#FF777F85" StrokeThickness="1"/>
+                                                    
+                                                </Grid>
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Grid.Resources>
+                        <Grid x:Name="horizontalResizer">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0"></RowDefinition>
+                                <RowDefinition Height="0"></RowDefinition>
+                                <RowDefinition Height="0"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="0"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="0"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Rectangle Grid.Row="2" Grid.Column="0" Margin="-0.5" Grid.RowSpan="3" Fill="Gray" Width="1"></Rectangle>
+                            <Rectangle Grid.Row="2" Grid.Column="0" Margin="-0.5" Grid.ColumnSpan="3" Fill="Gray" Height="1"></Rectangle>
+                            <Rectangle Grid.Row="2" Grid.Column="3" Margin="-0.5" Grid.RowSpan="3" Fill="Gray" Width="1"></Rectangle>
+                            <Rectangle Grid.Row="4" Grid.Column="0" Margin="-0.5" Grid.ColumnSpan="3" Fill="Gray" Height="1"></Rectangle>
+
+                            <Thumb x:Name="resizeTopLeft" Grid.Row="2" Margin="-15" Grid.Column="0" Style="{StaticResource roundthumbstyle}"></Thumb>
+                            <Thumb x:Name="resizeMiddleRight" Grid.Row="3" Margin="-5" Grid.Column="0" Width="10" Height="10" Style="{StaticResource ThumbStyle1}"></Thumb>
+                            <Thumb x:Name="resizeBottomLeft" Grid.Row="4" Margin="-15" Grid.Column="0"  Style="{StaticResource roundthumbstyle}"></Thumb>
+                            <Thumb x:Name="resizeTopMiddle" Grid.Row="2" Margin="-5" Grid.Column="1" Width="10" Height="10" Style="{StaticResource ThumbStyle1}"></Thumb>
+                            <Thumb x:Name="resizeBottomMiddle" Grid.Row="4" Margin="-5" Grid.Column="1" Width="10" Height="10" Style="{StaticResource ThumbStyle1}"></Thumb>
+                            <Thumb x:Name="resizeBottomRight" Grid.Row="4" Margin="-15" Grid.Column="2" Style="{StaticResource roundthumbstyle}"></Thumb>
+                            <Thumb x:Name="resizeTopRight" Grid.Row="2" Margin="-15" Grid.Column="2" Style="{StaticResource roundthumbstyle}"></Thumb>
+                            <Thumb x:Name="resizeMiddleLeft" Grid.Row="3" Margin="-5" Grid.Column="2" Width="10" Height="10" Style="{StaticResource ThumbStyle1}"></Thumb>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
+

@@ -1,0 +1,114 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--Predefined Symbols Template-->
+    <!--Cross-->
+    <ControlTemplate x:Key="Cross">
+        <Path  Stretch="Fill" Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}" Data="F1 M 133.133,45.7109L 154.307,24.5363L 175.482,45.7109L 154.307,66.8856L 175.482,88.0603L 154.307,109.235L 133.133,88.0603L 111.958,109.235L 90.7835,88.0603L 111.958,66.8856L 90.7835,45.7109L 111.958,24.5363L 133.133,45.7109 Z " />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="AnimationCross">
+        <Path  Stretch="Fill" Stroke="{TemplateBinding Background}" Data="F1 M 133.133,45.7109L 154.307,24.5363L 175.482,45.7109L 154.307,66.8856L 175.482,88.0603L 154.307,109.235L 133.133,88.0603L 111.958,109.235L 90.7835,88.0603L 111.958,66.8856L 90.7835,45.7109L 111.958,24.5363L 133.133,45.7109 Z " />
+    </ControlTemplate>
+
+    <!--Diamond-->
+    <ControlTemplate x:Key="Diamond">
+        <Path  Stretch="Fill" Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}"  Data="F1 M 156.37,93.7292L 134.634,71.8159L 112.906,49.9025L 91.1711,71.8159L 69.4364,93.7292L 70.1524,93.7292L 91.8844,115.644L 113.623,137.556L 135.362,115.644L 157.09,93.7292L 156.37,93.7292 Z "  />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="AnimationDiamond">
+        <Path  Stretch="Fill" Stroke="{TemplateBinding Background}"  Data="F1 M 156.37,93.7292L 134.634,71.8159L 112.906,49.9025L 91.1711,71.8159L 69.4364,93.7292L 70.1524,93.7292L 91.8844,115.644L 113.623,137.556L 135.362,115.644L 157.09,93.7292L 156.37,93.7292 Z "  />
+    </ControlTemplate>
+
+    <!--Hexagon-->
+    <ControlTemplate x:Key="Hexagon">
+        <Path  Stretch="Fill" Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}" Data="F1 M 111.119,104.776L 88.7819,66.0827L 111.119,27.3893L 155.795,27.3893L 178.133,66.0827L 155.795,104.776L 111.119,104.776 Z " />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="AnimationHexagon">
+        <Path  Stretch="Fill" Stroke="{TemplateBinding Background}" Data="F1 M 111.119,104.776L 88.7819,66.0827L 111.119,27.3893L 155.795,27.3893L 178.133,66.0827L 155.795,104.776L 111.119,104.776 Z " />
+    </ControlTemplate>
+
+    <!--HorizontalLine-->
+    <ControlTemplate x:Key="HorizontalLine">
+        <Line X1="0" X2="{TemplateBinding Width}" Y1="0" Y2="0" Stroke="{TemplateBinding Background}" StrokeThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="AnimationHorizontalLine">
+        <Line X1="0" X2="{TemplateBinding Width}" Y1="0" Y2="0" Stroke="{TemplateBinding Background}" StrokeThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </ControlTemplate>
+
+    <!--verticalLine-->
+    <ControlTemplate x:Key="VerticalLine">
+        <Line X1="0" X2="0" Y1="0" Y2="{TemplateBinding Height}" Stroke="{TemplateBinding Background}"  StrokeThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="AnimationVerticalLine">
+        <Line X1="0" X2="0" Y1="0" Y2="{TemplateBinding Height}" Stroke="{TemplateBinding Background}"  StrokeThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </ControlTemplate>
+
+    <!--InvertedTriangle-->
+    <ControlTemplate x:Key="InvertedTriangle">
+        <Path  Stretch="Fill" Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}"  Data="F1 M 133.31,86.5195L 121.815,66.6128L 110.323,46.7061L 133.31,46.7061L 156.294,46.7061L 144.806,66.6128L 133.31,86.5195 Z " />
+    </ControlTemplate>
+    <ControlTemplate x:Key="AnimationInvertedTriangle">
+        <Path  Stretch="Fill" Stroke="{TemplateBinding Background}"  Data="F1 M 133.31,86.5195L 121.815,66.6128L 110.323,46.7061L 133.31,46.7061L 156.294,46.7061L 144.806,66.6128L 133.31,86.5195 Z " />
+    </ControlTemplate>
+
+    <!--Triangle-->
+    <ControlTemplate x:Key="Triangle">
+        <Path  Stretch="Fill" Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}" Data="F1 M 133.308,46.7057L 144.803,66.6124L 156.295,86.5191L 133.308,86.5191L 110.324,86.5191L 121.812,66.6124L 133.308,46.7057 Z " />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="AnimationTriangle">
+        <Path  Stretch="Fill" Stroke="{TemplateBinding Background}" Data="F1 M 133.308,46.7057L 144.803,66.6124L 156.295,86.5191L 133.308,86.5191L 110.324,86.5191L 121.812,66.6124L 133.308,46.7057 Z " />
+    </ControlTemplate>
+
+    <!--Plus-->
+    <ControlTemplate x:Key="Plus">
+        <Path Stretch="Fill" Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}" Data="F1 M 145.193,54.8249L 169.315,54.8249L 169.315,78.9463L 145.193,78.9463L 145.193,103.074L 121.071,103.074L 121.071,78.9463L 96.946,78.9463L 96.946,54.8249L 121.071,54.8249L 121.071,30.6983L 145.193,30.6983L 145.193,54.8249 Z " />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="AnimationPlus">
+        <Path Stretch="Fill"  Stroke="{TemplateBinding Background}" Data="F1 M 145.193,54.8249L 169.315,54.8249L 169.315,78.9463L 145.193,78.9463L 145.193,103.074L 121.071,103.074L 121.071,78.9463L 96.946,78.9463L 96.946,54.8249L 121.071,54.8249L 121.071,30.6983L 145.193,30.6983L 145.193,54.8249 Z " />
+    </ControlTemplate>
+
+    <!--Circle-->
+    <ControlTemplate x:Key="Circle" >
+        <Ellipse  Fill="{TemplateBinding Background}"  Stroke="{TemplateBinding BorderBrush}" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="AnimationCircle" >
+        <Ellipse  Fill="{TemplateBinding Background}"  Stroke="Black" />
+    </ControlTemplate>
+
+    <!--Ellipse-->
+    <ControlTemplate x:Key="Ellipse">
+        <Ellipse  Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}"/>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="AnimationEllipse">
+        <Ellipse Stroke="{TemplateBinding Background}"/>
+    </ControlTemplate>
+
+    <!--Square-->
+    <ControlTemplate x:Key="Square">
+        <Rectangle  Fill="{TemplateBinding Background}"  Stroke="{TemplateBinding BorderBrush}"/>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="AnimationSquare">
+        <Rectangle  Stroke="{TemplateBinding Background}" />
+    </ControlTemplate>
+
+
+    <!--Pentagon-->
+    <ControlTemplate x:Key="Pentagon">
+        <Path Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}" Stretch="Fill" Data="F1 M 147.833,76.8112L 145.036,68.2032L 152.36,62.8845L 159.683,68.2032L 156.885,76.8112L 147.833,76.8112 Z " />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="AnimationPentagon">
+        <Path Stroke="{TemplateBinding Background}" Stretch="Fill" Data="F1 M 147.833,76.8112L 145.036,68.2032L 152.36,62.8845L 159.683,68.2032L 156.885,76.8112L 147.833,76.8112 Z " />
+    </ControlTemplate>
+
+</ResourceDictionary>
+

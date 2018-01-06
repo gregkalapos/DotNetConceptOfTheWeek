@@ -1,0 +1,33 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Syncfusion.UI.Xaml.Charts">
+
+    <Style TargetType="local:SfChart3D">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:SfChart3D">
+                    <Grid>
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"
+                  Background="{TemplateBinding Background}" Margin="{TemplateBinding Margin}">
+                            <Grid Background="Transparent">
+                                <local:ChartDockPanel x:Name="Part_DockPanel">
+                                    <ContentPresenter x:Name="PART_ChartHeader" Content="{TemplateBinding Header}" local:ChartDockPanel.Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                   
+                                    <local:ChartDockPanel.RootElement>
+                                        <local:ChartRootPanel x:Name="Part_LayoutRoot">
+                                        <Grid x:Name="Part_ControlsPanel"></Grid>
+                                        <Canvas x:Name="PART_3DPanel" local:ChartRootPanel.MeasurePriorityIndex="1"/>
+                                        <Canvas x:Name="PART_adorningCanvas" local:ChartRootPanel.MeasurePriorityIndex="1"></Canvas>
+                                        </local:ChartRootPanel>
+                                    </local:ChartDockPanel.RootElement>
+                                </local:ChartDockPanel>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
+

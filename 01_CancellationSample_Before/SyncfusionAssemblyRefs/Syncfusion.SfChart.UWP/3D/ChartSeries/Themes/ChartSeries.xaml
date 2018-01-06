@@ -1,0 +1,47 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Syncfusion.UI.Xaml.Charts">
+
+    <Style TargetType="local:PieSeries3D">
+        <Setter Property="EnableSmartLabels" Value="True"/>
+        <Setter Property="Palette" Value="Metro"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:PieSeries3D">
+                    <Border/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:DoughnutSeries3D">
+        <Setter Property="EnableSmartLabels" Value="True"/>
+        <Setter Property="Palette" Value="Metro"></Setter>
+    </Style>
+
+    <Style TargetType="local:ColumnSeries3D">
+    </Style>
+
+    <Style TargetType="local:BarSeries3D">
+    </Style>
+    
+    <Style TargetType="local:LineSeries3D"></Style>
+    <Style TargetType="local:AreaSeries3D"></Style>
+    <Style TargetType="local:ScatterSeries3D"></Style>
+           
+ <Style TargetType="local:StackingBarSeries3D">
+    </Style>
+
+    <Style TargetType="local:StackingBar100Series3D">
+    </Style>
+
+    <Style TargetType="local:StackingColumn100Series3D">
+    </Style>
+
+    <Style TargetType="local:StackingColumnSeries3D">
+    </Style>
+
+
+</ResourceDictionary>
+

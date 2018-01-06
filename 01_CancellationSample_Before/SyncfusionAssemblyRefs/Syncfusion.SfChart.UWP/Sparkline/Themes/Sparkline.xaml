@@ -1,0 +1,49 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Syncfusion.UI.Xaml.Charts"
+    >
+    <Style x:Key="axisStyle" TargetType="Line">
+        <Setter Property="Stroke" Value="Red"></Setter>
+        <Setter Property="StrokeThickness" Value="1"></Setter>
+    </Style>
+    
+    <Style x:Key="trackBallStyle" TargetType="Ellipse">
+        <Setter Property="Height" Value="5"></Setter>
+        <Setter Property="Width" Value="5"></Setter>
+        <Setter Property="Fill" Value="Red"></Setter>
+    </Style>
+    
+    <Style x:Key="sparklineBase" TargetType="local:SparklineBase">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:SparklineBase">
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
+                        <Grid Background="Transparent" Name="PART_RootPanel"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:SfWinLossSparkline" BasedOn="{StaticResource sparklineBase}"/>
+    
+    <Style TargetType="local:SparklineBase" BasedOn="{StaticResource sparklineBase}"/>
+
+    <Style TargetType="local:MarkerBase" x:Key="markerBase" BasedOn="{StaticResource sparklineBase}">
+        <Setter Property="AxisStyle" Value="{StaticResource axisStyle}"/>
+        <Setter Property="LineStyle" Value="{StaticResource axisStyle}"/>
+        <Setter Property="TrackBallStyle" Value="{StaticResource trackBallStyle}"/> 
+    </Style>
+
+    <Style TargetType="local:MarkerBase" BasedOn="{StaticResource markerBase}"/>
+
+    <Style TargetType="local:SfLineSparkline" BasedOn="{StaticResource markerBase}"/>
+    <Style TargetType="local:SfAreaSparkline" BasedOn="{StaticResource markerBase}"/>
+    
+    <Style TargetType="local:SfColumnSparkline" BasedOn="{StaticResource sparklineBase}">
+        <Setter Property="AxisStyle" Value="{StaticResource axisStyle}"/>
+    </Style>
+    
+</ResourceDictionary>
+
