@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.10
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_CancellationSample_Before", "01_CancellationSample_Before\01_CancellationSample_Before.csproj", "{4FE36C80-6F69-4849-9E2F-95C9C4B14533}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_WebSocket_DotNetStandard", "02_WebSocket_DotNetStandard", "{183DF1C7-649D-4875-A336-8F5D17B09E58}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_CryptoDataSourceLib", "02_CryptoDataSourceLib\02_CryptoDataSourceLib.csproj", "{1C8C8F65-FF26-4195-9202-75E3274A8F29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_BitcoinTracker.Uwp", "02_BitcoinTracker.Uwp\02_BitcoinTracker.Uwp.csproj", "{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,26 @@ Global
 		{1C8C8F65-FF26-4195-9202-75E3274A8F29}.Release|x64.Build.0 = Release|Any CPU
 		{1C8C8F65-FF26-4195-9202-75E3274A8F29}.Release|x86.ActiveCfg = Release|Any CPU
 		{1C8C8F65-FF26-4195-9202-75E3274A8F29}.Release|x86.Build.0 = Release|Any CPU
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Debug|ARM.ActiveCfg = Debug|ARM
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Debug|ARM.Build.0 = Debug|ARM
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Debug|ARM.Deploy.0 = Debug|ARM
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Debug|x64.ActiveCfg = Debug|x64
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Debug|x64.Build.0 = Debug|x64
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Debug|x64.Deploy.0 = Debug|x64
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Debug|x86.ActiveCfg = Debug|x86
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Debug|x86.Build.0 = Debug|x86
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Debug|x86.Deploy.0 = Debug|x86
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Release|Any CPU.ActiveCfg = Release|x86
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Release|ARM.ActiveCfg = Release|ARM
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Release|ARM.Build.0 = Release|ARM
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Release|ARM.Deploy.0 = Release|ARM
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Release|x64.ActiveCfg = Release|x64
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Release|x64.Build.0 = Release|x64
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Release|x64.Deploy.0 = Release|x64
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Release|x86.ActiveCfg = Release|x86
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Release|x86.Build.0 = Release|x86
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +111,7 @@ Global
 		{4FE36C80-6F69-4849-9E2F-95C9C4B14533} = {5C0448D4-A4C8-4A13-A39C-D78A3AB57E2F}
 		{63316D65-6A85-4323-9FE3-1576305878A0} = {5C0448D4-A4C8-4A13-A39C-D78A3AB57E2F}
 		{1C8C8F65-FF26-4195-9202-75E3274A8F29} = {183DF1C7-649D-4875-A336-8F5D17B09E58}
+		{CD843C15-CC82-4CF4-8650-49BCF8D45CCD} = {183DF1C7-649D-4875-A336-8F5D17B09E58}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3F64F0A3-5CD0-44AB-A2E7-D2A2AD801C8A}
