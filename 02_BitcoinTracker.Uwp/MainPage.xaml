@@ -14,8 +14,8 @@
         </Grid.RowDefinitions>-->
 
         <StackPanel VerticalAlignment="Center">
-            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Bitcoin"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Style="{StaticResource HeaderTextBlockStyle}"  VerticalAlignment="Center" HorizontalAlignment="Center" Text="Bitcoin"/>
+            <StackPanel Orientation="Horizontal" Margin="0,15,0,0" HorizontalAlignment="Center">
                 <TextBlock  Text="Price:" />
                 <TextBlock x:Name="PriceTextBlock" Text="n/a" />
             </StackPanel>
@@ -24,7 +24,7 @@
                 <TextBlock x:Name="ExchangeTextBlock" Text="n/a" />
             </StackPanel>
 
-            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+            <StackPanel Margin="0,30,0,0" HorizontalAlignment="Center" Orientation="Horizontal">
 
                 <Button Click="StartClicked" Content="Start"/>
                 <Button Click="StopClicked" Margin="15,0,0,0" Content="Stop"/>
