@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="398">
+                                <rect key="frame" x="476.5" y="384" width="159.5" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vX7-72-LhL">
+                                <rect key="frame" x="568.5" y="565" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29v-ln-GGx" customClass="LastTradePriceLabel">
+                                <rect key="frame" x="484.5" y="470" width="135" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Ecu-0I-3Aa"/>
+                                    <constraint firstAttribute="width" constant="135" id="qaL-TM-1xk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rei-A0-aab">
+                                <rect key="frame" x="484.5" y="510" width="135" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4zt-sm-P8H"/>
+                                    <constraint firstAttribute="width" constant="135" id="Ew7-2o-wRI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goX-sq-SAq" misplaced="YES">
+                                <rect key="frame" x="440" y="565" width="46" height="30"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="398" secondAttribute="centerY" id="399"/>
+                            <constraint firstAttribute="centerX" secondItem="398" secondAttribute="centerX" id="400"/>
+                            <constraint firstItem="rei-A0-aab" firstAttribute="leading" secondItem="398" secondAttribute="leadingMargin" id="0fr-ef-9P0"/>
+                            <constraint firstItem="vX7-72-LhL" firstAttribute="leading" secondItem="goX-sq-SAq" secondAttribute="trailing" constant="94" id="GeC-iv-FKM"/>
+                            <constraint firstItem="29v-ln-GGx" firstAttribute="top" secondItem="398" secondAttribute="bottom" constant="20" id="Kbb-0h-o4l"/>
+                            <constraint firstItem="rei-A0-aab" firstAttribute="top" secondItem="29v-ln-GGx" secondAttribute="bottom" constant="19" id="dcE-Ax-gVy"/>
+                            <constraint firstItem="vX7-72-LhL" firstAttribute="top" secondItem="rei-A0-aab" secondAttribute="bottom" constant="34" id="gKa-EW-JYF"/>
+                            <constraint firstItem="goX-sq-SAq" firstAttribute="top" secondItem="rei-A0-aab" secondAttribute="bottom" constant="34" id="mp9-8u-uRS"/>
+                            <constraint firstItem="29v-ln-GGx" firstAttribute="leading" secondItem="398" secondAttribute="leadingMargin" id="q8k-Pu-pCC"/>
+                            <constraint firstItem="goX-sq-SAq" firstAttribute="leading" secondItem="398" secondAttribute="leadingMargin" constant="-44" id="tua-Bi-sdW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="LastTradeExchangeLabel" destination="rei-A0-aab" id="name-outlet-rei-A0-aab"/>
+                        <outlet property="StartButton" destination="goX-sq-SAq" id="name-outlet-goX-sq-SAq"/>
+                        <outlet property="StopButton" destination="vX7-72-LhL" id="name-outlet-vX7-72-LhL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
