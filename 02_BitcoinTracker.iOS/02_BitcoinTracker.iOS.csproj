@@ -103,10 +103,6 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="LastTradePriceLabel.cs" />
-    <Compile Include="LastTradePriceLabel.designer.cs">
-      <DependentUpon>LastTradePriceLabel.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\02_CryptoDataSourceLib\02_CryptoDataSourceLib.csproj">
