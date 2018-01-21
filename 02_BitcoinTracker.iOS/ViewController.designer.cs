@@ -19,6 +19,10 @@ namespace _BitcoinTracker.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel LastTradePriceLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton StartButton { get; set; }
 
         [Outlet]
@@ -30,6 +34,11 @@ namespace _BitcoinTracker.iOS
             if (LastTradeExchangeLabel != null) {
                 LastTradeExchangeLabel.Dispose ();
                 LastTradeExchangeLabel = null;
+            }
+
+            if (LastTradePriceLabel != null) {
+                LastTradePriceLabel.Dispose ();
+                LastTradePriceLabel = null;
             }
 
             if (StartButton != null) {

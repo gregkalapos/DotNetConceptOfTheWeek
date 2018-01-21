@@ -46,31 +46,38 @@ namespace CryptoDataSourceLib
 			await SendData(data2);
 
 			ArraySegment<Byte> readbuffer = new ArraySegment<byte>(new Byte[8192]);
-			while (ws.State == WebSocketState.Open)
-			{
-				CryptoCurrencyUpdate updateValue = null;
-				try
-				{
-					var result = await ws.ReceiveAsync(readbuffer, CancellationToken.None);
-					var str = System.Text.Encoding.Default.GetString(readbuffer.Array, readbuffer.Offset, result.Count);
-					updateValue = Parse(str);
-					if (updateValue != null)
-					{
-						DataRecieved?.Invoke(this, updateValue);
-					}
-				}
-				catch (TaskCanceledException) { }
-			}
-
-			_timer.Stop();
-			Console.WriteLine("Stopped");
+            while (ws.State == WebSocketState.Open)
+            {
+                CryptoCurrencyUpdate updateValue = null;
+                try
+                {
+                    var result = await ws.ReceiveAsync(readbuffer, CancellationToken.None);
+                    var str = System.Text.Encoding.Default.GetString(readbuffer.Array, readbuffer.Offset, result.Count);
+                    updateValue = Parse(str);
+                    if (updateValue != null)
+                    {
+                        DataRecieved?.Invoke(this, updateValue);
+                    }
+                }
+                catch (TaskCanceledException)
+                {
+                    System.Diagnostics.Debug.Write("WebSocket Stopped");
+                }
+            }
 		}
 
 		public async void StopLoadingData()
 		{
-			if (ws.State != WebSocketState.Closed)
-				await ws.CloseAsync(WebSocketCloseStatus.Empty, String.Empty, CancellationToken.None);
-			ws.Dispose();
+            try
+            {
+                if (ws.State != WebSocketState.Closed)
+                    await ws.CloseAsync(WebSocketCloseStatus.Empty, String.Empty, CancellationToken.None);
+            }
+            finally
+            {
+                ws.Dispose();
+                _timer.Stop();
+            }
 		}
 
 		/// <summary>

@@ -11,13 +11,25 @@ namespace _BitcoinTracker.iOS
             // Note: this .ctor should not contain any initialization logic.
         }
 
+        CryptoDataSourceLib.CryptoDataSource cds;
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 
-            CryptoDataSourceLib.CryptoDataSource cds = new CryptoDataSourceLib.CryptoDataSource();
+            cds = new CryptoDataSourceLib.CryptoDataSource();
             cds.DataRecieved += (sender, e) => {
-                //LastTradePriceLabel.Text = e.LastPrice.ToString(); 
+                LastTradePriceLabel.Text = e.LastPrice.ToString();
+                LastTradeExchangeLabel.Text = e.ExchangeName;
+            };
+
+            StartButton.TouchUpInside += (sender, e) => 
+            {
+                cds.StartLoadingData();
+            };
+
+            StopButton.TouchUpInside += (sender, e) => 
+            {
+                cds.StopLoadingData();
             };
 
             cds.StartLoadingData();
