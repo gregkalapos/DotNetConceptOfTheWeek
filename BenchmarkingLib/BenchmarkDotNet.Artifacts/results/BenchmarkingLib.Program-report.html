@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Program</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.10.12, OS=Windows 10 Redstone 3 [1709, Fall Creators Update] (10.0.16299.192)
+Intel Core i5-5200U CPU 2.20GHz (Broadwell), 1 CPU, 4 logical cores and 2 physical cores
+Frequency=2143476 Hz, Resolution=466.5319 ns, Timer=TSC
+.NET Core SDK=2.1.2
+  [Host]     : .NET Core 2.0.3 (Framework 4.6.25815.02), 64bit RyuJIT
+  DefaultJob : .NET Core 2.0.3 (Framework 4.6.25815.02), 64bit RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>        Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Gen 0</th><th>Gen 1</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>CalculateWithLinq</td><td>12.67 ms</td><td>0.6614 ms</td><td>1.9501 ms</td><td>11.98 ms</td><td>296.8750</td><td>109.3750</td><td>1168.34 KB</td>
+</tr><tr><td>CalculateWithNonLinq</td><td>17.29 ms</td><td>0.3448 ms</td><td>0.2879 ms</td><td>17.27 ms</td><td>125.0000</td><td>31.2500</td><td>434.43 KB</td>
+</tr></tbody></table>
+</body>
+</html>

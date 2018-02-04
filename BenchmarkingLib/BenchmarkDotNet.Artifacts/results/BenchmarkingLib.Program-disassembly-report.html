@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>DisassemblyDiagnoser Output Program</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<table>
+<thead>
+<tr><th colspan="2">Program</th></tr>
+<tr>
+<th>CalculateWithLinq .NET Core 2.0.3 (Framework 4.6.25815.02), 64bit RyuJIT</th>
+<th>CalculateWithNonLinq .NET Core 2.0.3 (Framework 4.6.25815.02), 64bit RyuJIT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:top;"><pre><code>
+00007ffb`27ba0050 BenchmarkingLib.Program.CalculateWithLinq()
+			var linqres = SimpleMovingAverage.CalculateSMALinq(HisticalPrices, 14);
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_0000: ldsfld System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue> BenchmarkingLib.Program::HisticalPrices
+IL_0005: ldc.i4.s 14
+IL_0007: call System.Collections.Generic.List`1<LibToBenchmark.Quote> LibToBenchmark.SimpleMovingAverage::CalculateSMALinq(System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue>,System.Int32)
+IL_000c: stloc.0
+00007ffb`27ba0054 48b99028989412020000 mov rcx,21294982890h
+00007ffb`27ba005e 488b09          mov     rcx,qword ptr [rcx]
+00007ffb`27ba0061 ba0e000000      mov     edx,0Eh
+00007ffb`27ba0066 e845e5ffff      call    00007ffb`27b9e5b0
+		}
+  ^
+IL_000d: ret
+00007ffb`27ba006b 90              nop
+
+00007ffb`27ba0090 LibToBenchmark.SimpleMovingAverage.CalculateSMALinq(System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue>, Int32)
+			List<Quote> retVal = new List<Quote>();
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_0000: newobj System.Void System.Collections.Generic.List`1<LibToBenchmark.Quote>::.ctor()
+IL_0005: stloc.0
+00007ffb`27ba00b0 48b938b2c827fb7f0000 mov rcx,7FFB27C8B238h
+00007ffb`27ba00ba e83142ae5f      call    coreclr!MetaDataGetDispenser+0x72810 (00007ffb`876842f0)
+00007ffb`27ba00bf 488bd8          mov     rbx,rax
+00007ffb`27ba00c2 48b9b851c027fb7f0000 mov rcx,7FFB27C051B8h
+00007ffb`27ba00cc ba01000000      mov     edx,1
+00007ffb`27ba00d1 e8fa92a95f      call    coreclr!MetaDataGetDispenser+0x278f0 (00007ffb`876393d0)
+00007ffb`27ba00d6 48ba202d989412020000 mov rdx,21294982D20h
+00007ffb`27ba00e0 488b12          mov     rdx,qword ptr [rdx]
+00007ffb`27ba00e3 488d4b08        lea     rcx,[rbx+8]
+00007ffb`27ba00e7 e84426ae5f      call    coreclr!MetaDataGetDispenser+0x70c50 (00007ffb`87682730)
+			for (int i = 0; i < Price.Count() - SMALength + 1; i++)
+        ^^^^^^^^^
+IL_0006: ldc.i4.0
+IL_0007: stloc.1
+IL_0008: br.s IL_0065
+IL_000a: ldarg.0
+IL_000b: ldloc.1
+IL_000c: call System.Collections.Generic.IEnumerable`1<!!0> System.Linq.Enumerable::Skip<LibToBenchmark.HistoricalValue>(System.Collections.Generic.IEnumerable`1<!!0>,System.Int32)
+IL_0011: ldarg.1
+IL_0012: call System.Collections.Generic.IEnumerable`1<!!0> System.Linq.Enumerable::Take<LibToBenchmark.HistoricalValue>(System.Collections.Generic.IEnumerable`1<!!0>,System.Int32)
+IL_0017: stloc.2
+00007ffb`27ba00ec 33ed            xor     ebp,ebp
+			for (int i = 0; i < Price.Count() - SMALength + 1; i++)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_0065: ldloc.1
+IL_0066: ldarg.0
+IL_0067: call System.Int32 System.Linq.Enumerable::Count<LibToBenchmark.HistoricalValue>(System.Collections.Generic.IEnumerable`1<!!0>)
+IL_006c: ldarg.1
+IL_006d: sub
+IL_006e: ldc.i4.1
+IL_006f: add
+IL_0070: blt.s IL_000a
+00007ffb`27ba00ee 488bd6          mov     rdx,rsi
+00007ffb`27ba00f1 48b9a8bbc827fb7f0000 mov rcx,7FFB27C8BBA8h
+00007ffb`27ba00fb e8c8e4ffff      call    00007ffb`27b9e5c8
+00007ffb`27ba0100 2bc7            sub     eax,edi
+00007ffb`27ba0102 ffc0            inc     eax
+00007ffb`27ba0104 85c0            test    eax,eax
+00007ffb`27ba0106 0f8e54010000    jle     00007ffb`27ba0260
+00007ffb`27ba010c 448bc5          mov     r8d,ebp
+00007ffb`27ba010f 488bd6          mov     rdx,rsi
+00007ffb`27ba0112 48b990bcc827fb7f0000 mov rcx,7FFB27C8BC90h
+00007ffb`27ba011c e8c7e4ffff      call    00007ffb`27b9e5e8
+00007ffb`27ba0121 488bd0          mov     rdx,rax
+00007ffb`27ba0124 448bc7          mov     r8d,edi
+00007ffb`27ba0127 48b978bdc827fb7f0000 mov rcx,7FFB27C8BD78h
+00007ffb`27ba0131 e8d2e4ffff      call    00007ffb`27b9e608
+00007ffb`27ba0136 4c8bf0          mov     r14,rax
+				var fistAvg = firstSmaLengthItems.Average(n => n.Close);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_0018: ldloc.2
+IL_0019: ldsfld System.Func`2<LibToBenchmark.HistoricalValue,System.Decimal> LibToBenchmark.SimpleMovingAverage/<>c::<>9__1_0
+IL_001e: dup
+IL_001f: brtrue.s IL_0038
+IL_0021: pop
+IL_0022: ldsfld LibToBenchmark.SimpleMovingAverage/<>c LibToBenchmark.SimpleMovingAverage/<>c::<>9
+IL_0027: ldftn System.Decimal LibToBenchmark.SimpleMovingAverage/<>c::<CalculateSMALinq>b__1_0(LibToBenchmark.HistoricalValue)
+IL_002d: newobj System.Void System.Func`2<LibToBenchmark.HistoricalValue,System.Decimal>::.ctor(System.Object,System.IntPtr)
+00007ffb`27ba0139 48b9b851c027fb7f0000 mov rcx,7FFB27C051B8h
+00007ffb`27ba0143 ba06000000      mov     edx,6
+00007ffb`27ba0148 e80353ae5f      call    coreclr!MetaDataGetDispenser+0x73970 (00007ffb`87685450)
+00007ffb`27ba014d 48b9986b989412020000 mov rcx,21294986B98h
+00007ffb`27ba0157 4c8b09          mov     r9,qword ptr [rcx]
+00007ffb`27ba015a 4d85c9          test    r9,r9
+00007ffb`27ba015d 7554            jne     00007ffb`27ba01b3
+00007ffb`27ba015f 48b9b0bec827fb7f0000 mov rcx,7FFB27C8BEB0h
+00007ffb`27ba0169 e88241ae5f      call    coreclr!MetaDataGetDispenser+0x72810 (00007ffb`876842f0)
+00007ffb`27ba016e 4c8bf8          mov     r15,rax
+00007ffb`27ba0171 48ba906b989412020000 mov rdx,21294986B90h
+00007ffb`27ba017b 488b12          mov     rdx,qword ptr [rdx]
+00007ffb`27ba017e 4885d2          test    rdx,rdx
+00007ffb`27ba0181 0f84e9000000    je      00007ffb`27ba0270
+00007ffb`27ba0187 498d4f08        lea     rcx,[r15+8]
+00007ffb`27ba018b e8a025ae5f      call    coreclr!MetaDataGetDispenser+0x70c50 (00007ffb`87682730)
+00007ffb`27ba0190 48ba38e6b927fb7f0000 mov rdx,7FFB27B9E638h
+00007ffb`27ba019a 49895718        mov     qword ptr [r15+18h],rdx
+				retVal.Add(new Quote { Date = firstSmaLengthItems.Last().Date, Value = fistAvg });
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_0032: dup
+IL_0033: stsfld System.Func`2<LibToBenchmark.HistoricalValue,System.Decimal> LibToBenchmark.SimpleMovingAverage/<>c::<>9__1_0
+IL_0038: call System.Decimal System.Linq.Enumerable::Average<LibToBenchmark.HistoricalValue>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,System.Decimal>)
+IL_003d: stloc.3
+00007ffb`27ba019e 48b9986b989412020000 mov rcx,21294986B98h
+00007ffb`27ba01a8 498bd7          mov     rdx,r15
+00007ffb`27ba01ab e85025ae5f      call    coreclr!MetaDataGetDispenser+0x70c20 (00007ffb`87682700)
+00007ffb`27ba01b0 4d8bcf          mov     r9,r15
+00007ffb`27ba01b3 488d4c2438      lea     rcx,[rsp+38h]
+00007ffb`27ba01b8 4d8bc6          mov     r8,r14
+00007ffb`27ba01bb 48ba80c0c827fb7f0000 mov rdx,7FFB27C8C080h
+00007ffb`27ba01c5 e87ee4ffff      call    00007ffb`27b9e648
+IL_003e: ldloc.0
+IL_003f: newobj System.Void LibToBenchmark.Quote::.ctor()
+IL_0044: dup
+IL_0045: ldloc.2
+IL_0046: call !!0 System.Linq.Enumerable::Last<LibToBenchmark.HistoricalValue>(System.Collections.Generic.IEnumerable`1<!!0>)
+IL_004b: callvirt System.DateTime LibToBenchmark.HistoricalValue::get_Date()
+IL_0050: callvirt System.Void LibToBenchmark.Quote::set_Date(System.DateTime)
+00007ffb`27ba01ca 48b9a8b1c827fb7f0000 mov rcx,7FFB27C8B1A8h
+00007ffb`27ba01d4 e81741ae5f      call    coreclr!MetaDataGetDispenser+0x72810 (00007ffb`876842f0)
+00007ffb`27ba01d9 4c8bf8          mov     r15,rax
+00007ffb`27ba01dc 498bd6          mov     rdx,r14
+00007ffb`27ba01df 48b968c1c827fb7f0000 mov rcx,7FFB27C8C168h
+00007ffb`27ba01e9 e87ae4ffff      call    00007ffb`27b9e668
+00007ffb`27ba01ee 488b4810        mov     rcx,qword ptr [rax+10h]
+00007ffb`27ba01f2 49894f08        mov     qword ptr [r15+8],rcx
+			for (int i = 0; i < Price.Count() - SMALength + 1; i++)
+                                                      ^^^
+IL_0055: dup
+IL_0056: ldloc.3
+IL_0057: callvirt System.Void LibToBenchmark.Quote::set_Value(System.Decimal)
+00007ffb`27ba01f6 c4e17a6f442438  vmovdqu xmm0,xmmword ptr [rsp+38h]
+00007ffb`27ba01fd c4e17a7f442428  vmovdqu xmmword ptr [rsp+28h],xmm0
+00007ffb`27ba0204 498d4f10        lea     rcx,[r15+10h]
+00007ffb`27ba0208 c4e17a6f442428  vmovdqu xmm0,xmmword ptr [rsp+28h]
+00007ffb`27ba020f c4e17a7f01      vmovdqu xmmword ptr [rcx],xmm0
+IL_005c: callvirt System.Void System.Collections.Generic.List`1<LibToBenchmark.Quote>::Add(!0)
+00007ffb`27ba0214 488b4b08        mov     rcx,qword ptr [rbx+8]
+00007ffb`27ba0218 8b5318          mov     edx,dword ptr [rbx+18h]
+00007ffb`27ba021b ff431c          inc     dword ptr [rbx+1Ch]
+00007ffb`27ba021e 395108          cmp     dword ptr [rcx+8],edx
+00007ffb`27ba0221 7612            jbe     00007ffb`27ba0235
+00007ffb`27ba0223 448d4201        lea     r8d,[rdx+1]
+00007ffb`27ba0227 44894318        mov     dword ptr [rbx+18h],r8d
+00007ffb`27ba022b 4d8bc7          mov     r8,r15
+00007ffb`27ba022e e84d26ae5f      call    coreclr!MetaDataGetDispenser+0x70da0 (00007ffb`87682880)
+00007ffb`27ba0233 eb0b            jmp     00007ffb`27ba0240
+00007ffb`27ba0235 488bcb          mov     rcx,rbx
+00007ffb`27ba0238 498bd7          mov     rdx,r15
+00007ffb`27ba023b e870b9305c      call    System_Private_CoreLib+0x57bbb0 (00007ffb`83eabbb0)
+IL_0061: ldloc.1
+IL_0062: ldc.i4.1
+IL_0063: add
+IL_0064: stloc.1
+00007ffb`27ba0240 ffc5            inc     ebp
+00007ffb`27ba0242 488bd6          mov     rdx,rsi
+00007ffb`27ba0245 48b9a8bbc827fb7f0000 mov rcx,7FFB27C8BBA8h
+00007ffb`27ba024f e874e3ffff      call    00007ffb`27b9e5c8
+00007ffb`27ba0254 2bc7            sub     eax,edi
+00007ffb`27ba0256 ffc0            inc     eax
+00007ffb`27ba0258 3bc5            cmp     eax,ebp
+00007ffb`27ba025a 0f8facfeffff    jg      00007ffb`27ba010c
+			return retVal;
+   ^^^^^^^^^^^^^^
+IL_0072: ldloc.0
+IL_0073: ret
+00007ffb`27ba0260 488bc3          mov     rax,rbx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ffb`27bb0050 BenchmarkingLib.Program.CalculateWithNonLinq()
+			var res = SimpleMovingAverage.CalculateSMA(HisticalPrices, 14);
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_0000: ldsfld System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue> BenchmarkingLib.Program::HisticalPrices
+IL_0005: ldc.i4.s 14
+IL_0007: call System.Collections.Generic.List`1<LibToBenchmark.Quote> LibToBenchmark.SimpleMovingAverage::CalculateSMA(System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue>,System.Int32)
+IL_000c: stloc.0
+00007ffb`27bb0054 48b990284f17f3010000 mov rcx,1F3174F2890h
+00007ffb`27bb005e 488b09          mov     rcx,qword ptr [rcx]
+00007ffb`27bb0061 ba0e000000      mov     edx,0Eh
+00007ffb`27bb0066 e84de5ffff      call    00007ffb`27bae5b8
+		}
+  ^
+IL_000d: ret
+00007ffb`27bb006b 90              nop
+
+00007ffb`27bb0090 LibToBenchmark.SimpleMovingAverage.CalculateSMA(System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue>, Int32)
+			List<Quote> retVal = new List<Quote>();
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_0000: newobj System.Void System.Collections.Generic.List`1<LibToBenchmark.Quote>::.ctor()
+IL_0005: stloc.0
+00007ffb`27bb00bd 48b938b2c927fb7f0000 mov rcx,7FFB27C9B238h
+00007ffb`27bb00c7 e82442ad5f      call    coreclr!MetaDataGetDispenser+0x72810 (00007ffb`876842f0)
+00007ffb`27bb00cc 488bd8          mov     rbx,rax
+00007ffb`27bb00cf 48b9b851c127fb7f0000 mov rcx,7FFB27C151B8h
+00007ffb`27bb00d9 ba01000000      mov     edx,1
+00007ffb`27bb00de e8ed92a85f      call    coreclr!MetaDataGetDispenser+0x278f0 (00007ffb`876393d0)
+00007ffb`27bb00e3 48ba202d4f17f3010000 mov rdx,1F3174F2D20h
+00007ffb`27bb00ed 488b12          mov     rdx,qword ptr [rdx]
+00007ffb`27bb00f0 488d4b08        lea     rcx,[rbx+8]
+00007ffb`27bb00f4 e83726ad5f      call    coreclr!MetaDataGetDispenser+0x70c50 (00007ffb`87682730)
+			decimal[] buffer = new decimal[SMALength];
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_0006: ldarg.1
+IL_0007: newarr System.Decimal
+IL_000c: stloc.1
+00007ffb`27bb00f9 8bd6            mov     edx,esi
+00007ffb`27bb00fb 48b97a2aa183fb7f0000 mov rcx,offset System_Private_CoreLib+0xe2a7a (00007ffb`83a12a7a)
+00007ffb`27bb0105 e8d642ad5f      call    coreclr!MetaDataGetDispenser+0x72900 (00007ffb`876843e0)
+00007ffb`27bb010a 488be8          mov     rbp,rax
+			var current_index = 0;
+   ^^^^^^^^^^^^^^^^^^^^^^
+IL_000d: ldc.i4.0
+IL_000e: stloc.2
+00007ffb`27bb010d 4533f6          xor     r14d,r14d
+			for (int i = 0; i < Price.Count; i++)
+        ^^^^^^^^^
+IL_000f: ldc.i4.0
+IL_0010: stloc.3
+IL_0011: br.s IL_008f
+00007ffb`27bb0110 4533ff          xor     r15d,r15d
+00007ffb`27bb0113 837f1800        cmp     dword ptr [rdi+18h],0
+00007ffb`27bb0117 0f8ef5010000    jle     00007ffb`27bb0312
+				buffer[current_index] = Price[i].Close / SMALength;
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_0013: ldloc.1
+IL_0014: ldloc.2
+IL_0015: ldarg.0
+IL_0016: ldloc.3
+IL_0017: callvirt !0 System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue>::get_Item(System.Int32)
+IL_001c: callvirt System.Decimal LibToBenchmark.HistoricalValue::get_Close()
+IL_0021: ldarg.1
+IL_0022: call System.Decimal System.Decimal::op_Implicit(System.Int32)
+IL_0027: call System.Decimal System.Decimal::op_Division(System.Decimal,System.Decimal)
+IL_002c: stelem.any System.Decimal
+00007ffb`27bb011d 443b7f18        cmp     r15d,dword ptr [rdi+18h]
+00007ffb`27bb0121 0f8302020000    jae     00007ffb`27bb0329
+00007ffb`27bb0127 488b4f08        mov     rcx,qword ptr [rdi+8]
+00007ffb`27bb012b 443b7908        cmp     r15d,dword ptr [rcx+8]
+00007ffb`27bb012f 0f83ff010000    jae     00007ffb`27bb0334
+00007ffb`27bb0135 4963d7          movsxd  rdx,r15d
+00007ffb`27bb0138 488b4cd110      mov     rcx,qword ptr [rcx+rdx*8+10h]
+00007ffb`27bb013d 4883c148        add     rcx,48h
+00007ffb`27bb0141 c4e17a6f01      vmovdqu xmm0,xmmword ptr [rcx]
+00007ffb`27bb0146 c4e17a7f442478  vmovdqu xmmword ptr [rsp+78h],xmm0
+00007ffb`27bb014d c4e17a6f442478  vmovdqu xmm0,xmmword ptr [rsp+78h]
+00007ffb`27bb0154 c4e17a7f442468  vmovdqu xmmword ptr [rsp+68h],xmm0
+00007ffb`27bb015b 488d4c2468      lea     rcx,[rsp+68h]
+00007ffb`27bb0160 ba02000000      mov     edx,2
+00007ffb`27bb0165 e8860fd25f      call    coreclr!GetCLRRuntimeHost+0x189ab0 (00007ffb`878d10f0)
+00007ffb`27bb016a c4e17a6f442468  vmovdqu xmm0,xmmword ptr [rsp+68h]
+00007ffb`27bb0171 c4e17a7f8424a8000000 vmovdqu xmmword ptr [rsp+0A8h],xmm0
+00007ffb`27bb017b 8bce            mov     ecx,esi
+00007ffb`27bb017d 85c9            test    ecx,ecx
+00007ffb`27bb017f 7c04            jl      00007ffb`27bb0185
+00007ffb`27bb0181 33d2            xor     edx,edx
+00007ffb`27bb0183 eb09            jmp     00007ffb`27bb018e
+00007ffb`27bb0185 ba00000080      mov     edx,80000000h
+00007ffb`27bb018a 8bce            mov     ecx,esi
+00007ffb`27bb018c f7d9            neg     ecx
+00007ffb`27bb018e 33c0            xor     eax,eax
+00007ffb`27bb0190 4c8d842498000000 lea     r8,[rsp+98h]
+00007ffb`27bb0198 418910          mov     dword ptr [r8],edx
+00007ffb`27bb019b 41894004        mov     dword ptr [r8+4],eax
+00007ffb`27bb019f 41894808        mov     dword ptr [r8+8],ecx
+00007ffb`27bb01a3 4189400c        mov     dword ptr [r8+0Ch],eax
+00007ffb`27bb01a7 c4e17a6f8424a8000000 vmovdqu xmm0,xmmword ptr [rsp+0A8h]
+00007ffb`27bb01b1 c4e17a7f442458  vmovdqu xmmword ptr [rsp+58h],xmm0
+00007ffb`27bb01b8 c4e17a6f842498000000 vmovdqu xmm0,xmmword ptr [rsp+98h]
+00007ffb`27bb01c2 c4e17a7f442448  vmovdqu xmmword ptr [rsp+48h],xmm0
+00007ffb`27bb01c9 488d4c2458      lea     rcx,[rsp+58h]
+00007ffb`27bb01ce 488d542448      lea     rdx,[rsp+48h]
+00007ffb`27bb01d3 e84805d25f      call    coreclr!GetCLRRuntimeHost+0x1890e0 (00007ffb`878d0720)
+00007ffb`27bb01d8 c4e17a6f442458  vmovdqu xmm0,xmmword ptr [rsp+58h]
+00007ffb`27bb01df c4e17a7f842488000000 vmovdqu xmmword ptr [rsp+88h],xmm0
+00007ffb`27bb01e9 448b6508        mov     r12d,dword ptr [rbp+8]
+00007ffb`27bb01ed 453bf4          cmp     r14d,r12d
+00007ffb`27bb01f0 0f833e010000    jae     00007ffb`27bb0334
+00007ffb`27bb01f6 4963ce          movsxd  rcx,r14d
+00007ffb`27bb01f9 48c1e104        shl     rcx,4
+00007ffb`27bb01fd 488d4c0d10      lea     rcx,[rbp+rcx+10h]
+00007ffb`27bb0202 c4e17a6f842488000000 vmovdqu xmm0,xmmword ptr [rsp+88h]
+00007ffb`27bb020c c4e17a7f01      vmovdqu xmmword ptr [rcx],xmm0
+				decimal ma = 0;
+    ^^^^^^^^^^^^^^^
+IL_0031: ldloca.s V_4
+IL_0033: initobj System.Decimal
+00007ffb`27bb0211 488d8c24b8000000 lea     rcx,[rsp+0B8h]
+00007ffb`27bb0219 c4e17957c0      vxorpd  xmm0,xmm0,xmm0
+00007ffb`27bb021e c4e17a7f01      vmovdqu xmmword ptr [rcx],xmm0
+				for (int j = 0; j < SMALength; j++)
+         ^^^^^^^^^
+IL_0039: ldc.i4.0
+IL_003a: stloc.s V_5
+IL_003c: br.s IL_0055
+00007ffb`27bb0223 4533ed          xor     r13d,r13d
+				for (int j = 0; j < SMALength; j++)
+                    ^^^^^^^^^^^^^
+IL_0055: ldloc.s V_5
+IL_0057: ldarg.1
+IL_0058: blt.s IL_003e
+00007ffb`27bb0226 85f6            test    esi,esi
+00007ffb`27bb0228 7e5d            jle     00007ffb`27bb0287
+					ma += buffer[j];
+     ^^^^^^^^^^^^^^^^
+IL_003e: ldloc.s V_4
+IL_0040: ldloc.1
+IL_0041: ldloc.s V_5
+IL_0043: ldelem.any System.Decimal
+IL_0048: call System.Decimal System.Decimal::op_Addition(System.Decimal,System.Decimal)
+IL_004d: stloc.s V_4
+00007ffb`27bb022a c4e17a6f8424b8000000 vmovdqu xmm0,xmmword ptr [rsp+0B8h]
+00007ffb`27bb0234 c4e17a7f442438  vmovdqu xmmword ptr [rsp+38h],xmm0
+00007ffb`27bb023b 453bec          cmp     r13d,r12d
+00007ffb`27bb023e 0f83f0000000    jae     00007ffb`27bb0334
+00007ffb`27bb0244 4963cd          movsxd  rcx,r13d
+00007ffb`27bb0247 48c1e104        shl     rcx,4
+00007ffb`27bb024b 488d4c0d10      lea     rcx,[rbp+rcx+10h]
+00007ffb`27bb0250 c4e17a6f01      vmovdqu xmm0,xmmword ptr [rcx]
+00007ffb`27bb0255 c4e17a7f442428  vmovdqu xmmword ptr [rsp+28h],xmm0
+00007ffb`27bb025c 488d4c2438      lea     rcx,[rsp+38h]
+00007ffb`27bb0261 488d542428      lea     rdx,[rsp+28h]
+00007ffb`27bb0266 4533c0          xor     r8d,r8d
+00007ffb`27bb0269 e852ffd15f      call    coreclr!GetCLRRuntimeHost+0x188b80 (00007ffb`878d01c0)
+00007ffb`27bb026e c4e17a6f442438  vmovdqu xmm0,xmmword ptr [rsp+38h]
+00007ffb`27bb0275 c4e17a7f8424b8000000 vmovdqu xmmword ptr [rsp+0B8h],xmm0
+				for (int j = 0; j < SMALength; j++)
+                                   ^^^
+IL_004f: ldloc.s V_5
+IL_0051: ldc.i4.1
+IL_0052: add
+IL_0053: stloc.s V_5
+00007ffb`27bb027f 41ffc5          inc     r13d
+00007ffb`27bb0282 443bee          cmp     r13d,esi
+00007ffb`27bb0285 7ca3            jl      00007ffb`27bb022a
+				if (i >= SMALength-1)
+    ^^^^^^^^^^^^^^^^^^^^^
+IL_005a: ldloc.3
+IL_005b: ldarg.1
+IL_005c: ldc.i4.1
+IL_005d: sub
+IL_005e: blt.s IL_0085
+00007ffb`27bb0287 8d4eff          lea     ecx,[rsi-1]
+00007ffb`27bb028a 443bf9          cmp     r15d,ecx
+00007ffb`27bb028d 7c6c            jl      00007ffb`27bb02fb
+					retVal.Add(new Quote() { Value = ma, Date = Price[i].Date });
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_0060: ldloc.0
+IL_0061: newobj System.Void LibToBenchmark.Quote::.ctor()
+00007ffb`27bb028f 48b9a8b1c927fb7f0000 mov rcx,7FFB27C9B1A8h
+00007ffb`27bb0299 e85240ad5f      call    coreclr!MetaDataGetDispenser+0x72810 (00007ffb`876842f0)
+00007ffb`27bb029e 4c8bc0          mov     r8,rax
+IL_0066: dup
+IL_0067: ldloc.s V_4
+IL_0069: callvirt System.Void LibToBenchmark.Quote::set_Value(System.Decimal)
+00007ffb`27bb02a1 498d4810        lea     rcx,[r8+10h]
+00007ffb`27bb02a5 c4e17a6f8424b8000000 vmovdqu xmm0,xmmword ptr [rsp+0B8h]
+00007ffb`27bb02af c4e17a7f01      vmovdqu xmmword ptr [rcx],xmm0
+IL_006e: dup
+IL_006f: ldarg.0
+IL_0070: ldloc.3
+IL_0071: callvirt !0 System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue>::get_Item(System.Int32)
+IL_0076: callvirt System.DateTime LibToBenchmark.HistoricalValue::get_Date()
+IL_007b: callvirt System.Void LibToBenchmark.Quote::set_Date(System.DateTime)
+00007ffb`27bb02b4 443b7f18        cmp     r15d,dword ptr [rdi+18h]
+00007ffb`27bb02b8 7374            jae     00007ffb`27bb032e
+00007ffb`27bb02ba 488b4f08        mov     rcx,qword ptr [rdi+8]
+00007ffb`27bb02be 443b7908        cmp     r15d,dword ptr [rcx+8]
+00007ffb`27bb02c2 7370            jae     00007ffb`27bb0334
+00007ffb`27bb02c4 4963d7          movsxd  rdx,r15d
+00007ffb`27bb02c7 488b4cd110      mov     rcx,qword ptr [rcx+rdx*8+10h]
+00007ffb`27bb02cc 488b4910        mov     rcx,qword ptr [rcx+10h]
+00007ffb`27bb02d0 49894808        mov     qword ptr [r8+8],rcx
+				current_index = (current_index + 1) % SMALength;
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_0080: callvirt System.Void System.Collections.Generic.List`1<LibToBenchmark.Quote>::Add(!0)
+00007ffb`27bb02d4 488b4b08        mov     rcx,qword ptr [rbx+8]
+00007ffb`27bb02d8 8b5318          mov     edx,dword ptr [rbx+18h]
+00007ffb`27bb02db ff431c          inc     dword ptr [rbx+1Ch]
+00007ffb`27bb02de 395108          cmp     dword ptr [rcx+8],edx
+00007ffb`27bb02e1 760d            jbe     00007ffb`27bb02f0
+00007ffb`27bb02e3 8d4201          lea     eax,[rdx+1]
+00007ffb`27bb02e6 894318          mov     dword ptr [rbx+18h],eax
+00007ffb`27bb02e9 e89225ad5f      call    coreclr!MetaDataGetDispenser+0x70da0 (00007ffb`87682880)
+00007ffb`27bb02ee eb0b            jmp     00007ffb`27bb02fb
+00007ffb`27bb02f0 488bcb          mov     rcx,rbx
+00007ffb`27bb02f3 498bd0          mov     rdx,r8
+00007ffb`27bb02f6 e8b5b82f5c      call    System_Private_CoreLib+0x57bbb0 (00007ffb`83eabbb0)
+IL_0085: ldloc.2
+IL_0086: ldc.i4.1
+IL_0087: add
+IL_0088: ldarg.1
+IL_0089: rem
+IL_008a: stloc.2
+00007ffb`27bb02fb 418d4601        lea     eax,[r14+1]
+00007ffb`27bb02ff 99              cdq
+00007ffb`27bb0300 f7fe            idiv    eax,esi
+00007ffb`27bb0302 448bf2          mov     r14d,edx
+			for (int i = 0; i < Price.Count; i++)
+                                    ^^^
+IL_008b: ldloc.3
+IL_008c: ldc.i4.1
+IL_008d: add
+IL_008e: stloc.3
+IL_008f: ldloc.3
+IL_0090: ldarg.0
+IL_0091: callvirt System.Int32 System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue>::get_Count()
+IL_0096: blt IL_0013
+00007ffb`27bb0305 41ffc7          inc     r15d
+00007ffb`27bb0308 443b7f18        cmp     r15d,dword ptr [rdi+18h]
+00007ffb`27bb030c 0f8c0bfeffff    jl      00007ffb`27bb011d
+			return retVal;
+   ^^^^^^^^^^^^^^
+IL_009b: ldloc.0
+IL_009c: ret
+00007ffb`27bb0312 488bc3          mov     rax,rbx
+00007ffb`27bb0315 4881c4c8000000  add     rsp,0C8h
+00007ffb`27bb031c 5b              pop     rbx
+00007ffb`27bb031d 5d              pop     rbp
+00007ffb`27bb031e 5e              pop     rsi
+00007ffb`27bb031f 5f              pop     rdi
+00007ffb`27bb0320 415c            pop     r12
+00007ffb`27bb0322 415d            pop     r13
+00007ffb`27bb0324 415e            pop     r14
+00007ffb`27bb0326 415f            pop     r15
+00007ffb`27bb0328 c3              ret
+00007ffb`27bb0329 e8b2ac345c      call    System_Private_CoreLib+0x5cafe0 (00007ffb`83efafe0)
+00007ffb`27bb032e e8adac345c      call    System_Private_CoreLib+0x5cafe0 (00007ffb`83efafe0)
+00007ffb`27bb0333 cc              int     3
+
+</code></pre></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

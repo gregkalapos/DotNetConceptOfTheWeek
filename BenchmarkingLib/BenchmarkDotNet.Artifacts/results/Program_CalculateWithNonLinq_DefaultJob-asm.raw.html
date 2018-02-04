@@ -1,0 +1,991 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8' />
+<title>Output of DisassemblyDiagnoser for Program.CalculateWithNonLinq: DefaultJob</title>
+
+<style type="text/css">
+    pre { margin: 0px; }
+    table { border-collapse:collapse; }
+    td.perMethod { border-top: 1px black solid; }
+    tr.evenMap td { background-color: #F5F5F5; }  
+</style>
+</head>
+<body>
+<table>
+<tbody>
+<tr><th colspan="2" id="140716680085584" style="text-align: left;">00007ffb`27bb0050 BenchmarkingLib.Program.CalculateWithNonLinq()</th><th></th></tr>
+<tr class="evenMap">
+<td><pre><code>			var res = SimpleMovingAverage.CalculateSMA(HisticalPrices, 14);
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0000: ldsfld System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue> BenchmarkingLib.Program::HisticalPrices</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0005: ldc.i4.s 14</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0007: call System.Collections.Generic.List`1<LibToBenchmark.Quote> LibToBenchmark.SimpleMovingAverage::CalculateSMA(System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue>,System.Int32)</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_000c: stloc.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0054 48b990284f17f3010000 mov rcx,1F3174F2890h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb005e 488b09          mov     rcx,qword ptr [rcx]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0061 ba0e000000      mov     edx,0Eh</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0066 e84de5ffff      call    00007ffb`27bae5b8</pre></code></td>
+<td><a href="#140716680085648">CalculateSMA</a></td>
+</tr>
+<tr class="">
+<td><pre><code>		}
+  ^</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_000d: ret</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb006b 90              nop</pre></code></td>
+<td></td>
+</tr>
+<tr><td colspan="{2}">&nbsp;</td></tr>
+<tr><th colspan="2" id="140716680085648" style="text-align: left;">00007ffb`27bb0090 LibToBenchmark.SimpleMovingAverage.CalculateSMA(System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue>, Int32)</th><th></th></tr>
+<tr class="evenMap">
+<td><pre><code>			List<Quote> retVal = new List<Quote>();
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0000: newobj System.Void System.Collections.Generic.List`1<LibToBenchmark.Quote>::.ctor()</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0005: stloc.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb00bd 48b938b2c927fb7f0000 mov rcx,7FFB27C9B238h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb00c7 e82442ad5f      call    coreclr!MetaDataGetDispenser+0x72810 (00007ffb`876842f0)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb00cc 488bd8          mov     rbx,rax</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb00cf 48b9b851c127fb7f0000 mov rcx,7FFB27C151B8h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb00d9 ba01000000      mov     edx,1</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb00de e8ed92a85f      call    coreclr!MetaDataGetDispenser+0x278f0 (00007ffb`876393d0)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb00e3 48ba202d4f17f3010000 mov rdx,1F3174F2D20h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb00ed 488b12          mov     rdx,qword ptr [rdx]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb00f0 488d4b08        lea     rcx,[rbx+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb00f4 e83726ad5f      call    coreclr!MetaDataGetDispenser+0x70c50 (00007ffb`87682730)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="">
+<td><pre><code>			decimal[] buffer = new decimal[SMALength];
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0006: ldarg.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0007: newarr System.Decimal</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_000c: stloc.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb00f9 8bd6            mov     edx,esi</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb00fb 48b97a2aa183fb7f0000 mov rcx,offset System_Private_CoreLib+0xe2a7a (00007ffb`83a12a7a)</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0105 e8d642ad5f      call    coreclr!MetaDataGetDispenser+0x72900 (00007ffb`876843e0)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb010a 488be8          mov     rbp,rax</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>			var current_index = 0;
+   ^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_000d: ldc.i4.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_000e: stloc.2</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb010d 4533f6          xor     r14d,r14d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>			for (int i = 0; i < Price.Count; i++)
+        ^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_000f: ldc.i4.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0010: stloc.3</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0011: br.s IL_008f</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0110 4533ff          xor     r15d,r15d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0113 837f1800        cmp     dword ptr [rdi+18h],0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0117 0f8ef5010000    jle     00007ffb`27bb0312</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>				buffer[current_index] = Price[i].Close / SMALength;
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0013: ldloc.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0014: ldloc.2</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0015: ldarg.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0016: ldloc.3</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0017: callvirt !0 System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue>::get_Item(System.Int32)</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_001c: callvirt System.Decimal LibToBenchmark.HistoricalValue::get_Close()</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0021: ldarg.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0022: call System.Decimal System.Decimal::op_Implicit(System.Int32)</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0027: call System.Decimal System.Decimal::op_Division(System.Decimal,System.Decimal)</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_002c: stelem.any System.Decimal</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb011d 443b7f18        cmp     r15d,dword ptr [rdi+18h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0121 0f8302020000    jae     00007ffb`27bb0329</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0127 488b4f08        mov     rcx,qword ptr [rdi+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb012b 443b7908        cmp     r15d,dword ptr [rcx+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb012f 0f83ff010000    jae     00007ffb`27bb0334</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0135 4963d7          movsxd  rdx,r15d</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0138 488b4cd110      mov     rcx,qword ptr [rcx+rdx*8+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb013d 4883c148        add     rcx,48h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0141 c4e17a6f01      vmovdqu xmm0,xmmword ptr [rcx]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0146 c4e17a7f442478  vmovdqu xmmword ptr [rsp+78h],xmm0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb014d c4e17a6f442478  vmovdqu xmm0,xmmword ptr [rsp+78h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0154 c4e17a7f442468  vmovdqu xmmword ptr [rsp+68h],xmm0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb015b 488d4c2468      lea     rcx,[rsp+68h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0160 ba02000000      mov     edx,2</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0165 e8860fd25f      call    coreclr!GetCLRRuntimeHost+0x189ab0 (00007ffb`878d10f0)</pre></code></td>
+<td>System.Decimal.FCallRound(System.Decimal ByRef, Int32)</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb016a c4e17a6f442468  vmovdqu xmm0,xmmword ptr [rsp+68h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0171 c4e17a7f8424a8000000 vmovdqu xmmword ptr [rsp+0A8h],xmm0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb017b 8bce            mov     ecx,esi</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb017d 85c9            test    ecx,ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb017f 7c04            jl      00007ffb`27bb0185</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0181 33d2            xor     edx,edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0183 eb09            jmp     00007ffb`27bb018e</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0185 ba00000080      mov     edx,80000000h</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb018a 8bce            mov     ecx,esi</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb018c f7d9            neg     ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb018e 33c0            xor     eax,eax</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0190 4c8d842498000000 lea     r8,[rsp+98h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0198 418910          mov     dword ptr [r8],edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb019b 41894004        mov     dword ptr [r8+4],eax</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb019f 41894808        mov     dword ptr [r8+8],ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb01a3 4189400c        mov     dword ptr [r8+0Ch],eax</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb01a7 c4e17a6f8424a8000000 vmovdqu xmm0,xmmword ptr [rsp+0A8h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb01b1 c4e17a7f442458  vmovdqu xmmword ptr [rsp+58h],xmm0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb01b8 c4e17a6f842498000000 vmovdqu xmm0,xmmword ptr [rsp+98h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb01c2 c4e17a7f442448  vmovdqu xmmword ptr [rsp+48h],xmm0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb01c9 488d4c2458      lea     rcx,[rsp+58h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb01ce 488d542448      lea     rdx,[rsp+48h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb01d3 e84805d25f      call    coreclr!GetCLRRuntimeHost+0x1890e0 (00007ffb`878d0720)</pre></code></td>
+<td>System.Decimal.FCallDivide(System.Decimal ByRef, System.Decimal ByRef)</td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb01d8 c4e17a6f442458  vmovdqu xmm0,xmmword ptr [rsp+58h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb01df c4e17a7f842488000000 vmovdqu xmmword ptr [rsp+88h],xmm0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb01e9 448b6508        mov     r12d,dword ptr [rbp+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb01ed 453bf4          cmp     r14d,r12d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb01f0 0f833e010000    jae     00007ffb`27bb0334</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb01f6 4963ce          movsxd  rcx,r14d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb01f9 48c1e104        shl     rcx,4</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb01fd 488d4c0d10      lea     rcx,[rbp+rcx+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0202 c4e17a6f842488000000 vmovdqu xmm0,xmmword ptr [rsp+88h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb020c c4e17a7f01      vmovdqu xmmword ptr [rcx],xmm0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>				decimal ma = 0;
+    ^^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0031: ldloca.s V_4</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0033: initobj System.Decimal</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0211 488d8c24b8000000 lea     rcx,[rsp+0B8h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0219 c4e17957c0      vxorpd  xmm0,xmm0,xmm0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb021e c4e17a7f01      vmovdqu xmmword ptr [rcx],xmm0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>				for (int j = 0; j < SMALength; j++)
+         ^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0039: ldc.i4.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_003a: stloc.s V_5</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_003c: br.s IL_0055</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0223 4533ed          xor     r13d,r13d</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>				for (int j = 0; j < SMALength; j++)
+                    ^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0055: ldloc.s V_5</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0057: ldarg.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0058: blt.s IL_003e</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0226 85f6            test    esi,esi</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0228 7e5d            jle     00007ffb`27bb0287</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>					ma += buffer[j];
+     ^^^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_003e: ldloc.s V_4</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0040: ldloc.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0041: ldloc.s V_5</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0043: ldelem.any System.Decimal</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0048: call System.Decimal System.Decimal::op_Addition(System.Decimal,System.Decimal)</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_004d: stloc.s V_4</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb022a c4e17a6f8424b8000000 vmovdqu xmm0,xmmword ptr [rsp+0B8h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0234 c4e17a7f442438  vmovdqu xmmword ptr [rsp+38h],xmm0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb023b 453bec          cmp     r13d,r12d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb023e 0f83f0000000    jae     00007ffb`27bb0334</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0244 4963cd          movsxd  rcx,r13d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0247 48c1e104        shl     rcx,4</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb024b 488d4c0d10      lea     rcx,[rbp+rcx+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0250 c4e17a6f01      vmovdqu xmm0,xmmword ptr [rcx]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0255 c4e17a7f442428  vmovdqu xmmword ptr [rsp+28h],xmm0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb025c 488d4c2438      lea     rcx,[rsp+38h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0261 488d542428      lea     rdx,[rsp+28h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0266 4533c0          xor     r8d,r8d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0269 e852ffd15f      call    coreclr!GetCLRRuntimeHost+0x188b80 (00007ffb`878d01c0)</pre></code></td>
+<td>System.Decimal.FCallAddSub(System.Decimal ByRef, System.Decimal ByRef, Byte)</td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb026e c4e17a6f442438  vmovdqu xmm0,xmmword ptr [rsp+38h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0275 c4e17a7f8424b8000000 vmovdqu xmmword ptr [rsp+0B8h],xmm0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>				for (int j = 0; j < SMALength; j++)
+                                   ^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_004f: ldloc.s V_5</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0051: ldc.i4.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0052: add</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0053: stloc.s V_5</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb027f 41ffc5          inc     r13d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0282 443bee          cmp     r13d,esi</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0285 7ca3            jl      00007ffb`27bb022a</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>				if (i >= SMALength-1)
+    ^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_005a: ldloc.3</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_005b: ldarg.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_005c: ldc.i4.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_005d: sub</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_005e: blt.s IL_0085</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0287 8d4eff          lea     ecx,[rsi-1]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb028a 443bf9          cmp     r15d,ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb028d 7c6c            jl      00007ffb`27bb02fb</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>					retVal.Add(new Quote() { Value = ma, Date = Price[i].Date });
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0060: ldloc.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0061: newobj System.Void LibToBenchmark.Quote::.ctor()</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb028f 48b9a8b1c927fb7f0000 mov rcx,7FFB27C9B1A8h</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0299 e85240ad5f      call    coreclr!MetaDataGetDispenser+0x72810 (00007ffb`876842f0)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb029e 4c8bc0          mov     r8,rax</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0066: dup</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0067: ldloc.s V_4</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0069: callvirt System.Void LibToBenchmark.Quote::set_Value(System.Decimal)</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb02a1 498d4810        lea     rcx,[r8+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb02a5 c4e17a6f8424b8000000 vmovdqu xmm0,xmmword ptr [rsp+0B8h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb02af c4e17a7f01      vmovdqu xmmword ptr [rcx],xmm0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_006e: dup</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_006f: ldarg.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0070: ldloc.3</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0071: callvirt !0 System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue>::get_Item(System.Int32)</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0076: callvirt System.DateTime LibToBenchmark.HistoricalValue::get_Date()</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_007b: callvirt System.Void LibToBenchmark.Quote::set_Date(System.DateTime)</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb02b4 443b7f18        cmp     r15d,dword ptr [rdi+18h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb02b8 7374            jae     00007ffb`27bb032e</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb02ba 488b4f08        mov     rcx,qword ptr [rdi+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb02be 443b7908        cmp     r15d,dword ptr [rcx+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb02c2 7370            jae     00007ffb`27bb0334</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb02c4 4963d7          movsxd  rdx,r15d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb02c7 488b4cd110      mov     rcx,qword ptr [rcx+rdx*8+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb02cc 488b4910        mov     rcx,qword ptr [rcx+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb02d0 49894808        mov     qword ptr [r8+8],rcx</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>				current_index = (current_index + 1) % SMALength;
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0080: callvirt System.Void System.Collections.Generic.List`1<LibToBenchmark.Quote>::Add(!0)</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb02d4 488b4b08        mov     rcx,qword ptr [rbx+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb02d8 8b5318          mov     edx,dword ptr [rbx+18h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb02db ff431c          inc     dword ptr [rbx+1Ch]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb02de 395108          cmp     dword ptr [rcx+8],edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb02e1 760d            jbe     00007ffb`27bb02f0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb02e3 8d4201          lea     eax,[rdx+1]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb02e6 894318          mov     dword ptr [rbx+18h],eax</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb02e9 e89225ad5f      call    coreclr!MetaDataGetDispenser+0x70da0 (00007ffb`87682880)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb02ee eb0b            jmp     00007ffb`27bb02fb</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb02f0 488bcb          mov     rcx,rbx</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb02f3 498bd0          mov     rdx,r8</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb02f6 e8b5b82f5c      call    System_Private_CoreLib+0x57bbb0 (00007ffb`83eabbb0)</pre></code></td>
+<td>System.Collections.Generic.List`1[[System.__Canon, System.Private.CoreLib]].AddWithResize(System.__Canon)</td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0085: ldloc.2</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0086: ldc.i4.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0087: add</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0088: ldarg.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0089: rem</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_008a: stloc.2</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb02fb 418d4601        lea     eax,[r14+1]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb02ff 99              cdq</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0300 f7fe            idiv    eax,esi</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0302 448bf2          mov     r14d,edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>			for (int i = 0; i < Price.Count; i++)
+                                    ^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_008b: ldloc.3</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_008c: ldc.i4.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_008d: add</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_008e: stloc.3</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_008f: ldloc.3</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0090: ldarg.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0091: callvirt System.Int32 System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue>::get_Count()</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0096: blt IL_0013</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0305 41ffc7          inc     r15d</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0308 443b7f18        cmp     r15d,dword ptr [rdi+18h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb030c 0f8c0bfeffff    jl      00007ffb`27bb011d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>			return retVal;
+   ^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_009b: ldloc.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_009c: ret</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0312 488bc3          mov     rax,rbx</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0315 4881c4c8000000  add     rsp,0C8h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb031c 5b              pop     rbx</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb031d 5d              pop     rbp</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb031e 5e              pop     rsi</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb031f 5f              pop     rdi</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0320 415c            pop     r12</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0322 415d            pop     r13</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0324 415e            pop     r14</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0326 415f            pop     r15</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0328 c3              ret</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27bb0329 e8b2ac345c      call    System_Private_CoreLib+0x5cafe0 (00007ffb`83efafe0)</pre></code></td>
+<td>System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb032e e8adac345c      call    System_Private_CoreLib+0x5cafe0 (00007ffb`83efafe0)</pre></code></td>
+<td>System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27bb0333 cc              int     3</pre></code></td>
+<td></td>
+</tr>
+<tr><td colspan="{2}">&nbsp;</td></tr>
+</tbody></table></body></html>

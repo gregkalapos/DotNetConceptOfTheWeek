@@ -1,0 +1,647 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8' />
+<title>Output of DisassemblyDiagnoser for Program.CalculateWithLinq: DefaultJob</title>
+
+<style type="text/css">
+    pre { margin: 0px; }
+    table { border-collapse:collapse; }
+    td.perMethod { border-top: 1px black solid; }
+    tr.evenMap td { background-color: #F5F5F5; }  
+</style>
+</head>
+<body>
+<table>
+<tbody>
+<tr><th colspan="2" id="140716680020048" style="text-align: left;">00007ffb`27ba0050 BenchmarkingLib.Program.CalculateWithLinq()</th><th></th></tr>
+<tr class="evenMap">
+<td><pre><code>			var linqres = SimpleMovingAverage.CalculateSMALinq(HisticalPrices, 14);
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0000: ldsfld System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue> BenchmarkingLib.Program::HisticalPrices</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0005: ldc.i4.s 14</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0007: call System.Collections.Generic.List`1<LibToBenchmark.Quote> LibToBenchmark.SimpleMovingAverage::CalculateSMALinq(System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue>,System.Int32)</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_000c: stloc.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0054 48b99028989412020000 mov rcx,21294982890h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba005e 488b09          mov     rcx,qword ptr [rcx]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0061 ba0e000000      mov     edx,0Eh</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0066 e845e5ffff      call    00007ffb`27b9e5b0</pre></code></td>
+<td><a href="#140716680020112">CalculateSMALinq</a></td>
+</tr>
+<tr class="">
+<td><pre><code>		}
+  ^</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_000d: ret</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba006b 90              nop</pre></code></td>
+<td></td>
+</tr>
+<tr><td colspan="{2}">&nbsp;</td></tr>
+<tr><th colspan="2" id="140716680020112" style="text-align: left;">00007ffb`27ba0090 LibToBenchmark.SimpleMovingAverage.CalculateSMALinq(System.Collections.Generic.List`1<LibToBenchmark.HistoricalValue>, Int32)</th><th></th></tr>
+<tr class="evenMap">
+<td><pre><code>			List<Quote> retVal = new List<Quote>();
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0000: newobj System.Void System.Collections.Generic.List`1<LibToBenchmark.Quote>::.ctor()</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0005: stloc.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba00b0 48b938b2c827fb7f0000 mov rcx,7FFB27C8B238h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba00ba e83142ae5f      call    coreclr!MetaDataGetDispenser+0x72810 (00007ffb`876842f0)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba00bf 488bd8          mov     rbx,rax</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba00c2 48b9b851c027fb7f0000 mov rcx,7FFB27C051B8h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba00cc ba01000000      mov     edx,1</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba00d1 e8fa92a95f      call    coreclr!MetaDataGetDispenser+0x278f0 (00007ffb`876393d0)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba00d6 48ba202d989412020000 mov rdx,21294982D20h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba00e0 488b12          mov     rdx,qword ptr [rdx]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba00e3 488d4b08        lea     rcx,[rbx+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba00e7 e84426ae5f      call    coreclr!MetaDataGetDispenser+0x70c50 (00007ffb`87682730)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="">
+<td><pre><code>			for (int i = 0; i < Price.Count() - SMALength + 1; i++)
+        ^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0006: ldc.i4.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0007: stloc.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0008: br.s IL_0065</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_000a: ldarg.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_000b: ldloc.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_000c: call System.Collections.Generic.IEnumerable`1<!!0> System.Linq.Enumerable::Skip<LibToBenchmark.HistoricalValue>(System.Collections.Generic.IEnumerable`1<!!0>,System.Int32)</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0011: ldarg.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0012: call System.Collections.Generic.IEnumerable`1<!!0> System.Linq.Enumerable::Take<LibToBenchmark.HistoricalValue>(System.Collections.Generic.IEnumerable`1<!!0>,System.Int32)</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0017: stloc.2</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba00ec 33ed            xor     ebp,ebp</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>			for (int i = 0; i < Price.Count() - SMALength + 1; i++)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0065: ldloc.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0066: ldarg.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0067: call System.Int32 System.Linq.Enumerable::Count<LibToBenchmark.HistoricalValue>(System.Collections.Generic.IEnumerable`1<!!0>)</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_006c: ldarg.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_006d: sub</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_006e: ldc.i4.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_006f: add</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0070: blt.s IL_000a</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba00ee 488bd6          mov     rdx,rsi</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba00f1 48b9a8bbc827fb7f0000 mov rcx,7FFB27C8BBA8h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba00fb e8c8e4ffff      call    00007ffb`27b9e5c8</pre></code></td>
+<td>System.Linq.Enumerable.Count[[System.__Canon, System.Private.CoreLib]](System.Collections.Generic.IEnumerable`1<System.__Canon>)</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0100 2bc7            sub     eax,edi</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0102 ffc0            inc     eax</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0104 85c0            test    eax,eax</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0106 0f8e54010000    jle     00007ffb`27ba0260</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba010c 448bc5          mov     r8d,ebp</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba010f 488bd6          mov     rdx,rsi</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0112 48b990bcc827fb7f0000 mov rcx,7FFB27C8BC90h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba011c e8c7e4ffff      call    00007ffb`27b9e5e8</pre></code></td>
+<td>System.Linq.Enumerable.Skip[[System.__Canon, System.Private.CoreLib]](System.Collections.Generic.IEnumerable`1<System.__Canon>, Int32)</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0121 488bd0          mov     rdx,rax</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0124 448bc7          mov     r8d,edi</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0127 48b978bdc827fb7f0000 mov rcx,7FFB27C8BD78h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0131 e8d2e4ffff      call    00007ffb`27b9e608</pre></code></td>
+<td>System.Linq.Enumerable.Take[[System.__Canon, System.Private.CoreLib]](System.Collections.Generic.IEnumerable`1<System.__Canon>, Int32)</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0136 4c8bf0          mov     r14,rax</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>				var fistAvg = firstSmaLengthItems.Average(n => n.Close);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0018: ldloc.2</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0019: ldsfld System.Func`2<LibToBenchmark.HistoricalValue,System.Decimal> LibToBenchmark.SimpleMovingAverage/<>c::<>9__1_0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_001e: dup</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_001f: brtrue.s IL_0038</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0021: pop</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0022: ldsfld LibToBenchmark.SimpleMovingAverage/<>c LibToBenchmark.SimpleMovingAverage/<>c::<>9</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0027: ldftn System.Decimal LibToBenchmark.SimpleMovingAverage/<>c::<CalculateSMALinq>b__1_0(LibToBenchmark.HistoricalValue)</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_002d: newobj System.Void System.Func`2<LibToBenchmark.HistoricalValue,System.Decimal>::.ctor(System.Object,System.IntPtr)</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba0139 48b9b851c027fb7f0000 mov rcx,7FFB27C051B8h</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba0143 ba06000000      mov     edx,6</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba0148 e80353ae5f      call    coreclr!MetaDataGetDispenser+0x73970 (00007ffb`87685450)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba014d 48b9986b989412020000 mov rcx,21294986B98h</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba0157 4c8b09          mov     r9,qword ptr [rcx]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba015a 4d85c9          test    r9,r9</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba015d 7554            jne     00007ffb`27ba01b3</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba015f 48b9b0bec827fb7f0000 mov rcx,7FFB27C8BEB0h</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba0169 e88241ae5f      call    coreclr!MetaDataGetDispenser+0x72810 (00007ffb`876842f0)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba016e 4c8bf8          mov     r15,rax</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba0171 48ba906b989412020000 mov rdx,21294986B90h</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba017b 488b12          mov     rdx,qword ptr [rdx]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba017e 4885d2          test    rdx,rdx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba0181 0f84e9000000    je      00007ffb`27ba0270</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0187 498d4f08        lea     rcx,[r15+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba018b e8a025ae5f      call    coreclr!MetaDataGetDispenser+0x70c50 (00007ffb`87682730)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0190 48ba38e6b927fb7f0000 mov rdx,7FFB27B9E638h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba019a 49895718        mov     qword ptr [r15+18h],rdx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>				retVal.Add(new Quote { Date = firstSmaLengthItems.Last().Date, Value = fistAvg });
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0032: dup</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0033: stsfld System.Func`2<LibToBenchmark.HistoricalValue,System.Decimal> LibToBenchmark.SimpleMovingAverage/<>c::<>9__1_0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0038: call System.Decimal System.Linq.Enumerable::Average<LibToBenchmark.HistoricalValue>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,System.Decimal>)</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_003d: stloc.3</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba019e 48b9986b989412020000 mov rcx,21294986B98h</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba01a8 498bd7          mov     rdx,r15</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba01ab e85025ae5f      call    coreclr!MetaDataGetDispenser+0x70c20 (00007ffb`87682700)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba01b0 4d8bcf          mov     r9,r15</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba01b3 488d4c2438      lea     rcx,[rsp+38h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba01b8 4d8bc6          mov     r8,r14</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba01bb 48ba80c0c827fb7f0000 mov rdx,7FFB27C8C080h</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba01c5 e87ee4ffff      call    00007ffb`27b9e648</pre></code></td>
+<td>System.Linq.Enumerable.Average[[System.__Canon, System.Private.CoreLib]](System.Collections.Generic.IEnumerable`1<System.__Canon>, System.Func`2<System.__Canon,System.Decimal>)</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_003e: ldloc.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_003f: newobj System.Void LibToBenchmark.Quote::.ctor()</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0044: dup</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0045: ldloc.2</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0046: call !!0 System.Linq.Enumerable::Last<LibToBenchmark.HistoricalValue>(System.Collections.Generic.IEnumerable`1<!!0>)</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_004b: callvirt System.DateTime LibToBenchmark.HistoricalValue::get_Date()</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_0050: callvirt System.Void LibToBenchmark.Quote::set_Date(System.DateTime)</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba01ca 48b9a8b1c827fb7f0000 mov rcx,7FFB27C8B1A8h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba01d4 e81741ae5f      call    coreclr!MetaDataGetDispenser+0x72810 (00007ffb`876842f0)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba01d9 4c8bf8          mov     r15,rax</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba01dc 498bd6          mov     rdx,r14</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba01df 48b968c1c827fb7f0000 mov rcx,7FFB27C8C168h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba01e9 e87ae4ffff      call    00007ffb`27b9e668</pre></code></td>
+<td>System.Linq.Enumerable.Last[[System.__Canon, System.Private.CoreLib]](System.Collections.Generic.IEnumerable`1<System.__Canon>)</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba01ee 488b4810        mov     rcx,qword ptr [rax+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba01f2 49894f08        mov     qword ptr [r15+8],rcx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>			for (int i = 0; i < Price.Count() - SMALength + 1; i++)
+                                                      ^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0055: dup</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0056: ldloc.3</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0057: callvirt System.Void LibToBenchmark.Quote::set_Value(System.Decimal)</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba01f6 c4e17a6f442438  vmovdqu xmm0,xmmword ptr [rsp+38h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba01fd c4e17a7f442428  vmovdqu xmmword ptr [rsp+28h],xmm0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba0204 498d4f10        lea     rcx,[r15+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba0208 c4e17a6f442428  vmovdqu xmm0,xmmword ptr [rsp+28h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba020f c4e17a7f01      vmovdqu xmmword ptr [rcx],xmm0</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>IL_005c: callvirt System.Void System.Collections.Generic.List`1<LibToBenchmark.Quote>::Add(!0)</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0214 488b4b08        mov     rcx,qword ptr [rbx+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0218 8b5318          mov     edx,dword ptr [rbx+18h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba021b ff431c          inc     dword ptr [rbx+1Ch]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba021e 395108          cmp     dword ptr [rcx+8],edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0221 7612            jbe     00007ffb`27ba0235</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0223 448d4201        lea     r8d,[rdx+1]</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0227 44894318        mov     dword ptr [rbx+18h],r8d</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba022b 4d8bc7          mov     r8,r15</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba022e e84d26ae5f      call    coreclr!MetaDataGetDispenser+0x70da0 (00007ffb`87682880)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0233 eb0b            jmp     00007ffb`27ba0240</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0235 488bcb          mov     rcx,rbx</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0238 498bd7          mov     rdx,r15</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba023b e870b9305c      call    System_Private_CoreLib+0x57bbb0 (00007ffb`83eabbb0)</pre></code></td>
+<td>System.Collections.Generic.List`1[[System.__Canon, System.Private.CoreLib]].AddWithResize(System.__Canon)</td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0061: ldloc.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0062: ldc.i4.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0063: add</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0064: stloc.1</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba0240 ffc5            inc     ebp</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0242 488bd6          mov     rdx,rsi</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0245 48b9a8bbc827fb7f0000 mov rcx,7FFB27C8BBA8h</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba024f e874e3ffff      call    00007ffb`27b9e5c8</pre></code></td>
+<td>System.Linq.Enumerable.Count[[System.__Canon, System.Private.CoreLib]](System.Collections.Generic.IEnumerable`1<System.__Canon>)</td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0254 2bc7            sub     eax,edi</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0256 ffc0            inc     eax</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba0258 3bc5            cmp     eax,ebp</pre></code></td>
+<td></td>
+</tr>
+<tr class="evenMap">
+<td><pre><code>00007ffb`27ba025a 0f8facfeffff    jg      00007ffb`27ba010c</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>			return retVal;
+   ^^^^^^^^^^^^^^</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0072: ldloc.0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>IL_0073: ret</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffb`27ba0260 488bc3          mov     rax,rbx</pre></code></td>
+<td></td>
+</tr>
+<tr><td colspan="{2}">&nbsp;</td></tr>
+</tbody></table></body></html>
