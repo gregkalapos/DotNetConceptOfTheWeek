@@ -13,7 +13,7 @@ namespace BenchmarkingLib
 	[MemoryDiagnoser]
 	[DisassemblyDiagnoser(printAsm: true, printSource: true, printIL:true)]
 	public class Program
-    {
+	{
 		static List<HistoricalValue> HisticalPrices;
 
 		static Program()
@@ -21,8 +21,9 @@ namespace BenchmarkingLib
 			HistoricalPriceReader reader = new HistoricalPriceReader();
 			HisticalPrices = reader.GetHistoricalQuotes("MSFT").ToList();
 		}
+
 		static void Main(string[] args)
-        {
+		{
 			var summary = BenchmarkRunner.Run<Program>();
 		}
 
