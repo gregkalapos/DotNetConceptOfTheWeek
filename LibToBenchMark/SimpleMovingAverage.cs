@@ -18,8 +18,8 @@ namespace LibToBenchmark
 			for (int i = 0; i < Price.Count() - SMALength + 1; i++)
 			{
 				var firstSmaLengthItems = Price.Skip(i).Take(SMALength);
-				var fistAvg = firstSmaLengthItems.Average(n => n.Close);
-				retVal.Add(new Quote { Date = firstSmaLengthItems.Last().Date, Value = fistAvg });
+				var firstAvg = firstSmaLengthItems.Average(n => n.Close);
+				retVal.Add(new Quote { Date = firstSmaLengthItems.Last().Date, Value = firstAvg });
 			}
 
 			return retVal;
