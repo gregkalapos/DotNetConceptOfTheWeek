@@ -5,11 +5,11 @@ using System.Linq;
 
 namespace LibToBenchmark
 {
-    public class SimpleMovingAverage
-    {
+	public class SimpleMovingAverage
+	{
 		public SimpleMovingAverage()
 		{
-			
+
 		}
 
 		public static List<Quote> CalculateSMALinq(List<HistoricalValue> Price, int SMALength)
@@ -39,7 +39,7 @@ namespace LibToBenchmark
 					ma += buffer[j];
 				}
 
-				if (i >= SMALength-1)
+				if (i >= SMALength - 1)
 					retVal.Add(new Quote() { Value = ma, Date = Price[i].Date });
 				current_index = (current_index + 1) % SMALength;
 			}
