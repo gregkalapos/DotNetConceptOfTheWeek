@@ -22,7 +22,6 @@ namespace LibToBenchmark
 			set { high = value; }
 		}
 
-
 		private decimal low;
 		public Decimal Low
 		{

@@ -4,6 +4,9 @@ using System.Text;
 
 namespace LibToBenchmark
 {
+	/// <summary>
+	/// Reads and parses .csv files with historical data
+	/// </summary>
 	public class HistoricalPriceReader
 	{
 		public IEnumerable<HistoricalValue> GetHistoricalQuotes(String Symbol)
@@ -18,8 +21,7 @@ namespace LibToBenchmark
 				while ((line = reader.ReadLine()) != null)
 				{
 					var items = line.Split(';');
-					var date = items[0].Split('-');
-					//Console.WriteLine($"{date[0]}, {date[1]}, {date[2]}");
+					var date = items[0].Split('-');					
 					yield return new HistoricalValue
 					{
 						Date = new DateTime(Int32.Parse(date[0]), Int32.Parse(date[1]), Int32.Parse(date[2])),

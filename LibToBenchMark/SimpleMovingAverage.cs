@@ -5,13 +5,11 @@ using System.Linq;
 
 namespace LibToBenchmark
 {
+	/// <summary>
+	/// We benchmark the 2 different SMA implementations from this class
+	/// </summary>
 	public class SimpleMovingAverage
 	{
-		public SimpleMovingAverage()
-		{
-
-		}
-
 		public static List<Quote> CalculateSMALinq(List<HistoricalValue> Price, int SMALength)
 		{
 			List<Quote> retVal = new List<Quote>();
