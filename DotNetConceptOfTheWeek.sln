@@ -27,9 +27,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovarianceAndContravariance
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05_BenchmarkDotNet", "05_BenchmarkDotNet", "{D4186E5A-52F6-4183-BFFB-8A370C8E8923}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibToBenchmark", "LibToBenchMark\LibToBenchmark.csproj", "{D56094E4-24BF-40BD-8404-BC6612BF2177}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibToBenchmark", "LibToBenchMark\LibToBenchmark.csproj", "{D56094E4-24BF-40BD-8404-BC6612BF2177}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkingLib", "BenchmarkingLib\BenchmarkingLib.csproj", "{8E27D7C2-1307-4327-9625-6A6A0BE1D32D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenchmarkingLib", "BenchmarkingLib\BenchmarkingLib.csproj", "{8E27D7C2-1307-4327-9625-6A6A0BE1D32D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06_AspNetCore_SocialLogin", "06_AspNetCore_SocialLogin", "{0989AD47-5DE1-4DE7-91CF-DCEA10384805}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_SocialLogin", "AspNetCore_SocialLogin\AspNetCore_SocialLogin.csproj", "{58807FDA-EAF2-4132-AABF-2BBA178E02DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -275,6 +279,30 @@ Global
 		{8E27D7C2-1307-4327-9625-6A6A0BE1D32D}.Release|x64.Build.0 = Release|Any CPU
 		{8E27D7C2-1307-4327-9625-6A6A0BE1D32D}.Release|x86.ActiveCfg = Release|Any CPU
 		{8E27D7C2-1307-4327-9625-6A6A0BE1D32D}.Release|x86.Build.0 = Release|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Debug|ARM.Build.0 = Debug|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Debug|x64.Build.0 = Debug|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Debug|x86.Build.0 = Debug|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Release|ARM.ActiveCfg = Release|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Release|ARM.Build.0 = Release|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Release|iPhone.Build.0 = Release|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Release|x64.ActiveCfg = Release|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Release|x64.Build.0 = Release|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Release|x86.ActiveCfg = Release|Any CPU
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -289,6 +317,7 @@ Global
 		{7D7D0641-6748-45A9-9AE2-395E834F60D5} = {DF2E42B5-5DA3-47FF-8D1F-3625B05B3204}
 		{D56094E4-24BF-40BD-8404-BC6612BF2177} = {D4186E5A-52F6-4183-BFFB-8A370C8E8923}
 		{8E27D7C2-1307-4327-9625-6A6A0BE1D32D} = {D4186E5A-52F6-4183-BFFB-8A370C8E8923}
+		{58807FDA-EAF2-4132-AABF-2BBA178E02DE} = {0989AD47-5DE1-4DE7-91CF-DCEA10384805}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3F64F0A3-5CD0-44AB-A2E7-D2A2AD801C8A}
