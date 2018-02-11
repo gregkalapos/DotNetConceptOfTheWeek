@@ -1,10 +1,9 @@
 ﻿@model IEnumerable<String>
-    @{
-        ViewData["Title"] = "Login";
-    }
+@{
+    ViewData["Title"] = "Login";
+}
 
-    @foreach (var item in Model)
-    {
-        <a class="btn btn-primary login-button" asp-action="SignIn" asp-route-provider="@item">@item</a>
-
-    }
+@foreach (var item in Model)
+{
+    <a class="btn btn-primary login-button" asp-action="SignIn" asp-route-provider="@item">@item</a>
+}

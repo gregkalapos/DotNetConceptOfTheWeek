@@ -33,7 +33,6 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li><a asp-area="" asp-controller="Auth" asp-action="SignOut">Sign out</a></li>
@@ -42,13 +41,11 @@
                     {
                         <li><a asp-area="" asp-controller="Auth" asp-action="Login">Login</a></li>
                     }
-
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container body-content">
-
         @if (User.Identity.IsAuthenticated)
         {
             <h1>Welcome @User.Identity.Name</h1>
@@ -56,7 +53,6 @@
         else
         {
             <h1>You are not logged in</h1>
-
         }
         @RenderBody()
         <hr />

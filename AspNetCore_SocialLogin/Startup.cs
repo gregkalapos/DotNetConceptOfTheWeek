@@ -22,24 +22,24 @@ namespace AspNetCore_SocialLogin
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
 			services.AddAuthentication(options =>
 			{
 				options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 				options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 				options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-			}).AddTwitter(twitterOptions =>
-			{
-				twitterOptions.ConsumerKey = ""; //TODO: Fill with your data from twitter
-				twitterOptions.ConsumerSecret = ""; //TODO: Fill with your data from twitter
 			})
 			.AddFacebook(facebookOptions =>
 			{
 				facebookOptions.AppId = ""; //TODO: Fill with your data from facebook
 				facebookOptions.AppSecret = ""; //TODO: Fill with your data from facebook
 			})
+			.AddTwitter(twitterOptions =>
+			{
+				twitterOptions.ConsumerKey = ""; //TODO: Fill with your data from twitter
+				twitterOptions.ConsumerSecret = ""; //TODO: Fill with your data from twitter
+			})
 			.AddCookie();
-			
+
 			services.AddMvc();
         }
 
