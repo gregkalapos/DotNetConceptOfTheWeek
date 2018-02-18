@@ -26,8 +26,8 @@ module demo =
        else 
            Direction.Side
    
-    let CountTrend (trend: Direction) cur prev counter  = 
-        let dir = GetDirection cur prev;
+    let CountTrend (trend: Direction) (cur: OHCL) (prev: OHCL) counter  = 
+        let dir = GetDirection cur.Close prev.Close;
         if(dir = trend) then 
             counter+1
         else 

@@ -28,8 +28,8 @@ module demo =
        else 
            Direction.Side
    
-    let CountTrend (trend: Direction) cur prev counter  = 
-        let dir = GetDirection cur prev;
+    let CountTrend (trend: Direction) (cur: OHCL) (prev: OHCL) counter  = 
+        let dir = GetDirection cur.Close prev.Close;
         if(dir = trend) then 
             counter+1
         else 
@@ -55,10 +55,10 @@ module demo =
                |> Seq.sortBy(fun f -> f.Date) 
                |> Seq.toList 
     
-    let up = ProcessList (rows |> List.tail) (rows |> List.head) 0 (CountTrend Side)  
-    
-    let down = ProcessList (rows |> List.tail) (rows |> List.head) 0 (CountTrend Side)  
-    
+    let up = ProcessList (rows |> List.tail) (rows |> List.head) 0 (CountTrend Up)  
+    let down = ProcessList (rows |> List.tail) (rows |> List.head) 0 (CountTrend Down)  
+    let side = ProcessList (rows |> List.tail) (rows |> List.head) 0 (CountTrend Side) 
+   
     let dayDataList = ProcessList (rows |> List.tail) (rows |> List.head) [] ProcessDayData
 
 
