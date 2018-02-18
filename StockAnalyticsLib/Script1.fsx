@@ -1,5 +1,5 @@
-﻿#r "C:\\Users\\gergo\\.nuget\\packages\\fsharp.data\\2.4.4\\lib\\net45\\Fsharp.Data.dll"
-
+﻿//Adapt this path
+#r "C:\\Users\\[USERNAME]\\.nuget\\packages\\fsharp.data\\2.4.4\\lib\\net45\\Fsharp.Data.dll"
  
 open FSharp.Data
 
