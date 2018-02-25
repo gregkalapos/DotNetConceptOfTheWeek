@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_CancellationSample", "01
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_WebSocket_DotNetStandard", "02_WebSocket_DotNetStandard", "{183DF1C7-649D-4875-A336-8F5D17B09E58}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_CryptoDataSourceLib", "02_CryptoDataSourceLib\02_CryptoDataSourceLib.csproj", "{1C8C8F65-FF26-4195-9202-75E3274A8F29}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_CryptoDataSourceLib", "02_CryptoDataSourceLib\02_CryptoDataSourceLib.csproj", "{1C8C8F65-FF26-4195-9202-75E3274A8F29}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_BitcoinTracker.Uwp", "02_BitcoinTracker.Uwp\02_BitcoinTracker.Uwp.csproj", "{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}"
 EndProject
@@ -23,23 +23,29 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cs8NullableReferenceTypes",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_CSharp_CovarianceAndContravariance", "04_CSharp_CovarianceAndContravariance", "{DF2E42B5-5DA3-47FF-8D1F-3625B05B3204}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovarianceAndContravarianceSample", "CovarianceAndContravarianceSample\CovarianceAndContravarianceSample.csproj", "{7D7D0641-6748-45A9-9AE2-395E834F60D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovarianceAndContravarianceSample", "CovarianceAndContravarianceSample\CovarianceAndContravarianceSample.csproj", "{7D7D0641-6748-45A9-9AE2-395E834F60D5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05_BenchmarkDotNet", "05_BenchmarkDotNet", "{D4186E5A-52F6-4183-BFFB-8A370C8E8923}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibToBenchmark", "LibToBenchMark\LibToBenchmark.csproj", "{D56094E4-24BF-40BD-8404-BC6612BF2177}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibToBenchmark", "LibToBenchMark\LibToBenchmark.csproj", "{D56094E4-24BF-40BD-8404-BC6612BF2177}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenchmarkingLib", "BenchmarkingLib\BenchmarkingLib.csproj", "{8E27D7C2-1307-4327-9625-6A6A0BE1D32D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkingLib", "BenchmarkingLib\BenchmarkingLib.csproj", "{8E27D7C2-1307-4327-9625-6A6A0BE1D32D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06_AspNetCore_SocialLogin", "06_AspNetCore_SocialLogin", "{0989AD47-5DE1-4DE7-91CF-DCEA10384805}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_SocialLogin", "AspNetCore_SocialLogin\AspNetCore_SocialLogin.csproj", "{6F0B117E-67D9-4CB3-8BF6-EC828F613985}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_SocialLogin", "AspNetCore_SocialLogin\AspNetCore_SocialLogin.csproj", "{6F0B117E-67D9-4CB3-8BF6-EC828F613985}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07_Fsharp", "07_Fsharp", "{E26431D4-194B-4BFB-8355-3F8FB3677DFC}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "StockAnalyticsLib", "StockAnalyticsLib\StockAnalyticsLib.fsproj", "{1A4DE1F0-34A9-4E88-9949-465C3B593DB0}"
+Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "StockAnalyticsLib", "StockAnalyticsLib\StockAnalyticsLib.fsproj", "{1A4DE1F0-34A9-4E88-9949-465C3B593DB0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpAppUsingFsharpLib", "CsharpAppUsingFsharpLib\CsharpAppUsingFsharpLib.csproj", "{C2DBF605-C183-468C-95E7-65BCF99214C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08_SignalRCore", "08_SignalRCore", "{028DA887-D810-45F3-B280-EA53822022CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRDemo", "SignalRDemo\SignalRDemo.csproj", "{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRClient", "SignalRDemo\SignalRClient\SignalRClient.csproj", "{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -357,6 +363,54 @@ Global
 		{C2DBF605-C183-468C-95E7-65BCF99214C6}.Release|x64.Build.0 = Release|Any CPU
 		{C2DBF605-C183-468C-95E7-65BCF99214C6}.Release|x86.ActiveCfg = Release|Any CPU
 		{C2DBF605-C183-468C-95E7-65BCF99214C6}.Release|x86.Build.0 = Release|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Debug|ARM.Build.0 = Debug|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Debug|x64.Build.0 = Debug|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Debug|x86.Build.0 = Debug|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Release|ARM.ActiveCfg = Release|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Release|ARM.Build.0 = Release|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Release|iPhone.Build.0 = Release|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Release|x64.ActiveCfg = Release|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Release|x64.Build.0 = Release|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Release|x86.ActiveCfg = Release|Any CPU
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}.Release|x86.Build.0 = Release|Any CPU
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Debug|ARM.ActiveCfg = Debug|iPhoneSimulator
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Debug|ARM.Build.0 = Debug|iPhoneSimulator
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Debug|iPhone.Build.0 = Debug|iPhone
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Debug|x64.ActiveCfg = Debug|iPhoneSimulator
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Debug|x64.Build.0 = Debug|iPhoneSimulator
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Debug|x86.ActiveCfg = Debug|iPhoneSimulator
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Debug|x86.Build.0 = Debug|iPhoneSimulator
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Release|Any CPU.Build.0 = Release|iPhone
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Release|ARM.ActiveCfg = Release|iPhone
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Release|ARM.Build.0 = Release|iPhone
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Release|iPhone.ActiveCfg = Release|iPhone
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Release|iPhone.Build.0 = Release|iPhone
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Release|x64.ActiveCfg = Release|iPhone
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Release|x64.Build.0 = Release|iPhone
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Release|x86.ActiveCfg = Release|iPhone
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}.Release|x86.Build.0 = Release|iPhone
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -374,6 +428,8 @@ Global
 		{6F0B117E-67D9-4CB3-8BF6-EC828F613985} = {0989AD47-5DE1-4DE7-91CF-DCEA10384805}
 		{1A4DE1F0-34A9-4E88-9949-465C3B593DB0} = {E26431D4-194B-4BFB-8355-3F8FB3677DFC}
 		{C2DBF605-C183-468C-95E7-65BCF99214C6} = {E26431D4-194B-4BFB-8355-3F8FB3677DFC}
+		{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F} = {028DA887-D810-45F3-B280-EA53822022CD}
+		{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF} = {028DA887-D810-45F3-B280-EA53822022CD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3F64F0A3-5CD0-44AB-A2E7-D2A2AD801C8A}

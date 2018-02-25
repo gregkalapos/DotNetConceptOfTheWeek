@@ -1,0 +1,33 @@
+﻿@page
+@{
+}
+
+<div id="MsgList">
+</div>
+
+<input type="text" id="NewMsg" value=""><br>
+<button id="SendBtn">Send</button>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/signalr-client-1.0.0-alpha2-final.js"></script>
+
+<script>
+    var userId = "Web" + Math.floor((Math.random() * 100) + 1);
+
+    let connection = new signalR.HubConnection('/chat');
+
+    connection.on('send', data => {
+        $("#MsgList").append("<p>"+ data + "</p>");
+        console.log(data);
+    });
+
+    connection.start()
+          .then(() => connection.invoke('Send', userId + ' connected'));
+
+    $("#SendBtn").click(function() {
+      var enteredTxt = $("#NewMsg").val();
+      connection.invoke('Send', userId + ": " + enteredTxt);
+    });
+
+</script>
