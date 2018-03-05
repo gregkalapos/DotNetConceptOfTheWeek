@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_CancellationSample", "01
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_WebSocket_DotNetStandard", "02_WebSocket_DotNetStandard", "{183DF1C7-649D-4875-A336-8F5D17B09E58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_CryptoDataSourceLib", "02_CryptoDataSourceLib\02_CryptoDataSourceLib.csproj", "{1C8C8F65-FF26-4195-9202-75E3274A8F29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_CryptoDataSourceLib", "02_CryptoDataSourceLib\02_CryptoDataSourceLib.csproj", "{1C8C8F65-FF26-4195-9202-75E3274A8F29}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_BitcoinTracker.Uwp", "02_BitcoinTracker.Uwp\02_BitcoinTracker.Uwp.csproj", "{CD843C15-CC82-4CF4-8650-49BCF8D45CCD}"
 EndProject
@@ -23,29 +23,34 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cs8NullableReferenceTypes",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_CSharp_CovarianceAndContravariance", "04_CSharp_CovarianceAndContravariance", "{DF2E42B5-5DA3-47FF-8D1F-3625B05B3204}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovarianceAndContravarianceSample", "CovarianceAndContravarianceSample\CovarianceAndContravarianceSample.csproj", "{7D7D0641-6748-45A9-9AE2-395E834F60D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovarianceAndContravarianceSample", "CovarianceAndContravarianceSample\CovarianceAndContravarianceSample.csproj", "{7D7D0641-6748-45A9-9AE2-395E834F60D5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05_BenchmarkDotNet", "05_BenchmarkDotNet", "{D4186E5A-52F6-4183-BFFB-8A370C8E8923}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibToBenchmark", "LibToBenchMark\LibToBenchmark.csproj", "{D56094E4-24BF-40BD-8404-BC6612BF2177}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibToBenchmark", "LibToBenchMark\LibToBenchmark.csproj", "{D56094E4-24BF-40BD-8404-BC6612BF2177}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkingLib", "BenchmarkingLib\BenchmarkingLib.csproj", "{8E27D7C2-1307-4327-9625-6A6A0BE1D32D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenchmarkingLib", "BenchmarkingLib\BenchmarkingLib.csproj", "{8E27D7C2-1307-4327-9625-6A6A0BE1D32D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06_AspNetCore_SocialLogin", "06_AspNetCore_SocialLogin", "{0989AD47-5DE1-4DE7-91CF-DCEA10384805}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_SocialLogin", "AspNetCore_SocialLogin\AspNetCore_SocialLogin.csproj", "{6F0B117E-67D9-4CB3-8BF6-EC828F613985}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_SocialLogin", "AspNetCore_SocialLogin\AspNetCore_SocialLogin.csproj", "{6F0B117E-67D9-4CB3-8BF6-EC828F613985}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07_Fsharp", "07_Fsharp", "{E26431D4-194B-4BFB-8355-3F8FB3677DFC}"
 EndProject
-Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "StockAnalyticsLib", "StockAnalyticsLib\StockAnalyticsLib.fsproj", "{1A4DE1F0-34A9-4E88-9949-465C3B593DB0}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "StockAnalyticsLib", "StockAnalyticsLib\StockAnalyticsLib.fsproj", "{1A4DE1F0-34A9-4E88-9949-465C3B593DB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpAppUsingFsharpLib", "CsharpAppUsingFsharpLib\CsharpAppUsingFsharpLib.csproj", "{C2DBF605-C183-468C-95E7-65BCF99214C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsharpAppUsingFsharpLib", "CsharpAppUsingFsharpLib\CsharpAppUsingFsharpLib.csproj", "{C2DBF605-C183-468C-95E7-65BCF99214C6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08_SignalRCore", "08_SignalRCore", "{028DA887-D810-45F3-B280-EA53822022CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRDemo", "SignalRDemo\SignalRDemo.csproj", "{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRDemo", "SignalRDemo\SignalRDemo.csproj", "{AD4C994C-4DA6-4393-B261-B3D2BA1FD35F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRClient", "SignalRDemo\SignalRClient\SignalRClient.csproj", "{4D571F26-BE38-4F6F-99A3-65AB7F8BAEAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "09_Blazor", "09_Blazor", "{D8919FD4-3C8B-4C93-A41D-68350341909A}"
+	ProjectSection(SolutionItems) = preProject
+		09_Blazor\readme.txt = 09_Blazor\readme.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
