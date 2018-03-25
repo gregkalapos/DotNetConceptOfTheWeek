@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>DisassemblyDiagnoser Output Program</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<table>
+<thead>
+<tr><th colspan="2">Program</th></tr>
+<tr>
+<th>AddArrays_Vector_Benchmark .NET Core 2.0.5 (CoreCLR 4.6.26020.03, CoreFX 4.6.26018.01), 64bit RyuJIT</th>
+<th>AddArrays_Simple_Benchmark .NET Core 2.0.5 (CoreCLR 4.6.26020.03, CoreFX 4.6.26018.01), 64bit RyuJIT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:top;"><pre><code>
+00007ffd`7f6d0a90 Simd_Sample1.Program.AddArrays_Vector_Benchmark()
+			AddArrays_Vector(v1, v2);
+   ^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_0000: ldsfld System.Int32[] Simd_Sample1.Program::v1
+IL_0005: ldsfld System.Int32[] Simd_Sample1.Program::v2
+IL_000a: call System.Int32[] Simd_Sample1.Program::AddArrays_Vector(System.Int32[],System.Int32[])
+IL_000f: pop
+00007ffd`7f6d0a94 48b9a014747ffd7f0000 mov rcx,7FFD7F7414A0h
+00007ffd`7f6d0a9e ba01000000      mov     edx,1
+00007ffd`7f6d0aa3 e8a849ab5f      call    coreclr!MetaDataGetDispenser+0x73970 (00007ffd`df185450)
+00007ffd`7f6d0aa8 48b9406c6a5db1020000 mov rcx,2B15D6A6C40h
+00007ffd`7f6d0ab2 488b09          mov     rcx,qword ptr [rcx]
+00007ffd`7f6d0ab5 48ba486c6a5db1020000 mov rdx,2B15D6A6C48h
+00007ffd`7f6d0abf 488b12          mov     rdx,qword ptr [rdx]
+00007ffd`7f6d0ac2 e87142feff      call    00007ffd`7f6b4d38
+		}
+  ^
+IL_0010: ret
+00007ffd`7f6d0ac7 90              nop
+
+00007ffd`7f6d1040 Simd_Sample1.Program.AddArrays_Vector(Int32[], Int32[])
+			int[] retVal = new int[v1.Length];
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_0000: ldarg.0
+IL_0001: ldlen
+IL_0002: conv.i4
+IL_0003: newarr System.Int32
+IL_0008: stloc.0
+IL_0009: call System.Int32 System.Numerics.Vector`1<System.Int32>::get_Count()
+IL_000e: stloc.1
+IL_000f: ldc.i4.0
+IL_0010: stloc.2
+00007ffd`7f6d1050 8b5f08          mov     ebx,dword ptr [rdi+8]
+00007ffd`7f6d1053 8bd3            mov     edx,ebx
+00007ffd`7f6d1055 48b9ba3103cafd7f0000 mov rcx,offset System_Private_CoreLib+0xe31ba (00007ffd`ca0331ba)
+00007ffd`7f6d105f e87c33ab5f      call    coreclr!MetaDataGetDispenser+0x72900 (00007ffd`df1843e0)
+			for (i = 0; i < v1.Length - vecSize; i += vecSize)
+        ^^^^^
+IL_0011: ldc.i4.0
+IL_0012: stloc.2
+IL_0013: br.s IL_003e
+00007ffd`7f6d1064 33d2            xor     edx,edx
+			for (i = 0; i < v1.Length - vecSize; i += vecSize)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+IL_003e: ldloc.2
+IL_003f: ldarg.0
+IL_0040: ldlen
+IL_0041: conv.i4
+IL_0042: ldloc.1
+IL_0043: sub
+IL_0044: blt.s IL_0015
+00007ffd`7f6d1066 8bcb            mov     ecx,ebx
+00007ffd`7f6d1068 83e908          sub     ecx,8
+00007ffd`7f6d106b 85c9            test    ecx,ecx
+00007ffd`7f6d106d 7e62            jle     00007ffd`7f6d10d1
+00007ffd`7f6d106f 448b4608        mov     r8d,dword ptr [rsi+8]
+00007ffd`7f6d1073 448b4808        mov     r9d,dword ptr [rax+8]
+				var va = new Vector<int>(v1, i);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_0015: ldloca.s V_3
+IL_0017: ldarg.0
+IL_0018: ldloc.2
+IL_0019: call System.Void System.Numerics.Vector`1<System.Int32>::.ctor(!0[],System.Int32)
+00007ffd`7f6d1077 3bd3            cmp     edx,ebx
+00007ffd`7f6d1079 0f83fa000000    jae     00007ffd`7f6d1179
+00007ffd`7f6d107f 448d5207        lea     r10d,[rdx+7]
+00007ffd`7f6d1083 443bd3          cmp     r10d,ebx
+00007ffd`7f6d1086 0f83ed000000    jae     00007ffd`7f6d1179
+00007ffd`7f6d108c c4e17d10449710  vmovupd ymm0,ymmword ptr [rdi+rdx*4+10h]
+				var vb = new Vector<int>(v2, i);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_001e: ldloca.s V_4
+IL_0020: ldarg.1
+IL_0021: ldloc.2
+IL_0022: call System.Void System.Numerics.Vector`1<System.Int32>::.ctor(!0[],System.Int32)
+00007ffd`7f6d1093 413bd0          cmp     edx,r8d
+00007ffd`7f6d1096 0f83dd000000    jae     00007ffd`7f6d1179
+00007ffd`7f6d109c 453bd0          cmp     r10d,r8d
+00007ffd`7f6d109f 0f83d4000000    jae     00007ffd`7f6d1179
+00007ffd`7f6d10a5 c4e17d104c9610  vmovupd ymm1,ymmword ptr [rsi+rdx*4+10h]
+				var vc = va + vb;
+    ^^^^^^^^^^^^^^^^^
+IL_0027: ldloc.3
+IL_0028: ldloc.s V_4
+IL_002a: call System.Numerics.Vector`1<!0> System.Numerics.Vector`1<System.Int32>::op_Addition(System.Numerics.Vector`1<!0>,System.Numerics.Vector`1<!0>)
+IL_002f: stloc.s V_5
+00007ffd`7f6d10ac c4e17dfec1      vpaddd  ymm0,ymm0,ymm1
+				vc.CopyTo(retVal, i);
+    ^^^^^^^^^^^^^^^^^^^^^
+IL_0031: ldloca.s V_5
+IL_0033: ldloc.0
+IL_0034: ldloc.2
+IL_0035: call System.Void System.Numerics.Vector`1<System.Int32>::CopyTo(!0[],System.Int32)
+00007ffd`7f6d10b1 413bd1          cmp     edx,r9d
+00007ffd`7f6d10b4 0f83c4000000    jae     00007ffd`7f6d117e
+00007ffd`7f6d10ba 453bd1          cmp     r10d,r9d
+00007ffd`7f6d10bd 0f83c0000000    jae     00007ffd`7f6d1183
+00007ffd`7f6d10c3 c4e17d11449010  vmovupd ymmword ptr [rax+rdx*4+10h],ymm0
+			for (i = 0; i < v1.Length - vecSize; i += vecSize)
+                                        ^^^^^^^^^^^^
+IL_003a: ldloc.2
+IL_003b: ldloc.1
+IL_003c: add
+IL_003d: stloc.2
+00007ffd`7f6d10ca 83c208          add     edx,8
+00007ffd`7f6d10cd 3bca            cmp     ecx,edx
+00007ffd`7f6d10cf 7fa6            jg      00007ffd`7f6d1077
+			if (i != v1.Length)
+   ^^^^^^^^^^^^^^^^^^^
+IL_0046: ldloc.2
+IL_0047: ldarg.0
+IL_0048: ldlen
+IL_0049: conv.i4
+IL_004a: beq.s IL_006b
+00007ffd`7f6d10d1 3bda            cmp     ebx,edx
+00007ffd`7f6d10d3 0f8495000000    je      00007ffd`7f6d116e
+				for (int j = i; j < v1.Length; j++)
+         ^^^^^^^^^
+IL_004c: ldloc.2
+IL_004d: stloc.s V_6
+IL_004f: br.s IL_0064
+00007ffd`7f6d10d9 3bda            cmp     ebx,edx
+00007ffd`7f6d10db 0f8e8d000000    jle     00007ffd`7f6d116e
+00007ffd`7f6d10e1 4885f6          test    rsi,rsi
+00007ffd`7f6d10e4 0f95c1          setne   cl
+00007ffd`7f6d10e7 0fb6c9          movzx   ecx,cl
+00007ffd`7f6d10ea 83e101          and     ecx,1
+00007ffd`7f6d10ed f7c101000000    test    ecx,1
+00007ffd`7f6d10f3 744b            je      00007ffd`7f6d1140
+00007ffd`7f6d10f5 448b4608        mov     r8d,dword ptr [rsi+8]
+00007ffd`7f6d10f9 443bc3          cmp     r8d,ebx
+00007ffd`7f6d10fc 410f9dc0        setge   r8b
+00007ffd`7f6d1100 450fb6c0        movzx   r8d,r8b
+00007ffd`7f6d1104 85d2            test    edx,edx
+00007ffd`7f6d1106 0f9dc1          setge   cl
+00007ffd`7f6d1109 0fb6c9          movzx   ecx,cl
+00007ffd`7f6d110c 4423c1          and     r8d,ecx
+00007ffd`7f6d110f 448b4808        mov     r9d,dword ptr [rax+8]
+00007ffd`7f6d1113 443bcb          cmp     r9d,ebx
+00007ffd`7f6d1116 410f9dc1        setge   r9b
+00007ffd`7f6d111a 450fb6c9        movzx   r9d,r9b
+00007ffd`7f6d111e 4585c1          test    r9d,r8d
+00007ffd`7f6d1121 741d            je      00007ffd`7f6d1140
+					retVal[j] = v1[j] + v2[j];
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_0051: ldloc.0
+IL_0052: ldloc.s V_6
+IL_0054: ldarg.0
+IL_0055: ldloc.s V_6
+IL_0057: ldelem.i4
+IL_0058: ldarg.1
+IL_0059: ldloc.s V_6
+IL_005b: ldelem.i4
+IL_005c: add
+IL_005d: stelem.i4
+00007ffd`7f6d1123 4863ca          movsxd  rcx,edx
+00007ffd`7f6d1126 448b448f10      mov     r8d,dword ptr [rdi+rcx*4+10h]
+00007ffd`7f6d112b 458bd0          mov     r10d,r8d
+00007ffd`7f6d112e 4403548e10      add     r10d,dword ptr [rsi+rcx*4+10h]
+00007ffd`7f6d1133 4489548810      mov     dword ptr [rax+rcx*4+10h],r10d
+				for (int j = i; j < v1.Length; j++)
+                                   ^^^
+IL_005e: ldloc.s V_6
+IL_0060: ldc.i4.1
+IL_0061: add
+IL_0062: stloc.s V_6
+00007ffd`7f6d1138 ffc2            inc     edx
+				for (int j = i; j < v1.Length; j++)
+                    ^^^^^^^^^^^^^
+IL_0064: ldloc.s V_6
+IL_0066: ldarg.0
+IL_0067: ldlen
+IL_0068: conv.i4
+IL_0069: blt.s IL_0051
+00007ffd`7f6d113a 3bda            cmp     ebx,edx
+00007ffd`7f6d113c 7fe5            jg      00007ffd`7f6d1123
+00007ffd`7f6d113e eb2e            jmp     00007ffd`7f6d116e
+00007ffd`7f6d1140 3bd3            cmp     edx,ebx
+00007ffd`7f6d1142 7335            jae     00007ffd`7f6d1179
+00007ffd`7f6d1144 4863ca          movsxd  rcx,edx
+00007ffd`7f6d1147 448b548f10      mov     r10d,dword ptr [rdi+rcx*4+10h]
+00007ffd`7f6d114c 448b4608        mov     r8d,dword ptr [rsi+8]
+00007ffd`7f6d1150 413bd0          cmp     edx,r8d
+00007ffd`7f6d1153 7324            jae     00007ffd`7f6d1179
+00007ffd`7f6d1155 4403548e10      add     r10d,dword ptr [rsi+rcx*4+10h]
+00007ffd`7f6d115a 448b4808        mov     r9d,dword ptr [rax+8]
+00007ffd`7f6d115e 413bd1          cmp     edx,r9d
+00007ffd`7f6d1161 7316            jae     00007ffd`7f6d1179
+00007ffd`7f6d1163 4489548810      mov     dword ptr [rax+rcx*4+10h],r10d
+00007ffd`7f6d1168 ffc2            inc     edx
+00007ffd`7f6d116a 3bda            cmp     ebx,edx
+00007ffd`7f6d116c 7fd2            jg      00007ffd`7f6d1140
+			return retVal;
+   ^^^^^^^^^^^^^^
+IL_006b: ldloc.0
+IL_006c: ret
+00007ffd`7f6d116e c5f877          vzeroupper
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ffd`7f6b0a90 Simd_Sample1.Program.AddArrays_Simple_Benchmark()
+		}
+  ^
+IL_0010: ret
+00007ffd`7f6b0ac7 90              nop
+
+00007ffd`7f6b0bc0 Simd_Sample1.Program.AddArrays_Simple(Int32[], Int32[])
+			int[] retVal = new int[v1.Length];
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_0000: ldarg.0
+IL_0001: ldlen
+IL_0002: conv.i4
+IL_0003: newarr System.Int32
+IL_0008: stloc.0
+00007ffd`7f6b0bcd 8b5f08          mov     ebx,dword ptr [rdi+8]
+00007ffd`7f6b0bd0 8bd3            mov     edx,ebx
+00007ffd`7f6b0bd2 48b9ba3103cafd7f0000 mov rcx,offset System_Private_CoreLib+0xe31ba (00007ffd`ca0331ba)
+00007ffd`7f6b0bdc e8ff37ad5f      call    coreclr!MetaDataGetDispenser+0x72900 (00007ffd`df1843e0)
+			for (int i = 0; i < v1.Length; i++)
+        ^^^^^^^^^
+IL_0009: ldc.i4.0
+IL_000a: stloc.1
+IL_000b: br.s IL_001b
+00007ffd`7f6b0be1 33d2            xor     edx,edx
+			for (int i = 0; i < v1.Length; i++)
+                   ^^^^^^^^^^^^^
+IL_001b: ldloc.1
+IL_001c: ldarg.0
+IL_001d: ldlen
+IL_001e: conv.i4
+IL_001f: blt.s IL_000d
+00007ffd`7f6b0be3 85db            test    ebx,ebx
+00007ffd`7f6b0be5 7e69            jle     00007ffd`7f6b0c50
+00007ffd`7f6b0be7 4885f6          test    rsi,rsi
+00007ffd`7f6b0bea 0f95c1          setne   cl
+00007ffd`7f6b0bed 0fb6c9          movzx   ecx,cl
+00007ffd`7f6b0bf0 83e101          and     ecx,1
+00007ffd`7f6b0bf3 f7c101000000    test    ecx,1
+00007ffd`7f6b0bf9 7433            je      00007ffd`7f6b0c2e
+00007ffd`7f6b0bfb 395e08          cmp     dword ptr [rsi+8],ebx
+00007ffd`7f6b0bfe 0f9dc1          setge   cl
+00007ffd`7f6b0c01 0fb6c9          movzx   ecx,cl
+00007ffd`7f6b0c04 395808          cmp     dword ptr [rax+8],ebx
+00007ffd`7f6b0c07 410f9dc0        setge   r8b
+00007ffd`7f6b0c0b 450fb6c0        movzx   r8d,r8b
+00007ffd`7f6b0c0f 4185c8          test    r8d,ecx
+00007ffd`7f6b0c12 741a            je      00007ffd`7f6b0c2e
+				retVal[i] = v1[i] + v2[i];
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+IL_000d: ldloc.0
+IL_000e: ldloc.1
+IL_000f: ldarg.0
+IL_0010: ldloc.1
+IL_0011: ldelem.i4
+IL_0012: ldarg.1
+IL_0013: ldloc.1
+IL_0014: ldelem.i4
+IL_0015: add
+IL_0016: stelem.i4
+00007ffd`7f6b0c14 4863ca          movsxd  rcx,edx
+00007ffd`7f6b0c17 448b448f10      mov     r8d,dword ptr [rdi+rcx*4+10h]
+00007ffd`7f6b0c1c 4403448e10      add     r8d,dword ptr [rsi+rcx*4+10h]
+00007ffd`7f6b0c21 4489448810      mov     dword ptr [rax+rcx*4+10h],r8d
+			for (int i = 0; i < v1.Length; i++)
+                                  ^^^
+IL_0017: ldloc.1
+IL_0018: ldc.i4.1
+IL_0019: add
+IL_001a: stloc.1
+00007ffd`7f6b0c26 ffc2            inc     edx
+00007ffd`7f6b0c28 3bda            cmp     ebx,edx
+00007ffd`7f6b0c2a 7fe8            jg      00007ffd`7f6b0c14
+00007ffd`7f6b0c2c eb22            jmp     00007ffd`7f6b0c50
+00007ffd`7f6b0c2e 4863ca          movsxd  rcx,edx
+00007ffd`7f6b0c31 448b448f10      mov     r8d,dword ptr [rdi+rcx*4+10h]
+00007ffd`7f6b0c36 3b5608          cmp     edx,dword ptr [rsi+8]
+00007ffd`7f6b0c39 731d            jae     00007ffd`7f6b0c58
+00007ffd`7f6b0c3b 4403448e10      add     r8d,dword ptr [rsi+rcx*4+10h]
+00007ffd`7f6b0c40 3b5008          cmp     edx,dword ptr [rax+8]
+00007ffd`7f6b0c43 7313            jae     00007ffd`7f6b0c58
+00007ffd`7f6b0c45 4489448810      mov     dword ptr [rax+rcx*4+10h],r8d
+00007ffd`7f6b0c4a ffc2            inc     edx
+00007ffd`7f6b0c4c 3bda            cmp     ebx,edx
+00007ffd`7f6b0c4e 7fde            jg      00007ffd`7f6b0c2e
+			return retVal;
+   ^^^^^^^^^^^^^^
+IL_0021: ldloc.0
+IL_0022: ret
+00007ffd`7f6b0c50 4883c420        add     rsp,20h
+
+</code></pre></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
