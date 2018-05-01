@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_CancellationSample_Before", "01_CancellationSample_Before\01_CancellationSample_Before.csproj", "{4FE36C80-6F69-4849-9E2F-95C9C4B14533}"
 EndProject
@@ -64,7 +64,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simd_Sample1", "11_Vectoriz
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "12_ANCM_AspNetCore21", "12_ANCM_AspNetCore21", "{04E0D847-2DE8-4D0A-8233-39929A445E68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ANCM_Sample", "12_ANCM_AspNetCore21\ANCM_Sample\ANCM_Sample.csproj", "{FDC97D70-CE4D-440A-B6EF-10C41573B063}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ANCM_Sample", "12_ANCM_AspNetCore21\ANCM_Sample\ANCM_Sample.csproj", "{FDC97D70-CE4D-440A-B6EF-10C41573B063}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "13_CsStructLayout", "13_CsStructLayout", "{EBF7F279-88CC-436F-9203-EA76C449A2A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructLayoutSample", "13_CsStructLayout\StructLayoutSample\StructLayoutSample.csproj", "{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -526,6 +530,30 @@ Global
 		{FDC97D70-CE4D-440A-B6EF-10C41573B063}.Release|x64.Build.0 = Release|Any CPU
 		{FDC97D70-CE4D-440A-B6EF-10C41573B063}.Release|x86.ActiveCfg = Release|Any CPU
 		{FDC97D70-CE4D-440A-B6EF-10C41573B063}.Release|x86.Build.0 = Release|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Debug|ARM.Build.0 = Debug|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Debug|x64.Build.0 = Debug|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Debug|x86.Build.0 = Debug|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Release|ARM.ActiveCfg = Release|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Release|ARM.Build.0 = Release|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Release|iPhone.Build.0 = Release|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Release|x64.ActiveCfg = Release|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Release|x64.Build.0 = Release|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Release|x86.ActiveCfg = Release|Any CPU
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -549,6 +577,7 @@ Global
 		{61BE99CE-ED87-4822-887F-72E8D7645911} = {0F4CD670-7875-4DA6-BB6A-ABFDB26B1D29}
 		{27D90D5D-BB02-47DF-BB6B-F82F7AAD3C00} = {22BAC6EC-DF6F-4136-9AB4-5D4CB2335F50}
 		{FDC97D70-CE4D-440A-B6EF-10C41573B063} = {04E0D847-2DE8-4D0A-8233-39929A445E68}
+		{85F1CCEC-1D27-47C3-B3D2-BCF909D50DD1} = {EBF7F279-88CC-436F-9203-EA76C449A2A5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3F64F0A3-5CD0-44AB-A2E7-D2A2AD801C8A}
