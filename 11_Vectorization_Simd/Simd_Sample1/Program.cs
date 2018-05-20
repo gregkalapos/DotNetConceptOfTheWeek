@@ -8,8 +8,63 @@ namespace Simd_Sample1
 	[DisassemblyDiagnoser(printAsm: true, printSource: true, printIL: true)]
 	public class Program
 	{
-		static int[] v1 = new int[]
+		static void Main(string[] args)
 		{
+			//var summary = BenchmarkRunner.Run<Program>();
+			AddArrays_Vector(v1, v2);
+		}
+
+		[Benchmark]
+		public static void AddArrays_Simple_Benchmark()
+		{
+			AddArrays_Simple(v1, v2);
+		}
+
+		[Benchmark]
+		public static void AddArrays_Vector_Benchmark()
+		{
+			AddArrays_Vector(v1, v2);
+		}
+
+		public static double[] AddArrays_Vector(double[] v1, double[] v2)
+		{
+			double[] retVal = new double[v1.Length];
+			var vectSize = Vector<decimal>.Count;
+
+			int i = 0;
+			for (i = 0; i < v1.Length - vectSize; i += vectSize)
+			{
+				var va = new Vector<double>(v1, i);
+				var vb = new Vector<double>(v2, i);
+				var vc = va + vb;
+				vc.CopyTo(retVal, i);
+			}
+
+			if (i != v1.Length)
+			{
+				for (int j = i; j < v1.Length; j++)
+				{
+					retVal[j] = v1[j] + v2[j];
+				}
+			}
+
+			return retVal;
+		}
+
+		public static double[] AddArrays_Simple(double[] v1, double[] v2)
+		{
+			double[] retVal = new double[v1.Length];
+
+			for (int i = 0; i < v1.Length; i++)
+			{
+				retVal[i] = v1[i] + v2[i];
+			}
+
+			return retVal;
+		}
+
+		static double[] v1 = new double[]
+{
 			33,
 			35,
 			45,
@@ -130,9 +185,8 @@ namespace Simd_Sample1
 			63,
 			72,
 			17,
-		};
-
-		static int[] v2 = new int[]
+};
+		static double[] v2 = new double[]
 		{
 			33,
 			65,
@@ -255,59 +309,5 @@ namespace Simd_Sample1
 			52,
 			17,
 		};
-
-		static void Main(string[] args)
-		{
-			var summary = BenchmarkRunner.Run<Program>();
-		}
-
-		[Benchmark]
-		public static void AddArrays_Vector_Benchmark()
-		{
-			AddArrays_Vector(v1, v2);
-		}
-
-		[Benchmark]
-		public static void AddArrays_Simple_Benchmark()
-		{
-			AddArrays_Simple(v1, v2);
-		}
-
-		public static int[] AddArrays_Vector(int[] v1, int[] v2)
-		{
-			int[] retVal = new int[v1.Length];
-			int vecSize = Vector<int>.Count;
-
-			int i = 0;
-			for (i = 0; i < v1.Length - vecSize; i += vecSize)
-			{
-				var va = new Vector<int>(v1, i);
-				var vb = new Vector<int>(v2, i);
-				var vc = va + vb;
-				vc.CopyTo(retVal, i);
-			}
-
-			if (i != v1.Length)
-			{
-				for (int j = i; j < v1.Length; j++)
-				{
-					retVal[j] = v1[j] + v2[j];
-				}
-			}
-
-			return retVal;
-		}
-
-		public static int[] AddArrays_Simple(int[] v1, int[] v2)
-		{
-			int[] retVal = new int[v1.Length];
-
-			for (int i = 0; i < v1.Length; i++)
-			{
-				retVal[i] = v1[i] + v2[i];
-			}
-
-			return retVal;
-		}
 	}
 }

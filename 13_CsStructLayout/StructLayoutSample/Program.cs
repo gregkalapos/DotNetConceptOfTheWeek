@@ -7,6 +7,7 @@ namespace StructLayoutSample
 {
 	public class Program
 	{
+		[StructLayout(LayoutKind.Sequential, Pack = 1)]
 		struct Struct1
 		{
 			public byte b1;
@@ -15,8 +16,9 @@ namespace StructLayoutSample
 			public double d2;
 			public byte b3;
 		}
+
+		class C { }
 		
-		[StructLayout(LayoutKind.Auto)]
 		struct Struct2
 		{
 			public double d1;
@@ -25,17 +27,6 @@ namespace StructLayoutSample
 			public byte b2;
 			public byte b3;
 		}
-
-		[StructLayout(LayoutKind.Sequential, Pack = 1)]
-		struct Struct3
-		{
-			public byte b1;
-			public double d1;
-			public double d2;
-			public byte b2;
-			public byte b3;
-		}
-
 
 		[StructLayout(LayoutKind.Explicit)]
 		struct Union
@@ -48,18 +39,21 @@ namespace StructLayoutSample
 			public bool boolean;
 		}
 
-		class C { }
-
 		static void Main(string[] args)
 		{
+			Union u = new Union();
+			u.i = 42;
+			Console.WriteLine(u.boolean);
+			u.boolean = false;
+			int b = u.i;
+
 			unsafe
 			{
+				Console.WriteLine("Union: " + sizeof(Union));
 				Console.WriteLine("Struct1: " + sizeof(Struct1));
 				Console.WriteLine("Struct2: " + sizeof(Struct2));
-				Console.WriteLine("Struct3: " + sizeof(Struct3));
-
-				Console.WriteLine("Union: " + sizeof(Union));
 			}
+
 			Console.ReadKey();
 		}
 	}

@@ -11,22 +11,22 @@
 <body>
 <table>
 <tbody>
-<tr><th colspan="2" id="140726741306000" style="text-align: left;">00007ffd`7f6d0a90 Simd_Sample1.Program.AddArrays_Vector_Benchmark()</th><th></th></tr>
+<tr><th colspan="2" id="140724026608272" style="text-align: left;">00007ffc`dd9e0a90 Simd_Sample1.Program.AddArrays_Vector_Benchmark()</th><th></th></tr>
 <tr class="evenMap">
 <td><pre><code>			AddArrays_Vector(v1, v2);
    ^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>IL_0000: ldsfld System.Int32[] Simd_Sample1.Program::v1</pre></code></td>
+<td><pre><code>IL_0000: ldsfld System.Double[] Simd_Sample1.Program::v1</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>IL_0005: ldsfld System.Int32[] Simd_Sample1.Program::v2</pre></code></td>
+<td><pre><code>IL_0005: ldsfld System.Double[] Simd_Sample1.Program::v2</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>IL_000a: call System.Int32[] Simd_Sample1.Program::AddArrays_Vector(System.Int32[],System.Int32[])</pre></code></td>
+<td><pre><code>IL_000a: call System.Double[] Simd_Sample1.Program::AddArrays_Vector(System.Double[],System.Double[])</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
@@ -34,36 +34,36 @@
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d0a94 48b9a014747ffd7f0000 mov rcx,7FFD7F7414A0h</pre></code></td>
+<td><pre><code>00007ffc`dd9e0a94 48b9a014a5ddfc7f0000 mov rcx,7FFCDDA514A0h</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d0a9e ba01000000      mov     edx,1</pre></code></td>
+<td><pre><code>00007ffc`dd9e0a9e ba01000000      mov     edx,1</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d0aa3 e8a849ab5f      call    coreclr!MetaDataGetDispenser+0x73970 (00007ffd`df185450)</pre></code></td>
+<td><pre><code>00007ffc`dd9e0aa3 e8a849ab5f      call    coreclr!MetaDataGetDispenser+0x73970 (00007ffd`3d495450)</pre></code></td>
 <td>not managed method</td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d0aa8 48b9406c6a5db1020000 mov rcx,2B15D6A6C40h</pre></code></td>
+<td><pre><code>00007ffc`dd9e0aa8 48b9406cf769a5010000 mov rcx,1A569F76C40h</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d0ab2 488b09          mov     rcx,qword ptr [rcx]</pre></code></td>
+<td><pre><code>00007ffc`dd9e0ab2 488b09          mov     rcx,qword ptr [rcx]</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d0ab5 48ba486c6a5db1020000 mov rdx,2B15D6A6C48h</pre></code></td>
+<td><pre><code>00007ffc`dd9e0ab5 48ba486cf769a5010000 mov rdx,1A569F76C48h</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d0abf 488b12          mov     rdx,qword ptr [rdx]</pre></code></td>
+<td><pre><code>00007ffc`dd9e0abf 488b12          mov     rdx,qword ptr [rdx]</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d0ac2 e87142feff      call    00007ffd`7f6b4d38</pre></code></td>
-<td><a href="#140726741307456">AddArrays_Vector</a></td>
+<td><pre><code>00007ffc`dd9e0ac2 e87142feff      call    00007ffc`dd9c4d38</pre></code></td>
+<td><a href="#140724026609728">AddArrays_Vector</a></td>
 </tr>
 <tr class="">
 <td><pre><code>		}
@@ -75,14 +75,14 @@
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d0ac7 90              nop</pre></code></td>
+<td><pre><code>00007ffc`dd9e0ac7 90              nop</pre></code></td>
 <td></td>
 </tr>
 <tr><td colspan="{2}">&nbsp;</td></tr>
-<tr><th colspan="2" id="140726741307456" style="text-align: left;">00007ffd`7f6d1040 Simd_Sample1.Program.AddArrays_Vector(Int32[], Int32[])</th><th></th></tr>
+<tr><th colspan="2" id="140724026609728" style="text-align: left;">00007ffc`dd9e1040 Simd_Sample1.Program.AddArrays_Vector(Double[], Double[])</th><th></th></tr>
 <tr class="evenMap">
-<td><pre><code>			int[] retVal = new int[v1.Length];
-   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td><pre><code>			double[] retVal = new double[v1.Length];
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
@@ -98,7 +98,7 @@
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>IL_0003: newarr System.Int32</pre></code></td>
+<td><pre><code>IL_0003: newarr System.Double</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
@@ -106,7 +106,7 @@
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>IL_0009: call System.Int32 System.Numerics.Vector`1<System.Int32>::get_Count()</pre></code></td>
+<td><pre><code>IL_0009: call System.Int32 System.Numerics.Vector`1<System.Double>::get_Count()</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
@@ -122,23 +122,23 @@
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1050 8b5f08          mov     ebx,dword ptr [rdi+8]</pre></code></td>
+<td><pre><code>00007ffc`dd9e1050 8b5f08          mov     ebx,dword ptr [rdi+8]</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1053 8bd3            mov     edx,ebx</pre></code></td>
+<td><pre><code>00007ffc`dd9e1053 8bd3            mov     edx,ebx</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1055 48b9ba3103cafd7f0000 mov rcx,offset System_Private_CoreLib+0xe31ba (00007ffd`ca0331ba)</pre></code></td>
+<td><pre><code>00007ffc`dd9e1055 48b90a353723fd7f0000 mov rcx,offset System_Private_CoreLib+0xe350a (00007ffd`2337350a)</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d105f e87c33ab5f      call    coreclr!MetaDataGetDispenser+0x72900 (00007ffd`df1843e0)</pre></code></td>
+<td><pre><code>00007ffc`dd9e105f e87c33ab5f      call    coreclr!MetaDataGetDispenser+0x72900 (00007ffd`3d4943e0)</pre></code></td>
 <td>not managed method</td>
 </tr>
 <tr class="">
-<td><pre><code>			for (i = 0; i < v1.Length - vecSize; i += vecSize)
+<td><pre><code>			for (i = 0; i < v1.Length - vectSize; i += vectSize)
         ^^^^^</pre></code></td>
 <td></td>
 </tr>
@@ -155,12 +155,12 @@
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d1064 33d2            xor     edx,edx</pre></code></td>
+<td><pre><code>00007ffc`dd9e1064 33d2            xor     edx,edx</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>			for (i = 0; i < v1.Length - vecSize; i += vecSize)
-               ^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td><pre><code>			for (i = 0; i < v1.Length - vectSize; i += vectSize)
+               ^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
@@ -192,32 +192,32 @@
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1066 8bcb            mov     ecx,ebx</pre></code></td>
+<td><pre><code>00007ffc`dd9e1066 8bcb            mov     ecx,ebx</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1068 83e908          sub     ecx,8</pre></code></td>
+<td><pre><code>00007ffc`dd9e1068 83e904          sub     ecx,4</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d106b 85c9            test    ecx,ecx</pre></code></td>
+<td><pre><code>00007ffc`dd9e106b 85c9            test    ecx,ecx</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d106d 7e62            jle     00007ffd`7f6d10d1</pre></code></td>
+<td><pre><code>00007ffc`dd9e106d 7e62            jle     00007ffc`dd9e10d1</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d106f 448b4608        mov     r8d,dword ptr [rsi+8]</pre></code></td>
+<td><pre><code>00007ffc`dd9e106f 448b4608        mov     r8d,dword ptr [rsi+8]</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d1073 448b4808        mov     r9d,dword ptr [rax+8]</pre></code></td>
+<td><pre><code>00007ffc`dd9e1073 448b4808        mov     r9d,dword ptr [rax+8]</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>				var va = new Vector<int>(v1, i);
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td><pre><code>				var va = new Vector<double>(v1, i);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
@@ -233,36 +233,36 @@
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>IL_0019: call System.Void System.Numerics.Vector`1<System.Int32>::.ctor(!0[],System.Int32)</pre></code></td>
+<td><pre><code>IL_0019: call System.Void System.Numerics.Vector`1<System.Double>::.ctor(!0[],System.Int32)</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1077 3bd3            cmp     edx,ebx</pre></code></td>
+<td><pre><code>00007ffc`dd9e1077 3bd3            cmp     edx,ebx</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1079 0f83fa000000    jae     00007ffd`7f6d1179</pre></code></td>
+<td><pre><code>00007ffc`dd9e1079 0f8303010000    jae     00007ffc`dd9e1182</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d107f 448d5207        lea     r10d,[rdx+7]</pre></code></td>
+<td><pre><code>00007ffc`dd9e107f 448d5203        lea     r10d,[rdx+3]</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1083 443bd3          cmp     r10d,ebx</pre></code></td>
+<td><pre><code>00007ffc`dd9e1083 443bd3          cmp     r10d,ebx</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1086 0f83ed000000    jae     00007ffd`7f6d1179</pre></code></td>
+<td><pre><code>00007ffc`dd9e1086 0f83f6000000    jae     00007ffc`dd9e1182</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d108c c4e17d10449710  vmovupd ymm0,ymmword ptr [rdi+rdx*4+10h]</pre></code></td>
+<td><pre><code>00007ffc`dd9e108c c4e17d1044d710  vmovupd ymm0,ymmword ptr [rdi+rdx*8+10h]</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>				var vb = new Vector<int>(v2, i);
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td><pre><code>				var vb = new Vector<double>(v2, i);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
@@ -278,27 +278,27 @@
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>IL_0022: call System.Void System.Numerics.Vector`1<System.Int32>::.ctor(!0[],System.Int32)</pre></code></td>
+<td><pre><code>IL_0022: call System.Void System.Numerics.Vector`1<System.Double>::.ctor(!0[],System.Int32)</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d1093 413bd0          cmp     edx,r8d</pre></code></td>
+<td><pre><code>00007ffc`dd9e1093 413bd0          cmp     edx,r8d</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d1096 0f83dd000000    jae     00007ffd`7f6d1179</pre></code></td>
+<td><pre><code>00007ffc`dd9e1096 0f83e6000000    jae     00007ffc`dd9e1182</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d109c 453bd0          cmp     r10d,r8d</pre></code></td>
+<td><pre><code>00007ffc`dd9e109c 453bd0          cmp     r10d,r8d</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d109f 0f83d4000000    jae     00007ffd`7f6d1179</pre></code></td>
+<td><pre><code>00007ffc`dd9e109f 0f83dd000000    jae     00007ffc`dd9e1182</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d10a5 c4e17d104c9610  vmovupd ymm1,ymmword ptr [rsi+rdx*4+10h]</pre></code></td>
+<td><pre><code>00007ffc`dd9e10a5 c4e17d104cd610  vmovupd ymm1,ymmword ptr [rsi+rdx*8+10h]</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
@@ -315,7 +315,7 @@
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>IL_002a: call System.Numerics.Vector`1<!0> System.Numerics.Vector`1<System.Int32>::op_Addition(System.Numerics.Vector`1<!0>,System.Numerics.Vector`1<!0>)</pre></code></td>
+<td><pre><code>IL_002a: call System.Numerics.Vector`1<!0> System.Numerics.Vector`1<System.Double>::op_Addition(System.Numerics.Vector`1<!0>,System.Numerics.Vector`1<!0>)</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
@@ -323,7 +323,7 @@
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d10ac c4e17dfec1      vpaddd  ymm0,ymm0,ymm1</pre></code></td>
+<td><pre><code>00007ffc`dd9e10ac c4e17d58c1      vaddpd  ymm0,ymm0,ymm1</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
@@ -344,32 +344,32 @@
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>IL_0035: call System.Void System.Numerics.Vector`1<System.Int32>::CopyTo(!0[],System.Int32)</pre></code></td>
+<td><pre><code>IL_0035: call System.Void System.Numerics.Vector`1<System.Double>::CopyTo(!0[],System.Int32)</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d10b1 413bd1          cmp     edx,r9d</pre></code></td>
+<td><pre><code>00007ffc`dd9e10b1 413bd1          cmp     edx,r9d</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d10b4 0f83c4000000    jae     00007ffd`7f6d117e</pre></code></td>
+<td><pre><code>00007ffc`dd9e10b4 0f83cd000000    jae     00007ffc`dd9e1187</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d10ba 453bd1          cmp     r10d,r9d</pre></code></td>
+<td><pre><code>00007ffc`dd9e10ba 453bd1          cmp     r10d,r9d</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d10bd 0f83c0000000    jae     00007ffd`7f6d1183</pre></code></td>
+<td><pre><code>00007ffc`dd9e10bd 0f83c9000000    jae     00007ffc`dd9e118c</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d10c3 c4e17d11449010  vmovupd ymmword ptr [rax+rdx*4+10h],ymm0</pre></code></td>
+<td><pre><code>00007ffc`dd9e10c3 c4e17d1144d010  vmovupd ymmword ptr [rax+rdx*8+10h],ymm0</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>			for (i = 0; i < v1.Length - vecSize; i += vecSize)
-                                        ^^^^^^^^^^^^</pre></code></td>
+<td><pre><code>			for (i = 0; i < v1.Length - vectSize; i += vectSize)
+                                         ^^^^^^^^^^^^^</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
@@ -389,15 +389,15 @@
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d10ca 83c208          add     edx,8</pre></code></td>
+<td><pre><code>00007ffc`dd9e10ca 83c204          add     edx,4</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d10cd 3bca            cmp     ecx,edx</pre></code></td>
+<td><pre><code>00007ffc`dd9e10cd 3bca            cmp     ecx,edx</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d10cf 7fa6            jg      00007ffd`7f6d1077</pre></code></td>
+<td><pre><code>00007ffc`dd9e10cf 7fa6            jg      00007ffc`dd9e1077</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
@@ -426,11 +426,11 @@
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d10d1 3bda            cmp     ebx,edx</pre></code></td>
+<td><pre><code>00007ffc`dd9e10d1 3bda            cmp     ebx,edx</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d10d3 0f8495000000    je      00007ffd`7f6d116e</pre></code></td>
+<td><pre><code>00007ffc`dd9e10d3 0f849e000000    je      00007ffc`dd9e1177</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
@@ -451,91 +451,91 @@
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d10d9 3bda            cmp     ebx,edx</pre></code></td>
+<td><pre><code>00007ffc`dd9e10d9 3bda            cmp     ebx,edx</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d10db 0f8e8d000000    jle     00007ffd`7f6d116e</pre></code></td>
+<td><pre><code>00007ffc`dd9e10db 0f8e96000000    jle     00007ffc`dd9e1177</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d10e1 4885f6          test    rsi,rsi</pre></code></td>
+<td><pre><code>00007ffc`dd9e10e1 4885f6          test    rsi,rsi</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d10e4 0f95c1          setne   cl</pre></code></td>
+<td><pre><code>00007ffc`dd9e10e4 0f95c1          setne   cl</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d10e7 0fb6c9          movzx   ecx,cl</pre></code></td>
+<td><pre><code>00007ffc`dd9e10e7 0fb6c9          movzx   ecx,cl</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d10ea 83e101          and     ecx,1</pre></code></td>
+<td><pre><code>00007ffc`dd9e10ea 83e101          and     ecx,1</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d10ed f7c101000000    test    ecx,1</pre></code></td>
+<td><pre><code>00007ffc`dd9e10ed f7c101000000    test    ecx,1</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d10f3 744b            je      00007ffd`7f6d1140</pre></code></td>
+<td><pre><code>00007ffc`dd9e10f3 744e            je      00007ffc`dd9e1143</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d10f5 448b4608        mov     r8d,dword ptr [rsi+8]</pre></code></td>
+<td><pre><code>00007ffc`dd9e10f5 448b4608        mov     r8d,dword ptr [rsi+8]</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d10f9 443bc3          cmp     r8d,ebx</pre></code></td>
+<td><pre><code>00007ffc`dd9e10f9 443bc3          cmp     r8d,ebx</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d10fc 410f9dc0        setge   r8b</pre></code></td>
+<td><pre><code>00007ffc`dd9e10fc 410f9dc0        setge   r8b</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1100 450fb6c0        movzx   r8d,r8b</pre></code></td>
+<td><pre><code>00007ffc`dd9e1100 450fb6c0        movzx   r8d,r8b</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1104 85d2            test    edx,edx</pre></code></td>
+<td><pre><code>00007ffc`dd9e1104 85d2            test    edx,edx</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1106 0f9dc1          setge   cl</pre></code></td>
+<td><pre><code>00007ffc`dd9e1106 0f9dc1          setge   cl</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1109 0fb6c9          movzx   ecx,cl</pre></code></td>
+<td><pre><code>00007ffc`dd9e1109 0fb6c9          movzx   ecx,cl</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d110c 4423c1          and     r8d,ecx</pre></code></td>
+<td><pre><code>00007ffc`dd9e110c 4423c1          and     r8d,ecx</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d110f 448b4808        mov     r9d,dword ptr [rax+8]</pre></code></td>
+<td><pre><code>00007ffc`dd9e110f 448b4808        mov     r9d,dword ptr [rax+8]</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1113 443bcb          cmp     r9d,ebx</pre></code></td>
+<td><pre><code>00007ffc`dd9e1113 443bcb          cmp     r9d,ebx</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1116 410f9dc1        setge   r9b</pre></code></td>
+<td><pre><code>00007ffc`dd9e1116 410f9dc1        setge   r9b</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d111a 450fb6c9        movzx   r9d,r9b</pre></code></td>
+<td><pre><code>00007ffc`dd9e111a 450fb6c9        movzx   r9d,r9b</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d111e 4585c1          test    r9d,r8d</pre></code></td>
+<td><pre><code>00007ffc`dd9e111e 4585c1          test    r9d,r8d</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1121 741d            je      00007ffd`7f6d1140</pre></code></td>
+<td><pre><code>00007ffc`dd9e1121 7420            je      00007ffc`dd9e1143</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
@@ -560,7 +560,7 @@
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>IL_0057: ldelem.i4</pre></code></td>
+<td><pre><code>IL_0057: ldelem.r8</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
@@ -572,7 +572,7 @@
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>IL_005b: ldelem.i4</pre></code></td>
+<td><pre><code>IL_005b: ldelem.r8</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
@@ -580,27 +580,23 @@
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>IL_005d: stelem.i4</pre></code></td>
+<td><pre><code>IL_005d: stelem.r8</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d1123 4863ca          movsxd  rcx,edx</pre></code></td>
+<td><pre><code>00007ffc`dd9e1123 4863ca          movsxd  rcx,edx</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d1126 448b448f10      mov     r8d,dword ptr [rdi+rcx*4+10h]</pre></code></td>
+<td><pre><code>00007ffc`dd9e1126 c4e17b1044cf10  vmovsd  xmm0,qword ptr [rdi+rcx*8+10h]</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d112b 458bd0          mov     r10d,r8d</pre></code></td>
+<td><pre><code>00007ffc`dd9e112d c4e17b5844ce10  vaddsd  xmm0,xmm0,mmword ptr [rsi+rcx*8+10h]</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d112e 4403548e10      add     r10d,dword ptr [rsi+rcx*4+10h]</pre></code></td>
-<td></td>
-</tr>
-<tr class="">
-<td><pre><code>00007ffd`7f6d1133 4489548810      mov     dword ptr [rax+rcx*4+10h],r10d</pre></code></td>
+<td><pre><code>00007ffc`dd9e1134 c4e17b1144c810  vmovsd  qword ptr [rax+rcx*8+10h],xmm0</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
@@ -625,7 +621,7 @@
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1138 ffc2            inc     edx</pre></code></td>
+<td><pre><code>00007ffc`dd9e113b ffc2            inc     edx</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
@@ -654,75 +650,75 @@
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d113a 3bda            cmp     ebx,edx</pre></code></td>
+<td><pre><code>00007ffc`dd9e113d 3bda            cmp     ebx,edx</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d113c 7fe5            jg      00007ffd`7f6d1123</pre></code></td>
+<td><pre><code>00007ffc`dd9e113f 7fe2            jg      00007ffc`dd9e1123</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d113e eb2e            jmp     00007ffd`7f6d116e</pre></code></td>
+<td><pre><code>00007ffc`dd9e1141 eb34            jmp     00007ffc`dd9e1177</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1140 3bd3            cmp     edx,ebx</pre></code></td>
+<td><pre><code>00007ffc`dd9e1143 3bd3            cmp     edx,ebx</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1142 7335            jae     00007ffd`7f6d1179</pre></code></td>
+<td><pre><code>00007ffc`dd9e1145 733b            jae     00007ffc`dd9e1182</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1144 4863ca          movsxd  rcx,edx</pre></code></td>
+<td><pre><code>00007ffc`dd9e1147 4863ca          movsxd  rcx,edx</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1147 448b548f10      mov     r10d,dword ptr [rdi+rcx*4+10h]</pre></code></td>
+<td><pre><code>00007ffc`dd9e114a c4e17b1044cf10  vmovsd  xmm0,qword ptr [rdi+rcx*8+10h]</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d114c 448b4608        mov     r8d,dword ptr [rsi+8]</pre></code></td>
+<td><pre><code>00007ffc`dd9e1151 448b4608        mov     r8d,dword ptr [rsi+8]</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1150 413bd0          cmp     edx,r8d</pre></code></td>
+<td><pre><code>00007ffc`dd9e1155 413bd0          cmp     edx,r8d</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1153 7324            jae     00007ffd`7f6d1179</pre></code></td>
+<td><pre><code>00007ffc`dd9e1158 7328            jae     00007ffc`dd9e1182</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1155 4403548e10      add     r10d,dword ptr [rsi+rcx*4+10h]</pre></code></td>
+<td><pre><code>00007ffc`dd9e115a c4e17b5844ce10  vaddsd  xmm0,xmm0,mmword ptr [rsi+rcx*8+10h]</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d115a 448b4808        mov     r9d,dword ptr [rax+8]</pre></code></td>
+<td><pre><code>00007ffc`dd9e1161 448b4808        mov     r9d,dword ptr [rax+8]</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d115e 413bd1          cmp     edx,r9d</pre></code></td>
+<td><pre><code>00007ffc`dd9e1165 413bd1          cmp     edx,r9d</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1161 7316            jae     00007ffd`7f6d1179</pre></code></td>
+<td><pre><code>00007ffc`dd9e1168 7318            jae     00007ffc`dd9e1182</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1163 4489548810      mov     dword ptr [rax+rcx*4+10h],r10d</pre></code></td>
+<td><pre><code>00007ffc`dd9e116a c4e17b1144c810  vmovsd  qword ptr [rax+rcx*8+10h],xmm0</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d1168 ffc2            inc     edx</pre></code></td>
+<td><pre><code>00007ffc`dd9e1171 ffc2            inc     edx</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d116a 3bda            cmp     ebx,edx</pre></code></td>
+<td><pre><code>00007ffc`dd9e1173 3bda            cmp     ebx,edx</pre></code></td>
 <td></td>
 </tr>
 <tr class="evenMap">
-<td><pre><code>00007ffd`7f6d116c 7fd2            jg      00007ffd`7f6d1140</pre></code></td>
+<td><pre><code>00007ffc`dd9e1175 7fcc            jg      00007ffc`dd9e1143</pre></code></td>
 <td></td>
 </tr>
 <tr class="">
@@ -739,7 +735,7 @@
 <td></td>
 </tr>
 <tr class="">
-<td><pre><code>00007ffd`7f6d116e c5f877          vzeroupper</pre></code></td>
+<td><pre><code>00007ffc`dd9e1177 c5f877          vzeroupper</pre></code></td>
 <td></td>
 </tr>
 <tr><td colspan="{2}">&nbsp;</td></tr>

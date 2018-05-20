@@ -13,11 +13,11 @@
 </head>
 <body>
 <pre><code>
-BenchmarkDotNet=v0.10.13, OS=Windows 10 Redstone 2 [1703, Creators Update] (10.0.15063.909)
-Intel Core i7-6700 CPU 3.40GHz (Skylake), 1 CPU, 8 logical cores and 4 physical cores
-Frequency=3328125 Hz, Resolution=300.4695 ns, Timer=TSC
+BenchmarkDotNet=v0.10.13, OS=Windows 10 Redstone 3 [1709, Fall Creators Update] (10.0.16299.192)
+Intel Core i5-5200U CPU 2.20GHz (Broadwell), 1 CPU, 4 logical cores and 2 physical cores
+Frequency=2143475 Hz, Resolution=466.5321 ns, Timer=TSC
 .NET Core SDK=2.1.4
-  [Host]     : .NET Core 2.0.5 (CoreCLR 4.6.26020.03, CoreFX 4.6.26018.01), 64bit RyuJIT  [AttachedDebugger]
+  [Host]     : .NET Core 2.0.5 (CoreCLR 4.6.26020.03, CoreFX 4.6.26018.01), 64bit RyuJIT
   DefaultJob : .NET Core 2.0.5 (CoreCLR 4.6.26020.03, CoreFX 4.6.26018.01), 64bit RyuJIT
 </code></pre>
 <pre><code></code></pre>
@@ -25,8 +25,8 @@ Frequency=3328125 Hz, Resolution=300.4695 ns, Timer=TSC
 <table>
 <thead><tr><th>              Method</th><th>Mean</th><th>Error</th><th>StdDev</th>
 </tr>
-</thead><tbody><tr><td>AddArrays_Vector_Benchmark</td><td>68.31 ns</td><td>1.428 ns</td><td>3.012 ns</td>
-</tr><tr><td>AddArrays_Simple_Benchmark</td><td>123.93 ns</td><td>2.489 ns</td><td>4.676 ns</td>
+</thead><tbody><tr><td>AddArrays_Simple_Benchmark</td><td>215.2 ns</td><td>3.710 ns</td><td>4.123 ns</td>
+</tr><tr><td>AddArrays_Vector_Benchmark</td><td>162.7 ns</td><td>2.383 ns</td><td>2.113 ns</td>
 </tr></tbody></table>
 </body>
 </html>

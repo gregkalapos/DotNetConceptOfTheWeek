@@ -56,12 +56,12 @@
 </tr><tr class="">
 <td></td><td ><pre><code>IL_0010: ret</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0ac7 90              nop"><pre><code>nop</pre></code></td>
+<td></td><td title="00007ffc`dd9b0ac7 90              nop"><pre><code>nop</pre></code></td>
 </tr><tr><td colspan="{2}">&nbsp;</td></tr>
-<tr><th colspan="2" style="text-align: left;">Simd_Sample1.Program.AddArrays_Simple(Int32[], Int32[])</th><th></th></tr>
+<tr><th colspan="2" style="text-align: left;">Simd_Sample1.Program.AddArrays_Simple(Double[], Double[])</th><th></th></tr>
 <tr class="">
-<td></td><td ><pre><code>			int[] retVal = new int[v1.Length];
-   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
+<td></td><td ><pre><code>			double[] retVal = new double[v1.Length];
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
 </tr><tr class="">
 <td></td><td ><pre><code>IL_0000: ldarg.0</pre></code></td>
 </tr><tr class="">
@@ -69,17 +69,17 @@
 </tr><tr class="">
 <td></td><td ><pre><code>IL_0002: conv.i4</pre></code></td>
 </tr><tr class="">
-<td></td><td ><pre><code>IL_0003: newarr System.Int32</pre></code></td>
+<td></td><td ><pre><code>IL_0003: newarr System.Double</pre></code></td>
 </tr><tr class="">
 <td></td><td ><pre><code>IL_0008: stloc.0</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0bcd 8b5f08          mov     ebx,dword ptr [rdi+8]"><pre><code>mov     ebx,dword ptr [rdi+8]</pre></code></td>
+<td></td><td title="00007ffc`dd9b0bd0 8b5f08          mov     ebx,dword ptr [rdi+8]"><pre><code>mov     ebx,dword ptr [rdi+8]</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0bd0 8bd3            mov     edx,ebx"><pre><code>mov     edx,ebx</pre></code></td>
+<td></td><td title="00007ffc`dd9b0bd3 8bd3            mov     edx,ebx"><pre><code>mov     edx,ebx</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0bd2 48b9ba3103cafd7f0000 mov rcx,offset System_Private_CoreLib+0xe31ba (00007ffd`ca0331ba)"><pre><code>mov     rcx,offset System_Private_CoreLib+0xe31ba</pre></code></td>
+<td></td><td title="00007ffc`dd9b0bd5 48b90a353723fd7f0000 mov rcx,offset System_Private_CoreLib+0xe350a (00007ffd`2337350a)"><pre><code>mov     rcx,offset System_Private_CoreLib+0xe350a</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0bdc e8ff37ad5f      call    coreclr!MetaDataGetDispenser+0x72900 (00007ffd`df1843e0)"><pre><code>call    coreclr!MetaDataGetDispenser+0x72900</pre></code></td>
+<td></td><td title="00007ffc`dd9b0bdf e8fc37ae5f      call    coreclr!MetaDataGetDispenser+0x72900 (00007ffd`3d4943e0)"><pre><code>call    coreclr!MetaDataGetDispenser+0x72900</pre></code></td>
 </tr><tr class="">
 <td></td><td ><pre><code>			for (int i = 0; i < v1.Length; i++)
         ^^^^^^^^^</pre></code></td>
@@ -90,7 +90,7 @@
 </tr><tr class="">
 <td></td><td ><pre><code>IL_000b: br.s IL_001b</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0be1 33d2            xor     edx,edx"><pre><code>xor     edx,edx</pre></code></td>
+<td></td><td title="00007ffc`dd9b0be4 33d2            xor     edx,edx"><pre><code>xor     edx,edx</pre></code></td>
 </tr><tr class="">
 <td></td><td ><pre><code>			for (int i = 0; i < v1.Length; i++)
                    ^^^^^^^^^^^^^</pre></code></td>
@@ -105,37 +105,37 @@
 </tr><tr class="">
 <td></td><td ><pre><code>IL_001f: blt.s IL_000d</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0be3 85db            test    ebx,ebx"><pre><code>test    ebx,ebx</pre></code></td>
+<td></td><td title="00007ffc`dd9b0be6 85db            test    ebx,ebx"><pre><code>test    ebx,ebx</pre></code></td>
 </tr><tr class="">
-<td></td><td id="0" class="reference" data-reference="M01_L02" title="00007ffd`7f6b0be5 7e69            jle     00007ffd`7f6b0c50"><a href="#M01_L02"><pre><code>jle     M01_L02</pre></code></a></td>
+<td></td><td id="0" class="reference" data-reference="M01_L02" title="00007ffc`dd9b0be8 7e75            jle     00007ffc`dd9b0c5f"><a href="#M01_L02"><pre><code>jle     M01_L02</pre></code></a></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0be7 4885f6          test    rsi,rsi"><pre><code>test    rsi,rsi</pre></code></td>
+<td></td><td title="00007ffc`dd9b0bea 4885f6          test    rsi,rsi"><pre><code>test    rsi,rsi</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0bea 0f95c1          setne   cl"><pre><code>setne   cl</pre></code></td>
+<td></td><td title="00007ffc`dd9b0bed 0f95c1          setne   cl"><pre><code>setne   cl</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0bed 0fb6c9          movzx   ecx,cl"><pre><code>movzx   ecx,cl</pre></code></td>
+<td></td><td title="00007ffc`dd9b0bf0 0fb6c9          movzx   ecx,cl"><pre><code>movzx   ecx,cl</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0bf0 83e101          and     ecx,1"><pre><code>and     ecx,1</pre></code></td>
+<td></td><td title="00007ffc`dd9b0bf3 83e101          and     ecx,1"><pre><code>and     ecx,1</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0bf3 f7c101000000    test    ecx,1"><pre><code>test    ecx,1</pre></code></td>
+<td></td><td title="00007ffc`dd9b0bf6 f7c101000000    test    ecx,1"><pre><code>test    ecx,1</pre></code></td>
 </tr><tr class="">
-<td></td><td id="1" class="reference" data-reference="M01_L01" title="00007ffd`7f6b0bf9 7433            je      00007ffd`7f6b0c2e"><a href="#M01_L01"><pre><code>je      M01_L01</pre></code></a></td>
+<td></td><td id="1" class="reference" data-reference="M01_L01" title="00007ffc`dd9b0bfc 7439            je      00007ffc`dd9b0c37"><a href="#M01_L01"><pre><code>je      M01_L01</pre></code></a></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0bfb 395e08          cmp     dword ptr [rsi+8],ebx"><pre><code>cmp     dword ptr [rsi+8],ebx</pre></code></td>
+<td></td><td title="00007ffc`dd9b0bfe 395e08          cmp     dword ptr [rsi+8],ebx"><pre><code>cmp     dword ptr [rsi+8],ebx</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0bfe 0f9dc1          setge   cl"><pre><code>setge   cl</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c01 0f9dc1          setge   cl"><pre><code>setge   cl</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0c01 0fb6c9          movzx   ecx,cl"><pre><code>movzx   ecx,cl</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c04 0fb6c9          movzx   ecx,cl"><pre><code>movzx   ecx,cl</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0c04 395808          cmp     dword ptr [rax+8],ebx"><pre><code>cmp     dword ptr [rax+8],ebx</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c07 395808          cmp     dword ptr [rax+8],ebx"><pre><code>cmp     dword ptr [rax+8],ebx</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0c07 410f9dc0        setge   r8b"><pre><code>setge   r8b</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c0a 410f9dc0        setge   r8b"><pre><code>setge   r8b</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0c0b 450fb6c0        movzx   r8d,r8b"><pre><code>movzx   r8d,r8b</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c0e 450fb6c0        movzx   r8d,r8b"><pre><code>movzx   r8d,r8b</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0c0f 4185c8          test    r8d,ecx"><pre><code>test    r8d,ecx</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c12 4185c8          test    r8d,ecx"><pre><code>test    r8d,ecx</pre></code></td>
 </tr><tr class="">
-<td></td><td id="2" class="reference" data-reference="M01_L01" title="00007ffd`7f6b0c12 741a            je      00007ffd`7f6b0c2e"><a href="#M01_L01"><pre><code>je      M01_L01</pre></code></a></td>
+<td></td><td id="2" class="reference" data-reference="M01_L01" title="00007ffc`dd9b0c15 7420            je      00007ffc`dd9b0c37"><a href="#M01_L01"><pre><code>je      M01_L01</pre></code></a></td>
 </tr><tr class="">
 <td></td><td ><pre><code>				retVal[i] = v1[i] + v2[i];
     ^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></code></td>
@@ -148,28 +148,28 @@
 </tr><tr class="">
 <td></td><td ><pre><code>IL_0010: ldloc.1</pre></code></td>
 </tr><tr class="">
-<td></td><td ><pre><code>IL_0011: ldelem.i4</pre></code></td>
+<td></td><td ><pre><code>IL_0011: ldelem.r8</pre></code></td>
 </tr><tr class="">
 <td></td><td ><pre><code>IL_0012: ldarg.1</pre></code></td>
 </tr><tr class="">
 <td></td><td ><pre><code>IL_0013: ldloc.1</pre></code></td>
 </tr><tr class="">
-<td></td><td ><pre><code>IL_0014: ldelem.i4</pre></code></td>
+<td></td><td ><pre><code>IL_0014: ldelem.r8</pre></code></td>
 </tr><tr class="">
 <td></td><td ><pre><code>IL_0015: add</pre></code></td>
 </tr><tr class="">
-<td></td><td ><pre><code>IL_0016: stelem.i4</pre></code></td>
+<td></td><td ><pre><code>IL_0016: stelem.r8</pre></code></td>
 </tr><tr class="evenMap">
 <td id="M01_L00" class="label" data-label="M01_L00"><pre><code>M01_L00</pre></code></td>
 <td>&nbsp;</td></tr>
 <tr class="evenMap">
-<td></td><td title="00007ffd`7f6b0c14 4863ca          movsxd  rcx,edx"><pre><code>movsxd  rcx,edx</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c17 4863ca          movsxd  rcx,edx"><pre><code>movsxd  rcx,edx</pre></code></td>
 </tr><tr class="evenMap">
-<td></td><td title="00007ffd`7f6b0c17 448b448f10      mov     r8d,dword ptr [rdi+rcx*4+10h]"><pre><code>mov     r8d,dword ptr [rdi+rcx*4+10h]</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c1a c4e17b1044cf10  vmovsd  xmm0,qword ptr [rdi+rcx*8+10h]"><pre><code>vmovsd  xmm0,qword ptr [rdi+rcx*8+10h]</pre></code></td>
 </tr><tr class="evenMap">
-<td></td><td title="00007ffd`7f6b0c1c 4403448e10      add     r8d,dword ptr [rsi+rcx*4+10h]"><pre><code>add     r8d,dword ptr [rsi+rcx*4+10h]</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c21 c4e17b5844ce10  vaddsd  xmm0,xmm0,mmword ptr [rsi+rcx*8+10h]"><pre><code>vaddsd  xmm0,xmm0,mmword ptr [rsi+rcx*8+10h]</pre></code></td>
 </tr><tr class="evenMap">
-<td></td><td title="00007ffd`7f6b0c21 4489448810      mov     dword ptr [rax+rcx*4+10h],r8d"><pre><code>mov     dword ptr [rax+rcx*4+10h],r8d</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c28 c4e17b1144c810  vmovsd  qword ptr [rax+rcx*8+10h],xmm0"><pre><code>vmovsd  qword ptr [rax+rcx*8+10h],xmm0</pre></code></td>
 </tr><tr class="evenMap">
 <td></td><td ><pre><code>			for (int i = 0; i < v1.Length; i++)
                                   ^^^</pre></code></td>
@@ -182,38 +182,38 @@
 </tr><tr class="evenMap">
 <td></td><td ><pre><code>IL_001a: stloc.1</pre></code></td>
 </tr><tr class="evenMap">
-<td></td><td title="00007ffd`7f6b0c26 ffc2            inc     edx"><pre><code>inc     edx</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c2f ffc2            inc     edx"><pre><code>inc     edx</pre></code></td>
 </tr><tr class="evenMap">
-<td></td><td title="00007ffd`7f6b0c28 3bda            cmp     ebx,edx"><pre><code>cmp     ebx,edx</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c31 3bda            cmp     ebx,edx"><pre><code>cmp     ebx,edx</pre></code></td>
 </tr><tr class="evenMap">
-<td></td><td id="3" class="reference" data-reference="M01_L00" title="00007ffd`7f6b0c2a 7fe8            jg      00007ffd`7f6b0c14"><a href="#M01_L00"><pre><code>jg      M01_L00</pre></code></a></td>
+<td></td><td id="3" class="reference" data-reference="M01_L00" title="00007ffc`dd9b0c33 7fe2            jg      00007ffc`dd9b0c17"><a href="#M01_L00"><pre><code>jg      M01_L00</pre></code></a></td>
 </tr><tr class="evenMap">
-<td></td><td id="4" class="reference" data-reference="M01_L02" title="00007ffd`7f6b0c2c eb22            jmp     00007ffd`7f6b0c50"><a href="#M01_L02"><pre><code>jmp     M01_L02</pre></code></a></td>
+<td></td><td id="4" class="reference" data-reference="M01_L02" title="00007ffc`dd9b0c35 eb28            jmp     00007ffc`dd9b0c5f"><a href="#M01_L02"><pre><code>jmp     M01_L02</pre></code></a></td>
 </tr><tr class="">
 <td id="M01_L01" class="label" data-label="M01_L01"><pre><code>M01_L01</pre></code></td>
 <td>&nbsp;</td></tr>
 <tr class="">
-<td></td><td title="00007ffd`7f6b0c2e 4863ca          movsxd  rcx,edx"><pre><code>movsxd  rcx,edx</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c37 4863ca          movsxd  rcx,edx"><pre><code>movsxd  rcx,edx</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0c31 448b448f10      mov     r8d,dword ptr [rdi+rcx*4+10h]"><pre><code>mov     r8d,dword ptr [rdi+rcx*4+10h]</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c3a c4e17b1044cf10  vmovsd  xmm0,qword ptr [rdi+rcx*8+10h]"><pre><code>vmovsd  xmm0,qword ptr [rdi+rcx*8+10h]</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0c36 3b5608          cmp     edx,dword ptr [rsi+8]"><pre><code>cmp     edx,dword ptr [rsi+8]</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c41 3b5608          cmp     edx,dword ptr [rsi+8]"><pre><code>cmp     edx,dword ptr [rsi+8]</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0c39 731d            jae     00007ffd`7f6b0c58"><pre><code>jae     00007ffd`7f6b0c58</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c44 7321            jae     00007ffc`dd9b0c67"><pre><code>jae     00007ffc`dd9b0c67</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0c3b 4403448e10      add     r8d,dword ptr [rsi+rcx*4+10h]"><pre><code>add     r8d,dword ptr [rsi+rcx*4+10h]</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c46 c4e17b5844ce10  vaddsd  xmm0,xmm0,mmword ptr [rsi+rcx*8+10h]"><pre><code>vaddsd  xmm0,xmm0,mmword ptr [rsi+rcx*8+10h]</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0c40 3b5008          cmp     edx,dword ptr [rax+8]"><pre><code>cmp     edx,dword ptr [rax+8]</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c4d 3b5008          cmp     edx,dword ptr [rax+8]"><pre><code>cmp     edx,dword ptr [rax+8]</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0c43 7313            jae     00007ffd`7f6b0c58"><pre><code>jae     00007ffd`7f6b0c58</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c50 7315            jae     00007ffc`dd9b0c67"><pre><code>jae     00007ffc`dd9b0c67</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0c45 4489448810      mov     dword ptr [rax+rcx*4+10h],r8d"><pre><code>mov     dword ptr [rax+rcx*4+10h],r8d</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c52 c4e17b1144c810  vmovsd  qword ptr [rax+rcx*8+10h],xmm0"><pre><code>vmovsd  qword ptr [rax+rcx*8+10h],xmm0</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0c4a ffc2            inc     edx"><pre><code>inc     edx</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c59 ffc2            inc     edx"><pre><code>inc     edx</pre></code></td>
 </tr><tr class="">
-<td></td><td title="00007ffd`7f6b0c4c 3bda            cmp     ebx,edx"><pre><code>cmp     ebx,edx</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c5b 3bda            cmp     ebx,edx"><pre><code>cmp     ebx,edx</pre></code></td>
 </tr><tr class="">
-<td></td><td id="5" class="reference" data-reference="M01_L01" title="00007ffd`7f6b0c4e 7fde            jg      00007ffd`7f6b0c2e"><a href="#M01_L01"><pre><code>jg      M01_L01</pre></code></a></td>
+<td></td><td id="5" class="reference" data-reference="M01_L01" title="00007ffc`dd9b0c5d 7fd8            jg      00007ffc`dd9b0c37"><a href="#M01_L01"><pre><code>jg      M01_L01</pre></code></a></td>
 </tr><tr class="">
 <td></td><td ><pre><code>			return retVal;
    ^^^^^^^^^^^^^^</pre></code></td>
@@ -225,6 +225,6 @@
 <td id="M01_L02" class="label" data-label="M01_L02"><pre><code>M01_L02</pre></code></td>
 <td>&nbsp;</td></tr>
 <tr class="evenMap">
-<td></td><td title="00007ffd`7f6b0c50 4883c420        add     rsp,20h"><pre><code>add     rsp,20h</pre></code></td>
+<td></td><td title="00007ffc`dd9b0c5f 4883c420        add     rsp,20h"><pre><code>add     rsp,20h</pre></code></td>
 </tr><tr><td colspan="{2}">&nbsp;</td></tr>
 </tbody></table></body></html>
