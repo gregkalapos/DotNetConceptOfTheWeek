@@ -36,10 +36,7 @@ namespace CsExceptionFilterSample
 				{
 					Console.WriteLine("BammException");
 				}
-				else
-				{
-					throw;
-				}
+				throw;
 			}
 		}
 
