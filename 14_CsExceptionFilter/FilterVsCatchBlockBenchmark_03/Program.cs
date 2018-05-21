@@ -34,9 +34,9 @@ namespace FilterVsCatchBlockBenchmark
 			{
 				MWithException();
 			}
-			catch (Exception)
+			catch (Exception e)
 			{
-				Debug.WriteLine("Exception catch");
+				Debug.WriteLine($"Exception catch {e.Message}");
 				throw;
 			}
 
@@ -47,7 +47,6 @@ namespace FilterVsCatchBlockBenchmark
 		{
 			for (int i = 0; i < 100; i++)
 			{
-
 				try
 				{
 					FilterImpl();
@@ -69,7 +68,7 @@ namespace FilterVsCatchBlockBenchmark
 
 			bool Log(Exception e)
 			{
-				Debug.WriteLine("Exception filter");
+				Debug.WriteLine($"Exception filter {e.Message}");
 				return false;
 			}
 		}

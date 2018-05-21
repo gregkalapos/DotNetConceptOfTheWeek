@@ -33,7 +33,7 @@ namespace CsExceptionFilterSample
 		[MethodImpl(MethodImplOptions.NoInlining)]
 		static void A()
 		{
-			B_WithFilter();
+			B_WithExceptionHandler();
 		}
 
 		static void B_WithFilter()
@@ -60,9 +60,9 @@ namespace CsExceptionFilterSample
 		}
 
 		[MethodImpl(MethodImplOptions.NoInlining)]
-		static void C() {
-			var dateTime = DateTime.UtcNow;
-			Console.WriteLine(dateTime);
+		static void C()
+		{
+			var date = DateTime.UtcNow;
 			throw new Exception("Bamm");
 		}
 

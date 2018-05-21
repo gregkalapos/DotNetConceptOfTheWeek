@@ -9,7 +9,7 @@ Frequency=2143474 Hz, Resolution=466.5324 ns, Timer=TSC
 
 
 ```
-|                           Method |      Mean |    Error |   StdDev |
-|--------------------------------- |----------:|---------:|---------:|
-| CountingExceptionsWithCatchBlock | 136.70 us | 2.432 us | 2.156 us |
-|     CountingExceptionsWithFilter |  92.07 us | 1.714 us | 1.519 us |
+|                   Method |      Mean |     Error |    StdDev |
+|------------------------- |----------:|----------:|----------:|
+| ExceptionsWithCatchBlock | 14.485 ms | 0.2378 ms | 0.2224 ms |
+|     ExceptionsWithFilter |  9.830 ms | 0.2367 ms | 0.2726 ms |
