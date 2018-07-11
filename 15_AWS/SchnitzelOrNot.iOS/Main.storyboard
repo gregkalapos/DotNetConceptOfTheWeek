@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4591" translatesAutoresizingMaskIntoConstraints="NO" image="RedX.png" hidden="YES">
+                                <rect key="frame" x="164" y="87" width="50" height="50"/>
+                                <constraints>
+                                    <constraint id="4592" firstItem="4591" firstAttribute="width" constant="50"/>
+                                    <constraint id="4593" firstItem="4591" firstAttribute="height" constant="50"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="197" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="0">
+                                <rect key="frame" x="20" y="25" width="339" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="3242" firstItem="197" firstAttribute="width" constant="339"/>
+                                    <constraint id="3245" firstItem="197" firstAttribute="height" constant="54"/>
+                                </constraints>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="198" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="118" y="725" width="140" height="30"/>
+                                <state key="normal" title="Select Image"/>
+                                <connections>
+                                    <action selector="UIButton198_TouchUpInside:" destination="BYZ-38-t0r" id="199" eventType="touchUpInside"/>
+                                </connections>
+                                <constraints>
+                                    <constraint id="3011" firstItem="198" firstAttribute="width" constant="140"/>
+                                </constraints>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1964" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="26" y="142" width="323" height="546.5"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2166" animating="YES" hidden="YES">
+                                <rect key="frame" x="178" y="688.5" width="20" height="20"/>
+                                <rect key="contentStretch" x="1" y="0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint id="3230" firstItem="2166" firstAttribute="width" constant="20"/>
+                                    <constraint id="3233" firstItem="2166" firstAttribute="height" constant="20"/>
+                                    <constraint id="3234" firstItem="2166" firstAttribute="width" constant="20"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2167" translatesAutoresizingMaskIntoConstraints="NO" hidden="YES" misplaced="YES">
+                                <rect key="frame" x="375" y="686.5" width="62" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="3227" firstItem="2167" firstAttribute="width" constant="62"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No picture selected, please select an image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2171" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="0">
+                                <rect key="frame" x="57.5" y="374.5" width="261" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="3749" firstItem="2171" firstAttribute="width" constant="261"/>
+                                    <constraint id="3750" firstItem="2171" firstAttribute="height" constant="58"/>
+                                </constraints>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4278" translatesAutoresizingMaskIntoConstraints="NO" image="GreenC.png" hidden="YES">
+                                <rect key="frame" x="162" y="87" width="50" height="50"/>
+                                <constraints>
+                                    <constraint id="4281" firstItem="4278" firstAttribute="width" constant="50"/>
+                                    <constraint id="4282" firstItem="4278" firstAttribute="height" constant="50"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="3006" firstItem="198" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="3009" firstItem="wfy-db-euE" firstAttribute="top" secondItem="198" secondAttribute="bottom" constant="20"/>
+                            <constraint id="3226" firstItem="2167" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="3228" firstItem="198" firstAttribute="centerY" secondItem="2167" secondAttribute="bottom" constant="40"/>
+                            <constraint id="3229" firstItem="2166" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="0.5"/>
+                            <constraint id="3232" firstItem="2167" firstAttribute="centerY" secondItem="2166" secondAttribute="bottom" constant="18.5"/>
+                            <constraint id="3235" firstItem="2166" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="0.5"/>
+                            <constraint id="3237" firstItem="1964" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10"/>
+                            <constraint id="3239" firstItem="2166" firstAttribute="centerY" secondItem="1964" secondAttribute="bottom" constant="10"/>
+                            <constraint id="3243" firstItem="197" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2"/>
+                            <constraint id="3747" firstItem="8bC-Xf-vdC" firstAttribute="centerX" secondItem="2171" secondAttribute="centerX" constant="-0.5"/>
+                            <constraint id="3748" firstItem="2171" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-2.5"/>
+                            <constraint id="3759" firstItem="8bC-Xf-vdC" firstAttribute="trailingMargin" secondItem="1964" secondAttribute="trailing" constant="10"/>
+                            <constraint id="4022" firstItem="197" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5"/>
+                            <constraint id="4279" firstItem="4278" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-0.5"/>
+                            <constraint id="4280" firstItem="4278" firstAttribute="top" secondItem="197" secondAttribute="bottom" constant="8"/>
+                            <constraint id="4287" firstItem="1964" firstAttribute="top" secondItem="4278" secondAttribute="bottom" constant="5"/>
+                            <constraint id="4598" firstItem="1964" firstAttribute="top" secondItem="4591" secondAttribute="bottom" constant="5"/>
+                            <constraint id="4599" firstItem="4591" firstAttribute="top" secondItem="197" secondAttribute="centerY" constant="35"/>
+                            <constraint id="4600" firstItem="4591" firstAttribute="centerX" secondItem="1964" secondAttribute="centerX" constant="1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MainImgView" destination="1964" id="name-outlet-1964"/>
+                        <outlet property="IsSchnitzelLabel" destination="197" id="name-outlet-197"/>
+                        <outlet property="LoadingLabel" destination="2167" id="name-outlet-2167"/>
+                        <outlet property="LoadingIndicator" destination="2166" id="name-outlet-2166"/>
+                        <outlet property="SelectImgLabel" destination="2171" id="name-outlet-2171"/>
+                        <outlet property="RedXImg" destination="4591" id="name-outlet-4591"/>
+                        <outlet property="GreenCImg" destination="4278" id="name-outlet-4278"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GreenC.png" width="508" height="514"/>
+        <image name="RedX.png" width="542" height="524"/>
+    </resources>
+</document>
