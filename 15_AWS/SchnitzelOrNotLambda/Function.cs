@@ -37,7 +37,7 @@ namespace SchnitzelOrNotLambda
 				{
 					S3Object = new Amazon.Rekognition.Model.S3Object
 					{
-						Bucket = "sdffgdh3dfjkh342rhjvdf",
+						Bucket = "schnitzelornot",
 						Name = fileName
 					}
 				}
