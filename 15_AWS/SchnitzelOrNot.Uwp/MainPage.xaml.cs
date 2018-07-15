@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using SchnitzelOrNotClient;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage.Pickers;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -17,7 +18,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace UwpSample
+namespace SchnitzelOrNot.Uwp
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -45,46 +46,33 @@ namespace UwpSample
 			{
 				BitmapImage bitmapImage = new BitmapImage();
 				await bitmapImage.SetSourceAsync(fileStream);
-				OpenedImage.Source = bitmapImage;
+				SelectedImage.Source = bitmapImage;
 			}
 
-			NoPicButton.Visibility = Visibility.Collapsed;
+			var schnitzelDetector = 
+				new SchnitzelDetector("AKIAJFHV4ILY7OS5LALQ", "cmxRYkx/cNY2iyW5fvi3Hy8o3+RK8nPJcbehfJ34");
 
-			var schnitzelDetector = new SchnitzelDetector(); //TODO: Add secret key
-
+			
 			try
 			{
-				ResultTextBox.Text = String.Empty;
-				ResultTextBox.Visibility = Visibility.Collapsed;
-				IsLoadingGrid.Visibility = Visibility.Visible;
+				IsLoading.Visibility = Visibility.Visible;
+				ResultTb.Text = "";
 				var result = await schnitzelDetector.IsSchnitzel(file.Path, file.Name);
-				if(result)
+
+				if (result)
 				{
-					ResultTextBox.Text = "It's a schnitzel!!";
+					ResultTb.Text = "It's a schnitzel!!";
 				}
 				else
 				{
-					ResultTextBox.Text = "Nope, it's not a schnitzel";
+					ResultTb.Text = "Nope, it's not a schnitzel";
 				}
-			}
-			catch(Exception exception)
-			{
-
 			}
 			finally
 			{
-				ResultTextBox.Visibility = Visibility.Visible;
-				IsLoadingGrid.Visibility = Visibility.Collapsed;
+				IsLoading.Visibility = Visibility.Collapsed;
 			}
-			//if (file != null)
-			//{
-			//	// Application now has read/write access to the picked file
-			//	this.textBlock.Text = "Picked photo: " + file.Name;
-			//}
-			//else
-			//{
-			//	this.textBlock.Text = "Operation cancelled.";
-			//}
+
 		}
 	}
 }

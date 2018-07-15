@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="SchnitzelOrNot.Uwp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SchnitzelOrNot.Uwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <TextBlock x:Name="ResultTb" HorizontalAlignment="Center" />
+            <ProgressRing x:Name="IsLoading" Visibility="Collapsed" IsActive="True" HorizontalAlignment="Center" />
+        </Grid>
+
+        <Image x:Name="SelectedImage" Grid.Row="1" />
+
+        <Button Content="Browse" Grid.Row="2" HorizontalAlignment="Center" Click="Button_Click" />
+
+    </Grid>
+</Page>

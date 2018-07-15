@@ -22,7 +22,7 @@ namespace SchnitzelOrNot.iOS
 				imagePicker.DismissModalViewController(true);
 				SelectImgLabel.Hidden = true;
 
-				var sdetector = new SchnitzelDetector();
+				var sdetector = new SchnitzelDetector(); //TODO: add secret key
 				var imgUrl = e.ImageUrl;
 
 				MainImgView.ContentMode = UIViewContentMode.ScaleAspectFit;
@@ -37,7 +37,7 @@ namespace SchnitzelOrNot.iOS
 					RedXImg.Hidden = true;
 					GreenCImg.Hidden = true;
 
-					var res = await sdetector.IsSchnitzel(imgUrl.Path, "aaa.jpg");
+					var res = await sdetector.IsSchnitzel(imgUrl.Path, "tmpimg.jpg");
 
 					if (res)
 					{
