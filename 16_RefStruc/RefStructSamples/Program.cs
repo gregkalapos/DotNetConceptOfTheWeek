@@ -60,6 +60,7 @@ namespace RefStructSamples
 			//...
 		}
 
+		//2: method(s) returning a ref struct
 		public MyRefStruct MethodWithRetRefStruct()
 		{
 			var retVal = new MyRefStruct();
@@ -67,6 +68,7 @@ namespace RefStructSamples
 			return retVal;
 		}
 
+		//3: local variable 
 		public void MethodWithRefStructLocalVar()
 		{
 			var variable = new MyRefStruct();
