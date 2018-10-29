@@ -20,9 +20,8 @@ namespace SampleAppWithRssFeed.Controllers
 
 		public IActionResult Index()
 		{
-
-
-			return View();
+            var allPosts = blogDataStorage.BlogItems;
+			return View(allPosts);
 		}
 
 		public IActionResult About()

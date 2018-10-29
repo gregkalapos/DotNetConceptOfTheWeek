@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SampleAppWithRssFeed.Data;
 
 namespace SampleAppWithRssFeed
 {
@@ -31,8 +32,8 @@ namespace SampleAppWithRssFeed
 				options.MinimumSameSitePolicy = SameSiteMode.None;
 			});
 
-
-			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSingleton<IBlogDataStorage, DummyBlogDataStorage>();
+			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1).AddXmlSerializerFormatters();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
