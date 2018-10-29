@@ -3,8 +3,8 @@ namespace SampleAppWithRssFeed.Models
 {
 	public class BlogItem
 	{
-		public BlogItem()
-		{
-		}
+		public String Title { get; set; }
+		public String PreviewText { get; set; }
+		public DateTime PublishDate { get; set; }
 	}
 }

@@ -4,14 +4,24 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using SampleAppWithRssFeed.Data;
 using SampleAppWithRssFeed.Models;
 
 namespace SampleAppWithRssFeed.Controllers
 {
 	public class HomeController : Controller
 	{
+		private readonly IBlogDataStorage blogDataStorage;
+
+		public HomeController(IBlogDataStorage blogDataStorage)
+		{
+			this.blogDataStorage = blogDataStorage;
+		}
+
 		public IActionResult Index()
 		{
+
+
 			return View();
 		}
 

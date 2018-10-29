@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using SampleAppWithRssFeed.Models;
+
 namespace SampleAppWithRssFeed.Data
 {
-	public class IBlogDataStorage
+	public interface IBlogDataStorage
 	{
-		public IBlogDataStorage()
-		{
-		}
+		List<BlogItem> BlogItems { get; }
 	}
 }

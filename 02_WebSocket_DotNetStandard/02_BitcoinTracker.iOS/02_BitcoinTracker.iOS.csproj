@@ -112,7 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\02_CryptoDataSourceLib\02_CryptoDataSourceLib.csproj">
-      <Project>{1C8C8F65-FF26-4195-9202-75E3274A8F29}</Project>
+      <Project>{B81416F3-ACD5-45C4-9F4E-72CB47ED0018}</Project>
       <Name>02_CryptoDataSourceLib</Name>
     </ProjectReference>
   </ItemGroup>
